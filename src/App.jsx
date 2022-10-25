@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer";
+import Nav from "./components/nav";
 function App() {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route />
       </Routes>
