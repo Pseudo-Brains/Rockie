@@ -8,7 +8,13 @@ import {
   VStack,
   Flex,
   useColorModeValue,
+  Spacer,
+  Input,
+  Button,
+  InputGroup,
+  InputRightElement,
 } from "@chakra-ui/react";
+import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
 import React from "react";
 
@@ -21,10 +27,8 @@ function Footer() {
     <Box w={"100%"} bg={bg} px="24">
       <Box>
         <Flex>
-          <VStack p="6" alignItems={"flex-start"} w="35%">
+          <VStack alignItems={"flex-start"} w="33%" p="4" pt="8">
             <Image
-              // as={Icon}
-              // boxSize="180px"
               objectFit="contain"
               src="/image/rock-logo1.png"
               alt="logo"
@@ -33,23 +37,41 @@ function Footer() {
             <Heading color={TextColor} fontSize="20">
               Let's talk! 🤙
             </Heading>
-            <Text color={"#969BA9"} fontSize="md" fontWeight={"bold"}>
+            <Text
+              color={"#969BA9"}
+              fontSize="md"
+              fontWeight={"semibold"}
+              mb="2"
+            >
               +12 345 678 9101
             </Text>
-            <Text color={"#969BA9"} fontSize="md" fontWeight={"bold"}>
+            <Text
+              color={"#969BA9"}
+              fontSize="sm"
+              fontWeight={"semibold"}
+              mb="2"
+            >
               Info.Avitex@Gmail.Com
             </Text>
-            <Text color={"#969BA9"} fontSize="md" fontWeight={"bold"}>
-              Cecilia Chapman 711-2880 Nulla St.
+            <Text
+              color={"#969BA9"}
+              fontSize="sm"
+              pr="12"
+              fontWeight={"semibold"}
+            >
+              Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522
             </Text>
-            <Text color={"#969BA9"} fontSize="md" fontWeight={"bold"}>
-              Mankato Mississippi 96522
-            </Text>
+            {/* <Text color={"#969BA9"} fontSize="sm" fontWeight={"bold"}>
+             
+            </Text> */}
           </VStack>
           {/* ttt */}
-          <VStack>
-            <Flex flexDir={{ base: "column", md: "row" }}>
-              <VStack alignItems={"flex-start"} p="4">
+          <VStack alignItems={"flex-start"} w="35%" p="4" pt="8">
+            <Flex
+              flexDir={{ base: "column", md: "row" }}
+              justify="space-between"
+            >
+              <VStack alignItems={"flex-start"} py="4">
                 <Text
                   color={TextColor}
                   textTransform="uppercase"
@@ -69,29 +91,124 @@ function Footer() {
                   fontSize="sm"
                   _hover={{ color: "#163DE9" }}
                 >
-                  Spot
+                  Inverse Perpetual
                 </Text>
                 <Text
                   color={TextColor}
                   fontSize="sm"
                   _hover={{ color: "#163DE9" }}
                 >
-                  Spot
+                  USDT Perpetual
                 </Text>
                 <Text
                   color={TextColor}
                   fontSize="sm"
                   _hover={{ color: "#163DE9" }}
                 >
-                  Spot
+                  Exchange
+                </Text>
+                <Text
+                  color={TextColor}
+                  fontSize="sm"
+                  _hover={{ color: "#163DE9" }}
+                >
+                  Launchpad
+                </Text>
+                <Text
+                  color={TextColor}
+                  fontSize="sm"
+                  _hover={{ color: "#163DE9" }}
+                >
+                  Binance Pay
                 </Text>
               </VStack>
-              <VStack>
+              <Spacer />
+              <VStack py="4" alignItems={"flex-start"} ml="10">
                 <Text color={TextColor} textTransform="uppercase">
                   SERVICES
                 </Text>
+                <Text
+                  color={TextColor}
+                  fontSize="sm"
+                  _hover={{ color: "#163DE9" }}
+                >
+                  Buy Crypto
+                </Text>
+                <Text
+                  color={TextColor}
+                  fontSize="sm"
+                  _hover={{ color: "#163DE9" }}
+                >
+                  Tranding Fee
+                </Text>
+                <Text
+                  color={TextColor}
+                  fontSize="sm"
+                  _hover={{ color: "#163DE9" }}
+                >
+                  Markets
+                </Text>
+                <Text
+                  color={TextColor}
+                  fontSize="sm"
+                  _hover={{ color: "#163DE9" }}
+                >
+                  API
+                </Text>
+                <Text
+                  color={TextColor}
+                  fontSize="sm"
+                  _hover={{ color: "#163DE9" }}
+                >
+                  Referral Program
+                </Text>
               </VStack>
             </Flex>
+          </VStack>
+          {/* ttete */}
+          <VStack
+            alignItems={"flex-start"}
+            w="33%"
+            p="4"
+            pr="14"
+            pt="12"
+            justify={"space-evenly"}
+          >
+            <Heading
+              as={"h4"}
+              fontSize="2xl"
+              color={TextColor}
+              textTransform="uppercase"
+            >
+              Newletters
+            </Heading>
+            <Text color={TextColor} fontSize="sm" mb="10">
+              Subscribe Our Newsletter To Get More Free Design Course And
+              Resource.
+            </Text>
+
+            <InputGroup size="md">
+              <Input borderRadius="full" p={"1rem"} bg="white" />
+              <InputRightElement width="6.5rem" borderRadius="full" pr="-1">
+                <Button
+                  h="2rem"
+                  size="lg"
+                  fontSize={"14"}
+                  bg="#5084FF"
+                  borderRadius="full"
+                  py="4"
+                  color={"white"}
+                >
+                  submit
+                </Button>
+              </InputRightElement>
+            </InputGroup>
+            <HStack spacing={"4"}>
+              <Icon color={"#969BA9"} as={FaFacebookF} />
+              <Icon color={"#969BA9"} as={FaInstagram} />
+              <Icon color={"#969BA9"} as={FaYoutube} />
+              <Icon color={"#969BA9"} as={FaTwitter} />
+            </HStack>
           </VStack>
         </Flex>
       </Box>

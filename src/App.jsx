@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home1 from "./pages/homePage/Home1";
 import Nav from "./components/nav";
 import Footer from "./components/Footer";
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <BrowserRouter>
       <Nav />
       <Routes>
-        <Route />
+        <Route index element={<Home1 />} />
       </Routes>
       <Footer />
     </BrowserRouter>
