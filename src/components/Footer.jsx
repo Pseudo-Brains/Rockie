@@ -21,7 +21,7 @@ function Footer() {
     <Box w={"100%"} bg={bg} px="24">
       <Box>
         <Flex>
-          <VStack p="6" alignItems={"flex-start"} w="35%">
+          <VStack p="6" alignItems={"flex-start"} w="32%">
             <Image
               // as={Icon}
               // boxSize="180px"
@@ -47,7 +47,7 @@ function Footer() {
             </Text>
           </VStack>
           {/* ttt */}
-          <VStack>
+          <VStack w="32%">
             <Flex flexDir={{ base: "column", md: "row" }}>
               <VStack alignItems={"flex-start"} p="4">
                 <Text
@@ -90,6 +90,46 @@ function Footer() {
                 <Text color={TextColor} textTransform="uppercase">
                   SERVICES
                 </Text>
+              </VStack>
+
+              <VStack p="6" alignItems={"flex-start"} w="32%">
+                <VStack alignItems={"flex-start"} p="4">
+                  <Text
+                    color={TextColor}
+                    textTransform="uppercase"
+                    fontSize={"md"}
+                  >
+                    PRODUCTS
+                  </Text>
+                  <Text
+                    color={TextColor}
+                    fontSize="sm"
+                    _hover={{ color: "#163DE9" }}
+                  >
+                    Spot
+                  </Text>
+                  <Text
+                    color={TextColor}
+                    fontSize="sm"
+                    _hover={{ color: "#163DE9" }}
+                  >
+                    Spot
+                  </Text>
+                  <Text
+                    color={TextColor}
+                    fontSize="sm"
+                    _hover={{ color: "#163DE9" }}
+                  >
+                    Spot
+                  </Text>
+                  <Text
+                    color={TextColor}
+                    fontSize="sm"
+                    _hover={{ color: "#163DE9" }}
+                  >
+                    Spot
+                  </Text>
+                </VStack>
               </VStack>
             </Flex>
           </VStack>
