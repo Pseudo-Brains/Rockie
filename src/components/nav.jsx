@@ -10,8 +10,9 @@ import {
   Text,
   useColorMode,
   Circle,
+  Button,
 } from "@chakra-ui/react";
-import { FaBell, FaMoon, FaUser } from "react-icons/fa";
+import { FaBell, FaMoon, FaUser, FaSun } from "react-icons/fa";
 import { AiFillCaretDown } from "react-icons/ai";
 
 const Nav = () => {
@@ -20,8 +21,7 @@ const Nav = () => {
     <Flex
       color="whiteAlpha.900"
       w="100%"
-      //   bgColor={useColorMode("#141416", "")}
-      bgColor="#141416"
+      bgColor={useColorMode[("#fffff", "#ffffff")]}
       justify="space-between"
       h="50px"
     >
@@ -136,12 +136,14 @@ const Nav = () => {
         </Flex>
         <Icon as={FaBell} />
         <Flex align="center" justify="space-between" w="33%" h="100%">
-          <Icon
+          <Button
+            p="0"
+            bgColor="#141416"
+            _hover="none"
             onClick={toggleColorMode}
-            as={FaMoon}
-            color="white"
-            fontSize="22px"
-          />
+          >
+            {colorMode === "light" ? <Icon as={FaSun} /> : <Icon as={FaMoon} />}
+          </Button>
           <Box border="1px solid" borderRadius="30px" px="20px" py="5px">
             Wallet
           </Box>
