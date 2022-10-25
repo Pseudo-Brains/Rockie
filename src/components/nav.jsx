@@ -8,15 +8,19 @@ import {
   MenuItem,
   MenuList,
   Text,
+  useColorMode,
+  Circle,
 } from "@chakra-ui/react";
-import { FaBell } from "react-icons/fa";
+import { FaBell, FaMoon, FaUser } from "react-icons/fa";
 import { AiFillCaretDown } from "react-icons/ai";
 
 const Nav = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex
       color="whiteAlpha.900"
       w="100%"
+      //   bgColor={useColorMode("#141416", "")}
       bgColor="#141416"
       justify="space-between"
       h="50px"
@@ -130,8 +134,21 @@ const Nav = () => {
             </MenuList>
           </Menu>
         </Flex>
-        <Icon as={FaBell} color="white" fontSize="22px" />
-        <Flex w="33%" bgColor="pink" h="100%"></Flex>
+        <Icon as={FaBell} />
+        <Flex align="center" justify="space-between" w="33%" h="100%">
+          <Icon
+            onClick={toggleColorMode}
+            as={FaMoon}
+            color="white"
+            fontSize="22px"
+          />
+          <Box border="1px solid" borderRadius="30px" px="20px" py="5px">
+            Wallet
+          </Box>
+          <Circle minH="80%" minW="20%" bgColor="green.500">
+            <Icon as={FaUser} />
+          </Circle>
+        </Flex>
       </Flex>
     </Flex>
   );
