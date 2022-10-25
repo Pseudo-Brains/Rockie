@@ -1,6 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 
-const theme = extendTheme({
+export const theme = extendTheme({
   config: {
     initialColorMode: "light",
     useSystemColorMode: true,
@@ -12,10 +13,7 @@ const theme = extendTheme({
         padding: 0,
         "box-sizing": "border-box",
         "font-family": "Montserrat",
-        bg: mode(
-          "linear-gradient(to right,  #b7b7fc, #d4d4fd)",
-          "#020213"
-        )(props),
+        bg: mode("#020213", "#fffff")(props),
       },
     }),
   },
