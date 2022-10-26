@@ -1,0 +1,19 @@
+.btn-show-bg {
+  background-color: rgba(20, 20, 197, 0.719);
+}
+
+.btn-show {
+  background-color: transparent;
+}
+.btn-show:hover {
+  background-color: transparent;
+  padding: 20px;
+}
+.show-Btn-Hover:hover {
+  background-color: #171e2e;
+}
+
+.show-Btn-Hover:hover .btn-hover {
+  background-color: #6238fe;
+  border-color: transparent;
+}

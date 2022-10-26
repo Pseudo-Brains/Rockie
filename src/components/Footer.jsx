@@ -13,6 +13,7 @@ import {
   Button,
   InputGroup,
   InputRightElement,
+  background,
 } from "@chakra-ui/react";
 import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
@@ -24,30 +25,32 @@ function Footer() {
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
 
   return (
-    <Box w={"100%"} bg={bg} px="24">
+    <Box w={"100%"} bg={bg} px="2">
       <Box>
-        <Flex>
+        <Flex justify={"center"}>
           <VStack alignItems={"flex-start"} w="33%" p="4" pt="8">
             <Image
-              objectFit="contain"
+              objectFit="cover"
               src="/image/rock-logo1.png"
               alt="logo"
-              mb={"2"}
+              // boxSize={"160px"}
+              width={"230px"}
+              mb={"3"}
             />
-            <Heading color={TextColor} fontSize="20">
+            <Heading color={TextColor} fontSize="28" mb="2.5">
               Let's talk! 🤙
             </Heading>
             <Text
               color={"#969BA9"}
-              fontSize="md"
+              fontSize="2xl"
               fontWeight={"semibold"}
-              mb="2"
+              mb="3"
             >
               +12 345 678 9101
             </Text>
             <Text
               color={"#969BA9"}
-              fontSize="sm"
+              fontSize="lg"
               fontWeight={"semibold"}
               mb="2"
             >
@@ -55,8 +58,8 @@ function Footer() {
             </Text>
             <Text
               color={"#969BA9"}
-              fontSize="sm"
-              pr="12"
+              fontSize="lg"
+              pr="36"
               fontWeight={"semibold"}
             >
               Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522
@@ -66,7 +69,14 @@ function Footer() {
             </Text> */}
           </VStack>
           {/* ttt */}
-          <VStack alignItems={"flex-start"} w="35%" p="4" pt="8">
+          <VStack
+            w="35%"
+            p="2"
+            pt="8"
+            borderRight={"2px"}
+            borderLeft={"2px"}
+            borderColor={"#23262F"}
+          >
             <Flex
               flexDir={{ base: "column", md: "row" }}
               justify="space-between"
@@ -75,48 +85,48 @@ function Footer() {
                 <Text
                   color={TextColor}
                   textTransform="uppercase"
-                  fontSize={"md"}
+                  fontSize={"2xl"}
                 >
                   PRODUCTS
                 </Text>
                 <Text
                   color={TextColor}
-                  fontSize="sm"
+                  fontSize="2xl"
                   _hover={{ color: "#163DE9" }}
                 >
                   Spot
                 </Text>
                 <Text
                   color={TextColor}
-                  fontSize="sm"
+                  fontSize="2xl"
                   _hover={{ color: "#163DE9" }}
                 >
                   Inverse Perpetual
                 </Text>
                 <Text
                   color={TextColor}
-                  fontSize="sm"
+                  fontSize="2xl"
                   _hover={{ color: "#163DE9" }}
                 >
                   USDT Perpetual
                 </Text>
                 <Text
                   color={TextColor}
-                  fontSize="sm"
+                  fontSize="2xl"
                   _hover={{ color: "#163DE9" }}
                 >
                   Exchange
                 </Text>
                 <Text
                   color={TextColor}
-                  fontSize="sm"
+                  fontSize="2xl"
                   _hover={{ color: "#163DE9" }}
                 >
                   Launchpad
                 </Text>
                 <Text
                   color={TextColor}
-                  fontSize="sm"
+                  fontSize="2xl"
                   _hover={{ color: "#163DE9" }}
                 >
                   Binance Pay
@@ -124,40 +134,44 @@ function Footer() {
               </VStack>
               <Spacer />
               <VStack py="4" alignItems={"flex-start"} ml="10">
-                <Text color={TextColor} textTransform="uppercase">
+                <Text
+                  color={TextColor}
+                  textTransform="uppercase"
+                  fontSize={"2xl"}
+                >
                   SERVICES
                 </Text>
                 <Text
                   color={TextColor}
-                  fontSize="sm"
+                  fontSize="2xl"
                   _hover={{ color: "#163DE9" }}
                 >
                   Buy Crypto
                 </Text>
                 <Text
                   color={TextColor}
-                  fontSize="sm"
+                  fontSize="2xl"
                   _hover={{ color: "#163DE9" }}
                 >
                   Tranding Fee
                 </Text>
                 <Text
                   color={TextColor}
-                  fontSize="sm"
+                  fontSize="2xl"
                   _hover={{ color: "#163DE9" }}
                 >
                   Markets
                 </Text>
                 <Text
                   color={TextColor}
-                  fontSize="sm"
+                  fontSize="2xl"
                   _hover={{ color: "#163DE9" }}
                 >
                   API
                 </Text>
                 <Text
                   color={TextColor}
-                  fontSize="sm"
+                  fontSize="2xl"
                   _hover={{ color: "#163DE9" }}
                 >
                   Referral Program
@@ -169,34 +183,35 @@ function Footer() {
           <VStack
             alignItems={"flex-start"}
             w="33%"
-            p="4"
+            px="20"
             pr="14"
-            pt="12"
+            pt="4"
             justify={"space-evenly"}
           >
             <Heading
               as={"h4"}
-              fontSize="2xl"
+              fontSize="3xl"
               color={TextColor}
               textTransform="uppercase"
             >
               Newletters
             </Heading>
-            <Text color={TextColor} fontSize="sm" mb="10">
+            <Text color={TextColor} fontSize="18" mb="10">
               Subscribe Our Newsletter To Get More Free Design Course And
               Resource.
             </Text>
 
-            <InputGroup size="md">
-              <Input borderRadius="full" p={"1rem"} bg="white" />
-              <InputRightElement width="6.5rem" borderRadius="full" pr="-1">
+            <InputGroup size="lg">
+              <Input borderRadius="full" p={"1.1rem"} bg="white" />
+              <InputRightElement width="6.5rem" borderRadius="full" pr="1">
                 <Button
                   h="2rem"
                   size="lg"
-                  fontSize={"14"}
+                  fontSize={"18"}
                   bg="#5084FF"
                   borderRadius="full"
-                  py="4"
+                  py="6"
+                  _hover={{ background: "blue", color: "white" }}
                   color={"white"}
                 >
                   submit
@@ -217,7 +232,7 @@ function Footer() {
         <Text
           textAlign={"center"}
           fontWeight="semibold"
-          p={"4"}
+          p={"6"}
           m="4"
           color={"#969BA9"}
           borderTopWidth="2px"
