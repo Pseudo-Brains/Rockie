@@ -128,7 +128,7 @@ const Home2 = () => {
             >
               <Image
                 objectFit="cover"
-                src="/image/Ether.png"
+                src="/image/Ether7.png"
                 alt="Homebanner"
               />
               <Text p="13px" fontWeight="bold" color="white">
@@ -236,7 +236,11 @@ const Home2 = () => {
               direction="column"
               width="30%"
             >
-              <Image objectFit="cover" src="/image/BNB.png" alt="Homebanner" />
+              <Image
+                objectFit="cover"
+                src="/image/BNByy.png"
+                alt="Homebanner"
+              />
               <Text p="13px" fontWeight="bold" color="white">
                 BNB
               </Text>
