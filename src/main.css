@@ -17,3 +17,20 @@
   background-color: #6238fe;
   border-color: transparent;
 }
+.btn-style {
+  background-color: transparent;
+  color: transparent;
+}
+
+.btn-style a {
+  color: #aaaebd;
+  font-size: 20px;
+  font-weight: 100;
+}
+.btn-style a:hover {
+  color: #022984;
+}
+
+.btn-style-Nohover {
+  background-color: #3772ff;
+}
