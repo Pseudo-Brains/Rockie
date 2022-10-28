@@ -27,8 +27,17 @@ function Footer() {
   return (
     <Box w={"100%"} bg={bg} px="2">
       <Box>
-        <Flex justify={"center"}>
-          <VStack alignItems={"flex-start"} w="33%" p="4" pt="8">
+        <Flex
+          justify={"center"}
+          flexDir={{ base: "column", md: "row", lg: "row" }}
+          flexWrap="wrap"
+        >
+          <VStack
+            alignItems={"flex-start"}
+            w={{ base: "100%", md: "50%", lg: "33%" }}
+            p="4"
+            pt="8"
+          >
             <Image
               objectFit="cover"
               src="/image/rock-logo1.png"
@@ -70,11 +79,11 @@ function Footer() {
           </VStack>
           {/* ttt */}
           <VStack
-            w="35%"
+            w={{ base: "100%", md: "50%", lg: "33%" }}
             p="2"
             pt="8"
             borderRight={"2px"}
-            borderLeft={"2px"}
+            borderLeft={{ base: "0px", md: "0px", lg: "2px" }}
             borderColor={"#23262F"}
           >
             <Flex
@@ -133,7 +142,11 @@ function Footer() {
                 </Text>
               </VStack>
               <Spacer />
-              <VStack py="4" alignItems={"flex-start"} ml="10">
+              <VStack
+                py="4"
+                alignItems={"flex-start"}
+                ml={{ base: "2", md: "2", lg: "10" }}
+              >
                 <Text
                   color={TextColor}
                   textTransform="uppercase"
@@ -181,16 +194,22 @@ function Footer() {
           </VStack>
           {/* ttete */}
           <VStack
+            borderTopWidth={{ base: "2px", md: "2px", lg: "0" }}
+            borderTopColor={{
+              base: "#23262F",
+              md: "#23262F",
+              lg: "transparent",
+            }}
             alignItems={"flex-start"}
-            w="33%"
+            w={{ base: "100%", md: "100%", lg: "33%" }}
             px="20"
             pr="14"
             pt="4"
             justify={"space-evenly"}
           >
             <Heading
-              as={"h4"}
-              fontSize="3xl"
+              as={"h6"}
+              fontSize="2xl"
               color={TextColor}
               textTransform="uppercase"
             >
@@ -233,7 +252,8 @@ function Footer() {
           textAlign={"center"}
           fontWeight="semibold"
           p={"6"}
-          m="4"
+          mx="4"
+          mt="4"
           color={"#969BA9"}
           borderTopWidth="2px"
           borderTopColor="#23262F"

@@ -1,0 +1,48 @@
+import {
+  Box,
+  Flex,
+  HStack,
+  useColorModeValue,
+  Text,
+  Heading,
+  Button,
+} from "@chakra-ui/react";
+import "../main.css";
+
+import { Link } from "react-router-dom";
+
+function SubHeader(props) {
+  const bg = useColorModeValue("#141416", "#FFFFFF");
+  const bgSub = useColorModeValue("#17181C", "#FFFFFF");
+  const InputColor = useColorModeValue("#222630", "#FFFFFF");
+  const headerColor = useColorModeValue("#FFFFFF", "#23262F");
+  const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
+  return (
+    <Box px="8" py="14" bg={bgSub}>
+      <Flex
+        justify={"space-between"}
+        alignItems={{ base: "center", md: "flex-start" }}
+        flexDir={{ base: "column", md: "column", lg: "row" }}
+      >
+        <Heading fontSize={"5xl"} color={headerColor}>
+          {props.title}
+        </Heading>
+        <HStack>
+          <Button
+            className="btn-style"
+            color={"#AAAEBD"}
+            _hover={{ bg: "transparent", color: "white" }}
+            bg="transparent"
+          >
+            <Link to="/register">Home</Link>
+          </Button>
+          <Text fontSize={"1xl"} color="#AAAEBD">
+            / Buy Crypto
+          </Text>
+        </HStack>
+      </Flex>
+    </Box>
+  );
+}
+
+export default SubHeader;
