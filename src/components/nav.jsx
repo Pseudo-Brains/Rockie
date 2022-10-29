@@ -7,7 +7,8 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-  Text,
+  Link,
+  useColorModeValue,
   useColorMode,
   Circle,
   Button,
@@ -17,14 +18,11 @@ import { AiFillCaretDown } from "react-icons/ai";
 
 const Nav = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const bg = useColorModeValue("#141416", "#FFFFFF");
+  const TextColor = useColorModeValue("#FFFFFF", "Black");
+
   return (
-    <Flex
-      color="whiteAlpha.900"
-      w="100%"
-      bgColor={useColorMode[("#fffff", "#ffffff")]}
-      justify="space-between"
-      h="50px"
-    >
+    <Flex color={TextColor} w="100%" bg={bg} justify="space-between" h="50px">
       <Flex px="10px" w="45%" h="100%" justify="space-between">
         <Flex w="13%" align="center">
           <Image
@@ -36,8 +34,10 @@ const Nav = () => {
         <Flex fontWeight="thin" w="80%" align="center" justify="space-between">
           <Menu>
             <MenuButton fontWeight="700">Home</MenuButton>
-            <MenuList>
-              <MenuItem></MenuItem>
+            <MenuList bg={bg}>
+              <MenuItem>
+                <Link href="/">Home1</Link>
+              </MenuItem>
               <MenuItem>Open File</MenuItem>
               <MenuItem>Open File</MenuItem>
             </MenuList>

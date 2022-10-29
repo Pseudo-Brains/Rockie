@@ -8,6 +8,7 @@ import {
   Table,
   Thead,
   Tbody,
+  useColorModeValue,
   AspectRatio,
   Tr,
   Th,
@@ -18,8 +19,12 @@ import {
 import { FaArrowUp, FaStar, FaCircle } from "react-icons/fa";
 
 const Home2 = () => {
+  const bg = useColorModeValue("#141416", "#FFFFFF");
+  // const bgSub = useColorModeValue("#17181C", "#FFFFFF");
+  // const InputColor = useColorModeValue("#222630", "#FFFFFF");
+  // const headerColor = useColorModeValue("#FFFFFF", "#23262F");
   return (
-    <Box width="100%" pt="50px" minH="100vh" bgColor="#141416">
+    <Box width="100%" pt="50px" minH="100vh" bg={bg}>
       <Box w="100%" minH="100px" bgColor="#18191d">
         <Box w="80%" minH="100px" color="white" m="auto">
           <Flex bgColor="#" w="100%" justify="space-between" h="700px">
