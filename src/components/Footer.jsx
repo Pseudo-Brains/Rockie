@@ -94,16 +94,14 @@ function Footer() {
           {/* ttt */}
           <VStack
             w={{ base: "100%", md: "50%", lg: "33%" }}
-            p="2"
+            p={{ base: "6", md: "2" }}
             pt="8"
             borderRight={"2px"}
             borderLeft={{ base: "0px", md: "0px", lg: "2px" }}
             borderColor={"#23262F"}
+            alignItems={{ base: "flex-start", md: "center" }}
           >
-            <Flex
-              flexDir={{ base: "column", md: "row" }}
-              justify="space-between"
-            >
+            <Flex flexDir="row" justify="space-between">
               <VStack alignItems={"flex-start"} py="4">
                 <Text
                   color={TextColor}
