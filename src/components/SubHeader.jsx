@@ -16,9 +16,10 @@ function SubHeader(props) {
   const bgSub = useColorModeValue("#17181C", "#FFFFFF");
   const InputColor = useColorModeValue("#222630", "#FFFFFF");
   const headerColor = useColorModeValue("#FFFFFF", "#23262F");
+  const bgFormcolor = useColorModeValue("#18191D", "#F7F7F7");
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
   return (
-    <Box px="8" py="14" bg={bgSub}>
+    <Box px="8" py="14" bg={bgFormcolor}>
       <Flex
         justify={"space-between"}
         alignItems={{ base: "center", md: "flex-start" }}
@@ -34,7 +35,7 @@ function SubHeader(props) {
             _hover={{ bg: "transparent", color: "white" }}
             bg="transparent"
           >
-            <Link to="/register">Home</Link>
+            <Link to="/">Home</Link>
           </Button>
           <Text fontSize={"1xl"} color="#AAAEBD">
             / Buy Crypto
