@@ -20,6 +20,7 @@ import { FaSearch, FaCircle } from "react-icons/fa";
 const BlogList = () => {
   const bg = useColorModeValue("#141416", "#FFFFFF");
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
+  const headerColor = useColorModeValue("#FFFFFF", "#23262F");
   return (
     <Box width="100%" pt="50px" minH="100vh" bg={bg}>
       <Box>
@@ -29,7 +30,7 @@ const BlogList = () => {
         w="80%"
         minH="600px"
         justify="space-between"
-        color={TextColor}
+        color={headerColorader}
         m="auto"
         pt="50px"
         bg={bg}
