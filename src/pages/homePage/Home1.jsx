@@ -26,26 +26,30 @@ import {
   VStack,
   color,
   Wrap,
+  useColorMode,
   WrapItem,
   Avatar,
   AvatarBadge,
   AvatarGroup,
+  useModal,
 } from "@chakra-ui/react";
 import "../../main.css";
 import EarnUp from "../../components/EarnUp";
 function Home1() {
+  const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("#141416", "#FFFFFF");
-  const bgSub = useColorModeValue("#17181C", "#FFFFFF");
-
+  const bgSub = useColorModeValue("#17181C", "#F6F6F6");
+  const bgSubc = useColorModeValue("#17181C", "#E2E2E2");
   const headerColor = useColorModeValue("#FFFFFF", "#23262F");
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
-
+  const bgTr = useColorModeValue("#17181C", "#FFFFFF");
+  const bgTrSub = useColorModeValue("#131315", "#FFFFFF");
   const ShowBg = function (e) {
-    e.target.closest(".btn-show").classList.toggle("btn-show-bg");
+    console.log(e.target);
   };
   return (
     <Box bg={bg}>
-      <Box pt="10" p={{ base: "4" }}>
+      <Box pt="10" p={{ base: "4" }} bg={bgSub} pb="20">
         <Flex
           flexDir={{ base: "column", md: "column", lg: "row" }}
           justify={"center"}
@@ -138,13 +142,15 @@ function Home1() {
       <Box
         flexWrap="wrap"
         m={"auto"}
-        bg={bgSub}
-        py="6"
-        px={"8"}
-        w="94%"
+        bg={bgTr}
+        py="2"
+        mt="-24"
         borderRadius={"2xl"}
+        px={"8"}
+        w="84%"
         border="2px"
-        borderColor={"#22252E"}
+        boxShadow="2xl"
+        borderColor={useColorModeValue("#22252D", "#fff")}
       >
         {/* <Flex > */}
         <Box
@@ -195,11 +201,13 @@ function Home1() {
           </Flex>{" "}
         </Box>
         {/* </Flex> */}
-        <Box pb={"8"}>
+        <Box pb={"4"}>
           <Flex justify={"space-around"} flexWrap="wrap">
             <Box
               w={{ base: "95%", md: "46%", lg: "24%" }}
-              bg="#141416"
+              bg={bgTrSub}
+              mb="2"
+              _hover={{ boxShadow: "xl" }}
               px="12"
               py="8"
               borderRadius={"lg"}
@@ -243,8 +251,10 @@ function Home1() {
             {/* ttt */}
             <Box
               w={{ base: "95%", md: "46%", lg: "24%" }}
-              bg="#141416"
               px="12"
+              bg={bgTrSub}
+              mb="2"
+              _hover={{ boxShadow: "xl" }}
               py="8"
               borderRadius={"lg"}
             >
@@ -286,10 +296,12 @@ function Home1() {
             {/* ttt */}
             <Box
               w={{ base: "95%", md: "46%", lg: "24%" }}
-              bg="#141416"
               px="12"
               py="8"
               borderRadius={"lg"}
+              bg={bgTrSub}
+              mb="2"
+              _hover={{ boxShadow: "xl" }}
             >
               <HStack spacing={"3"}>
                 <Image
@@ -330,10 +342,12 @@ function Home1() {
             {/* ttt */}
             <Box
               w={{ base: "95%", md: "46%", lg: "24%" }}
-              bg="#141416"
               px="12"
               py="8"
               borderRadius={"lg"}
+              bg={bgTrSub}
+              mb="2"
+              _hover={{ boxShadow: "xl" }}
             >
               <HStack spacing={"3"}>
                 <Image
@@ -1206,7 +1220,7 @@ function Home1() {
                 bg={"#222630"}
               >
                 <HStack>
-                  <Text fontSize={"3xl"} fontWeight="bold" color={headerColor}>
+                  <Text fontSize={"3xl"} fontWeight="bold" color={TextColor}>
                     “Great course I really enjoyed it and the course was way
                     easy to learn with very good explanations of the code, I
                     could easily understand and develop applications with the
