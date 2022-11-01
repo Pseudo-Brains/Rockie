@@ -19,24 +19,115 @@ import { FaCircle, FaSearch } from "react-icons/fa";
 const Blogdetail = () => {
   const bg = useColorModeValue("#141416", "#FFFFFF");
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
+  const headerColor = useColorModeValue("#FFFFFF", "#23262F");
 
   return (
-    <Box width="100%" pt="50px" minH="100vh" bg={bg}>
+    <Box as="div" width="100%" pt="0px" minH="100px" bgColor={bg}>
       <Box>
         <SubHeader title={"Blog Detail"} />
       </Box>
       <Flex
+        as="div"
         w="80%"
-        minH="600px"
+        minH="2000px"
         justify="space-between"
-        color={TextColor}
+        color={headerColor}
         m="auto"
         pt="100px"
-        // bgColor="blue"
         bg={bg}
       >
-        <Box w="70%">
-          <Text></Text>
+        <Box w="65%" bg={bg}>
+          <Heading fontSize="45px">
+            Virtual Land In The Metaverse Is Selling For Millions Of Dollars
+          </Heading>
+          <Flex w="100%" align="center" py="30px" justify="space-between">
+            <Box
+              w="fit-content"
+              px="20px"
+              py="5px"
+              borderRadius="5px"
+              my="10px"
+              bgColor="#5184ff"
+            >
+              Learn & Earn
+            </Box>
+            <Flex w="15%" justify="space-between" align="center">
+              <Icon as={FaCircle} />
+              <Text>Floyd Buckridge</Text>
+            </Flex>
+          </Flex>
+          <Flex
+            w="100%"
+            // align="center"
+            minh="40px"
+            my="10px"
+            direction="column"
+          >
+            <Heading py="10px">What is the Metaverse?</Heading>
+            <Text pb="20px" fontSize="20px">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
+              sed nec, vestibulum odio diam amet. In massa auctor integer est.
+              Morbi viverra neque sagittis varius. Ornare in nibh dui ornare
+              mattis vel. Volutpat aenean enim sit cras egestas diam volutpat
+              integer est. Ornare in odio lorem pharetra tempor, neque sit.
+              Lacus fermentum urna tellus vulputate aliquam nullam amet,
+              posuere. Magna ligula et ut sagittis interdum duis. Ut sed
+              tristique tempor nibh bibendum accumsan, fringilla. Eget rhoncus
+              in hendrerit nascetur odio consectetur enim tristique. In
+              porttitor.
+            </Text>
+            <Image
+              borderRadius="10px"
+              h="90%"
+              objectFit="cover"
+              src="/image/vidddd.jpg"
+              alt="Homebanner"
+            />
+          </Flex>{" "}
+          <Flex w="100%" minh="40px" my="10px" direction="column">
+            <Heading py="10px">What is the Metaverse?</Heading>
+            <Text pb="20px" fontSize="20px">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
+              sed nec, vestibulum odio diam amet. In massa auctor integer est.
+              Morbi viverra neque sagittis varius. Ornare in nibh dui ornare
+              mattis vel. Volutpat aenean enim sit cras egestas diam volutpat
+              integer est. Ornare in odio lorem pharetra tempor, neque sit.
+              Lacus fermentum urna tellus vulputate aliquam nullam amet,
+              posuere. Magna ligula et ut sagittis interdum duis. Ut sed
+              tristique tempor nibh bibendum accumsan, fringilla. Eget rhoncus
+              in hendrerit nascetur odio consectetur enim tristique. In
+              porttitor.
+            </Text>
+            <Image
+              borderRadius="10px"
+              h="90%"
+              objectFit="cover"
+              src="/image/vidddd.jpg"
+              alt="Homebanner"
+            />
+          </Flex>
+          <Flex w="100%" minh="40px" my="10px" direction="column">
+            <Heading py="10px">What is the Metaverse?</Heading>
+            <Text pb="20px" fontSize="20px">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
+              sed nec, vestibulum odio diam amet. In massa auctor integer est.
+              Morbi viverra neque sagittis varius. Ornare in nibh dui ornare
+              mattis vel. Volutpat aenean enim sit cras egestas diam volutpat
+              integer est. Ornare in odio lorem pharetra tempor, neque sit.
+              Lacus fermentum urna tellus vulputate aliquam nullam amet,
+              posuere. Magna ligula et ut sagittis interdum duis. Ut sed
+              tristique tempor nibh bibendum accumsan, fringilla. Eget rhoncus
+              in hendrerit nascetur odio consectetur enim tristique. In
+              porttitor.
+            </Text>
+            <Image
+              borderRadius="10px"
+              h="90%"
+              objectFit="cover"
+              src="/image/vidddd.jpg"
+              alt="Homebanner"
+            />
+          </Flex>
         </Box>
         <Flex w="28%" direction="column">
           <InputGroup w="80%" m="10px">
@@ -130,7 +221,6 @@ const Blogdetail = () => {
               </Box>
             </Flex>
           </Box>
-          {/* <Box> */}
           <Heading py="15px" fontSize="25px">
             Popular Tags
           </Heading>
@@ -221,6 +311,7 @@ const Blogdetail = () => {
           </Flex>
         </Flex>
       </Flex>
+      <EarnUp />
     </Box>
   );
 };
