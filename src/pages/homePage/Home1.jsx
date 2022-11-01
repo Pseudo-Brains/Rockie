@@ -26,26 +26,30 @@ import {
   VStack,
   color,
   Wrap,
+  useColorMode,
   WrapItem,
   Avatar,
   AvatarBadge,
   AvatarGroup,
+  useModal,
 } from "@chakra-ui/react";
 import "../../main.css";
 import EarnUp from "../../components/EarnUp";
 function Home1() {
+  const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("#141416", "#FFFFFF");
-  const bgSub = useColorModeValue("#17181C", "#FFFFFF");
-
+  const bgSub = useColorModeValue("#17181C", "#F6F6F6");
+  const bgSubc = useColorModeValue("#17181C", "#E2E2E2");
   const headerColor = useColorModeValue("#FFFFFF", "#23262F");
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
-
+  const bgTr = useColorModeValue("#17181C", "#FFFFFF");
+  const bgTrSub = useColorModeValue("#131315", "#FFFFFF");
   const ShowBg = function (e) {
-    e.target.closest(".btn-show").classList.toggle("btn-show-bg");
+    console.log(e.target);
   };
   return (
     <Box bg={bg}>
-      <Box pt="10">
+      <Box pt="10" p={{ base: "4" }} bg={bgSub} pb="20">
         <Flex
           flexDir={{ base: "column", md: "column", lg: "row" }}
           justify={"center"}
@@ -138,13 +142,15 @@ function Home1() {
       <Box
         flexWrap="wrap"
         m={"auto"}
-        bg={bgSub}
-        py="6"
-        px={"8"}
-        w="94%"
+        bg={bgTr}
+        py="2"
+        mt="-24"
         borderRadius={"2xl"}
+        px={"8"}
+        w="84%"
         border="2px"
-        borderColor={"#22252E"}
+        boxShadow="2xl"
+        borderColor={useColorModeValue("#22252D", "#fff")}
       >
         {/* <Flex > */}
         <Box
@@ -195,11 +201,13 @@ function Home1() {
           </Flex>{" "}
         </Box>
         {/* </Flex> */}
-        <Box pb={"8"}>
+        <Box pb={"4"}>
           <Flex justify={"space-around"} flexWrap="wrap">
             <Box
               w={{ base: "95%", md: "46%", lg: "24%" }}
-              bg="#141416"
+              bg={bgTrSub}
+              mb="2"
+              _hover={{ boxShadow: "xl" }}
               px="12"
               py="8"
               borderRadius={"lg"}
@@ -243,8 +251,10 @@ function Home1() {
             {/* ttt */}
             <Box
               w={{ base: "95%", md: "46%", lg: "24%" }}
-              bg="#141416"
               px="12"
+              bg={bgTrSub}
+              mb="2"
+              _hover={{ boxShadow: "xl" }}
               py="8"
               borderRadius={"lg"}
             >
@@ -286,10 +296,12 @@ function Home1() {
             {/* ttt */}
             <Box
               w={{ base: "95%", md: "46%", lg: "24%" }}
-              bg="#141416"
               px="12"
               py="8"
               borderRadius={"lg"}
+              bg={bgTrSub}
+              mb="2"
+              _hover={{ boxShadow: "xl" }}
             >
               <HStack spacing={"3"}>
                 <Image
@@ -330,10 +342,12 @@ function Home1() {
             {/* ttt */}
             <Box
               w={{ base: "95%", md: "46%", lg: "24%" }}
-              bg="#141416"
               px="12"
               py="8"
               borderRadius={"lg"}
+              bg={bgTrSub}
+              mb="2"
+              _hover={{ boxShadow: "xl" }}
             >
               <HStack spacing={"3"}>
                 <Image
@@ -819,7 +833,7 @@ function Home1() {
           </Flex>
         </Box>
         <Box>
-          <Flex justify={"space-evenly"} mt="8">
+          <Flex justify={"space-evenly"} flexWrap="wrap" mt="8">
             <VStack
               w={{ base: "90%", md: "90%", lg: "23%" }}
               // h={{ base: "200px", md: "250px", lg: "300px" }}
@@ -933,8 +947,14 @@ function Home1() {
       </Box>
       {/* end of box 4 */}
       <Box bg={bg} py="10" px="4">
-        <Flex justify={"center"}>
-          <Box w={"60%"} position="relative" mt={"20"}>
+        <Flex justify={"center"} flexWrap="wrap">
+          <Box
+            w={{ base: "100%", md: "100%", lg: "60%" }}
+            position="relative"
+            mt={"20"}
+            // p={{ base: "2", md: "2" }}
+            textAlign="center"
+          >
             <Image
               boxSize={"10%"}
               objectFit="contain"
@@ -982,13 +1002,17 @@ function Home1() {
               left={"180px"}
             />
             <Image
-              boxSize={"98%"}
+              boxSize={{ base: "88%", md: "88%", lg: "90%" }}
               objectFit="contain"
               src="/image/pcandcoin.png"
               alt="pc"
             />
           </Box>
-          <Box w={"40%"} pr="8">
+          <Box
+            w={{ base: "100%", md: "100%", lg: "40%" }}
+            p={{ base: "2", md: "2" }}
+            pr={{ lg: "8" }}
+          >
             <VStack alignItems={"flex-start"}>
               <Heading fontSize={"6xl"} mt="-4" mb={"4"} color={headerColor}>
                 What Is Rockie
@@ -1049,7 +1073,7 @@ function Home1() {
           px="3"
           py="2"
         >
-          <Box w={{ base: "100%", md: "50%", lg: "50%" }}>
+          <Box w={{ base: "100%", md: "100%", lg: "50%" }}>
             <VStack mb="38px" rowGap={"30px"}>
               {" "}
               <Heading fontSize={"6xl"} color={headerColor} pr="6">
@@ -1110,7 +1134,7 @@ function Home1() {
               />
             </HStack>
           </Box>
-          <Box w={{ base: "100%", md: "50%", lg: "50%" }} position="relative">
+          <Box w={{ base: "100%", md: "100%", lg: "50%" }} position="relative">
             <Image
               boxSize="90%"
               objectFit="cover"
@@ -1122,16 +1146,19 @@ function Home1() {
       </Box>
       {/* end of 6 */}
 
-      <Box p="8">
+      <Box p="8" w="100%">
         <Flex
           flexDir={{ base: "column", md: "column", lg: "row" }}
           justify={"space-between"}
           flexWrap="wrap"
         >
-          <Box w="40%" pr={{ base: "2", md: "2", lg: "16" }}>
+          <Box
+            w={{ base: "100%", md: "100%", lg: "40%" }}
+            pr={{ base: "2", md: "2", lg: "16" }}
+          >
             <HStack>
               <Text fontSize={"6xl"} lineHeight="60px" color={headerColor}>
-                Our Customers <br /> Love What We Do
+                Our Customers Love What We Do
               </Text>
             </HStack>
             <HStack my="4">
@@ -1146,7 +1173,6 @@ function Home1() {
               </Text>
             </HStack>
             <HStack>
-              {" "}
               <Wrap>
                 <WrapItem>
                   <Avatar name="Kent Dodds" src="https://bit.ly/kent-c-dodds" />
@@ -1183,9 +1209,8 @@ function Home1() {
               </Text>
             </HStack>
           </Box>
-          <Box w="50%" p="8">
+          <Box w={{ base: "100%", md: "100%", lg: "50%" }} p="8">
             <Flex>
-              {" "}
               <Box
                 borderLeft={"8px"}
                 borderLeftRadius="lg"
@@ -1195,9 +1220,7 @@ function Home1() {
                 bg={"#222630"}
               >
                 <HStack>
-                  {" "}
-                  <Text fontSize={"3xl"} fontWeight="bold" color={headerColor}>
-                    {" "}
+                  <Text fontSize={"3xl"} fontWeight="bold" color={TextColor}>
                     “Great course I really enjoyed it and the course was way
                     easy to learn with very good explanations of the code, I
                     could easily understand and develop applications with the
@@ -1213,7 +1236,6 @@ function Home1() {
                     />
                   </VStack>
                   <VStack mt="2">
-                    {" "}
                     <Text
                       fontSize={"2xl"}
                       fontWeight="bold"
@@ -1221,16 +1243,13 @@ function Home1() {
                     >
                       Johnny Andro
                     </Text>
-                    ,{" "}
                     <Text fontSize={"lg"} color={headerColor}>
                       Director Company
                     </Text>
                   </VStack>
                   <Spacer />
                   <VStack>
-                    {" "}
                     <Image
-                      // boxSize="100px"
                       objectFit="cover"
                       src="/image/comentLogo.png"
                       alt="Dan Abramov"
@@ -1243,33 +1262,6 @@ function Home1() {
         </Flex>
       </Box>
       {/* end of 7 */}
-      {/* <Box bg={bgSub}> 
-        <Stack py="4" px="8" direction={["column", "row"]}>
-          <VStack alignItems={"flex-start"}>
-            <Heading color={headerColor} textAlign="left" fontSize="4xl">
-              Earn up to $25 worth of crypto
-            </Heading>
-            <Text textAlign="left" color={headerColor} fontSize="1.2rem">
-              Discover How Specific Cryptocurrencies Work — And Get A Bit Of
-              Each Crypto To Try Out For Yourself.
-            </Text>
-          </VStack>
-          <Spacer />
-          <VStack alignItems={"center"} justify="center" py="8">
-            <Button
-              borderRadius={"full"}
-              py="8"
-              px="10"
-              bg="#E4DFFD"
-              color={"black"}
-              _hover={{ bg: "#23262F", color: "white" }}
-              fontSize="2xl"
-            >
-              Create Account
-            </Button>
-          </VStack>
-        </Stack>
-      </Box> */}
       <EarnUp />
     </Box>
   );

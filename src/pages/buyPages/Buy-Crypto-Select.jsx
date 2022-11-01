@@ -28,6 +28,7 @@ function BuyCryptoSelect() {
   const bg = useColorModeValue("#141416", "#FFFFFF");
   const bgSub = useColorModeValue("#17181C", "#FFFFFF");
   const InputColor = useColorModeValue("#222630", "#FFFFFF");
+  const bgFormcolor = useColorModeValue("#18191D", "#F7F7F7");
   const headerColor = useColorModeValue("#FFFFFF", "#23262F");
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
   return (
@@ -51,7 +52,7 @@ function BuyCryptoSelect() {
               fontSize={"1xl"}
               py="25px"
               pr="40"
-              color={"white"}
+              color={TextColor}
             >
               Overview
             </Button>
@@ -62,7 +63,7 @@ function BuyCryptoSelect() {
               fontSize={"1xl"}
               py="25px"
               pr="40"
-              color={"white"}
+              color={TextColor}
             >
               Buy Crypto
             </Button>
@@ -73,14 +74,14 @@ function BuyCryptoSelect() {
               fontSize={"1xl"}
               py="25px"
               pr="40"
-              color={"white"}
+              color={TextColor}
             >
               Sell Crypto
             </Button>
           </Box>
 
           <Box
-            w={{ base: "100%", md: "100%", lg: "75%" }}
+            w={{ base: "100%", md: "100%", lg: "70%" }}
             alignItems={"center"}
           >
             <Flex justify={"center"} alignItems="center" flexDir="column">
@@ -98,7 +99,7 @@ function BuyCryptoSelect() {
                   Select currency
                 </Text>{" "}
                 <Image
-                  src="/image/dotArrow.png"
+                  src="/image/whitedash.png"
                   w={{ base: "1rem", md: "1.3rem", lg: "8.5rem" }}
                   alt="Dot arrow"
                 />
@@ -114,15 +115,18 @@ function BuyCryptoSelect() {
                   Important Notes
                 </Text>
                 <Image
-                  src="/image/dotArrow.png"
+                  src="/image/whitedash.png"
                   w={{ base: "1rem", md: "1.3rem", lg: "8.5rem" }}
                   alt="Dot arrow"
+                />
+                <Icon
+                  as={MdRadioButtonChecked}
+                  fontSize={{ base: "sm", md: "md", lg: "lg" }}
                 />
                 <Text
                   fontSize={{ base: "sm", md: "md", lg: "lg" }}
                   color={headerColor}
                 >
-                  {" "}
                   Payment Details
                 </Text>
               </HStack>
@@ -134,7 +138,7 @@ function BuyCryptoSelect() {
                   pb="6"
                   mt="8"
                   borderRadius={"2xl"}
-                  bg={bgSub}
+                  bg={bgFormcolor}
                 >
                   <VStack alignItems={"flex-start"} rowGap="50px">
                     <Text

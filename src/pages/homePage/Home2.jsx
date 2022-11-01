@@ -8,6 +8,7 @@ import {
   Table,
   Thead,
   Tbody,
+  useColorModeValue,
   AspectRatio,
   Tr,
   Th,
@@ -18,10 +19,17 @@ import {
 import { FaArrowUp, FaStar, FaCircle } from "react-icons/fa";
 
 const Home2 = () => {
+  const bg = useColorModeValue("#141416", "#FFFFFF");
+  const bgx = useColorModeValue("#141416", "#f6f6f6");
+  const bgSub = useColorModeValue("#17181C", "#f6f6f6");
+  const bgSubc = useColorModeValue("#17181C", "#E2E2E2");
+  const bgSubcc = useColorModeValue("#17181C", "#ffffff");
+
+  const headerColor = useColorModeValue("#FFFFFF", "#23262F");
   return (
-    <Box width="100%" pt="50px" minH="100vh" bgColor="#141416">
-      <Box w="100%" minH="100px" bgColor="#18191d">
-        <Box w="80%" minH="100px" color="white" m="auto">
+    <Box width="100%" pt="0px" minH="100vh" bg={bg}>
+      <Box w="100%" minH="100px" bg={bgx}>
+        <Box w="80%" minH="100px" color={headerColor} m="auto">
           <Flex bgColor="#" w="100%" justify="space-between" h="700px">
             <Box h="90%" w="45%" pt="30px">
               <Heading py="30px" fontSize="6xl" lineHeight="75px">
@@ -56,10 +64,10 @@ const Home2 = () => {
         minH="250px"
         mt="-100px"
         mx="auto"
+        px="20px"
         borderRadius="30px"
-        bg="#18191d"
+        bg={bgSubcc}
         w="75%"
-        border="1px solid"
         align="center"
         justify="space-around"
       >
@@ -69,6 +77,7 @@ const Home2 = () => {
           direction="column"
           width="24%"
           h="190px"
+          bg={bgSubc}
         >
           <Flex justify="space-between" w="90%">
             <Flex
@@ -82,7 +91,7 @@ const Home2 = () => {
                 src="/image/Bitcoin.png"
                 alt="Homebanner"
               />
-              <Text p="13px" fontWeight="bold" color="white">
+              <Text p="13px" fontWeight="bold" color={headerColor}>
                 Bitcoin
               </Text>
             </Flex>
@@ -110,10 +119,10 @@ const Home2 = () => {
             </Flex>
           </Flex>
           <Flex p="13px" justify="space-between" w="80%">
-            <Heading fontSize="22px" fontWeight="bold" color="white">
+            <Heading fontSize="22px" fontWeight="bold" color={headerColor}>
               USD 53,260.20
             </Heading>
-            <Text fontSize="14px" color="white">
+            <Text fontSize="14px" color={headerColor}>
               BTC
             </Text>
           </Flex>
@@ -124,6 +133,7 @@ const Home2 = () => {
           direction="column"
           width="24%"
           h="190px"
+          bg={bgSubc}
         >
           <Flex justify="space-between" w="90%">
             <Flex
@@ -137,7 +147,7 @@ const Home2 = () => {
                 src="/image/Ether7.png"
                 alt="Homebanner"
               />
-              <Text p="13px" fontWeight="bold" color="white">
+              <Text p="13px" fontWeight="bold" color={headerColor}>
                 Etherium
               </Text>
             </Flex>
@@ -165,10 +175,10 @@ const Home2 = () => {
             </Flex>
           </Flex>
           <Flex p="13px" justify="space-between" w="80%">
-            <Heading fontSize="22px" fontWeight="bold" color="white">
+            <Heading fontSize="22px" fontWeight="bold" color={headerColor}>
               USD 53,260.20
             </Heading>
-            <Text fontSize="14px" color="white">
+            <Text fontSize="14px" color={headerColor}>
               ETH
             </Text>
           </Flex>
@@ -179,6 +189,7 @@ const Home2 = () => {
           direction="column"
           width="24%"
           h="190px"
+          bg={bgSubc}
         >
           <Flex justify="space-between" w="90%">
             <Flex
@@ -192,7 +203,7 @@ const Home2 = () => {
                 src="/image/Teter.png"
                 alt="Homebanner"
               />
-              <Text p="13px" fontWeight="bold" color="white">
+              <Text p="13px" fontWeight="bold" color={headerColor}>
                 Teter
               </Text>
             </Flex>
@@ -220,10 +231,10 @@ const Home2 = () => {
             </Flex>
           </Flex>
           <Flex p="13px" justify="space-between" w="80%">
-            <Heading fontSize="22px" fontWeight="bold" color="white">
+            <Heading fontSize="22px" fontWeight="bold" color={headerColor}>
               USD 53,260.20
             </Heading>
-            <Text fontSize="14px" color="white">
+            <Text fontSize="14px" color={headerColor}>
               USDT
             </Text>
           </Flex>
@@ -234,6 +245,7 @@ const Home2 = () => {
           direction="column"
           width="24%"
           h="190px"
+          bg={bgSubc}
         >
           <Flex justify="space-between" w="90%">
             <Flex
@@ -247,7 +259,7 @@ const Home2 = () => {
                 src="/image/BNByy.png"
                 alt="Homebanner"
               />
-              <Text p="13px" fontWeight="bold" color="white">
+              <Text p="13px" fontWeight="bold" color={headerColor}>
                 BNB
               </Text>
             </Flex>
@@ -275,10 +287,10 @@ const Home2 = () => {
             </Flex>
           </Flex>
           <Flex p="13px" justify="space-between" w="80%">
-            <Heading fontSize="22px" fontWeight="bold" color="white">
+            <Heading fontSize="22px" fontWeight="bold" color={headerColor}>
               USD 53,260.20
             </Heading>
-            <Text fontSize="14px" color="white">
+            <Text fontSize="14px" color={headerColor}>
               BNB
             </Text>
           </Flex>
@@ -297,8 +309,8 @@ const Home2 = () => {
               <Flex
                 align="center"
                 direction="column"
-                color="white"
-                bgColor="#18191d"
+                color={headerColor}
+                bg={bgSub}
                 pt="35px"
                 w="100%"
                 h="46%"
@@ -321,8 +333,8 @@ const Home2 = () => {
               <Flex
                 align="center"
                 direction="column"
-                color="white"
-                bgColor="#18191d"
+                color={headerColor}
+                bg={bgSub}
                 pt="35px"
                 w="100%"
                 h="47%"
@@ -347,8 +359,8 @@ const Home2 = () => {
               <Flex
                 align="center"
                 direction="column"
-                color="white"
-                bgColor="#18191d"
+                color={headerColor}
+                bg={bgSub}
                 pt="35px"
                 w="90%"
                 h="50%"
@@ -372,7 +384,7 @@ const Home2 = () => {
           </Flex>
           <Flex
             w="48%"
-            color="white"
+            color={headerColor}
             align="center"
             // border="1px solid"
             minH="600px"
@@ -398,7 +410,7 @@ const Home2 = () => {
           </Flex>
         </Flex>
       </Box>
-      <Box w="80%" m="30px auto" minH="500px" bgColor="#18191d">
+      <Box w="80%" m="30px auto" minH="500px" bgColor={bg}>
         <Flex color="white" justify="space-between" w="100%" align="center">
           <Heading fontSize="42px">Market Update</Heading>
           <Text fontSize="20px">
@@ -422,7 +434,7 @@ const Home2 = () => {
                 <Th></Th>
               </Tr>
             </Thead>
-            <Tbody color="white">
+            <Tbody color={headerColor}>
               <Tr _hover="red">
                 <Td>
                   <Icon as={FaStar} />
@@ -820,7 +832,7 @@ const Home2 = () => {
               </Flex>
             </Flex>
           </Flex>
-          <Box width="50%" color="white">
+          <Box width="50%" color={headerColor}>
             <Heading py="13px">
               We Are The Most Trusted Cryptocurrency Platform.
             </Heading>
@@ -832,7 +844,7 @@ const Home2 = () => {
               direction="column"
               justify="space-between"
               h="60%"
-              color="white"
+              color={headerColor}
             >
               <Flex align="center" w="70%" h="22%" justify="space-between">
                 <Flex
@@ -913,7 +925,7 @@ const Home2 = () => {
           </Box>
         </Flex>
       </Box>
-      <Box w="80%" m="30px auto" color="white">
+      <Box w="80%" m="30px auto" color={headerColor}>
         <Flex align="center" w="100%" direction="column">
           <Heading pt="20px">How It Works</Heading>
           <Text py="20px" w="30%" textAlign="center" fontSize="22px">
@@ -1035,7 +1047,7 @@ const Home2 = () => {
           </Flex>
         </Flex>
       </Box>
-      <Box w="80%" m="30px auto" color="white">
+      <Box w="80%" m="30px auto" color={headerColor}>
         <Flex align="center" w="100%" direction="column">
           <Heading pt="20px">Learn And Earn</Heading>
           <Text py="20px" w="30%" textAlign="center" fontSize="22px">
@@ -1064,7 +1076,6 @@ const Home2 = () => {
                 backgroundSize="cover"
                 backgroundRepeat="no-repeat"
                 w="100%"
-                bgColor="pink"
               >
                 <AspectRatio w="50px" top="20" m="auto" ratio={1}>
                   <iframe
