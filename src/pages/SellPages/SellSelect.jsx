@@ -295,6 +295,22 @@ function SellSelect() {
                       </Td>
                       <Td color={"green.300"}>+6.04%</Td>
                     </Tr>
+                    <Tr>
+                      <Td>2</Td>
+                      <Td pl="0">
+                        <HStack>
+                          <Image w="90%" src="/image/BtC.png" />
+                          <VStack alignItems={"flex-start"}>
+                            <Text color="#212529">USDT</Text>
+                            <Text>Tether USD</Text>
+                          </VStack>
+                        </HStack>
+                      </Td>
+                      <Td isNumeric color="#212529">
+                        $2,605.95
+                      </Td>
+                      <Td color={"red.300"}>+6.04%</Td>
+                    </Tr>
                   </Tbody>
                   {/* <Tfoot></Tfoot> */}
                 </Table>
