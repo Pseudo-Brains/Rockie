@@ -29,7 +29,7 @@ import { refreshicon } from "../../../public/Icons/icons";
 import EarnUp from "../../components/EarnUp";
 import SubHeader from "../../components/SubHeader";
 
-function BuyCryptoConfirm() {
+function SellCryptoConfirm() {
   const bg = useColorModeValue("#141416", "#FFFFFF");
   const bgSub = useColorModeValue("#17181C", "#FFFFFF");
   const InputColor = useColorModeValue("#222630", "#FFFFFF");
@@ -38,7 +38,7 @@ function BuyCryptoConfirm() {
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
   return (
     <Box display={"flex"} flexDir="column" alignItems={"center"} bg={bg}>
-      <SubHeader title={"Buy Crypto"} />
+      <SubHeader title={"Sell Crypto"} />
       <Box maxW={"1450px"} w="100%" pt="20" pb="28">
         <Flex>
           <Box
@@ -86,12 +86,32 @@ function BuyCryptoConfirm() {
           </Box>
 
           <Box
-            w={{ base: "100%", md: "100%", lg: "70%" }}
+            w={{ base: "100%", md: "100%", lg: "72%" }}
             alignItems={"center"}
           >
-            <Flex justify={"center"} alignItems="center" flexDir="column">
-              <HStack w="90%" alignItems={"center"} ml="12">
+            <Flex justify={"center"} alignItems="flex-end" flexDir="column">
+              <HStack
+                w={{ base: "90%", md: "86%", lg: "95%" }}
+                justify="space-between"
+                ml={{ base: "2", md: "2", lg: "2" }}
+              >
                 {" "}
+                <Icon
+                  as={FaCheckCircle}
+                  fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  color="green.400"
+                />{" "}
+                <Text
+                  fontSize={{ base: "sm", md: "1xl", lg: "md" }}
+                  color={headerColor}
+                >
+                  Select crypto
+                </Text>{" "}
+                <Image
+                  src="/image/greenline.png"
+                  w={{ base: "1rem", md: "1.3rem", lg: "4rem" }}
+                  alt="Dot arrow"
+                />
                 <Icon
                   as={FaCheckCircle}
                   fontSize={{ base: "sm", md: "md", lg: "lg" }}
@@ -101,28 +121,28 @@ function BuyCryptoConfirm() {
                   fontSize={{ base: "sm", md: "md", lg: "lg" }}
                   color={headerColor}
                 >
-                  Select currency
-                </Text>{" "}
+                  {" "}
+                  Confirm Payment
+                </Text>
                 <Image
                   src="/image/greenline.png"
-                  w={{ base: "1rem", md: "1.3rem", lg: "8.5rem" }}
+                  w={{ base: "1rem", md: "1.3rem", lg: "5.5rem" }}
                   alt="Dot arrow"
                 />
                 <Icon
-                  color="green.400"
                   as={MdRadioButtonChecked}
                   fontSize={{ base: "sm", md: "md", lg: "lg" }}
-                />{" "}
+                  color="green.400"
+                />
                 <Text
                   fontSize={{ base: "sm", md: "md", lg: "lg" }}
                   color={headerColor}
                 >
-                  {" "}
-                  Important Notes
+                  Payment Details
                 </Text>
                 <Image
                   src="/image/whitedash.png"
-                  w={{ base: "1rem", md: "1.3rem", lg: "8.5rem" }}
+                  w={{ base: "1rem", md: "1.3rem", lg: "5.5rem" }}
                   alt="Dot arrow"
                 />
                 <Icon
@@ -136,7 +156,7 @@ function BuyCryptoConfirm() {
                   Payment Details
                 </Text>
               </HStack>
-              <VStack w={{ base: "90%", md: "86%", lg: "80%" }}>
+              <VStack w={{ base: "90%", md: "86%", lg: "95%" }}>
                 <FormControl
                   isRequired
                   px="10"
@@ -215,7 +235,7 @@ function BuyCryptoConfirm() {
                 </FormControl>
               </VStack>
 
-              <VStack w={{ base: "90%", md: "86%", lg: "80%" }}>
+              <VStack w={{ base: "90%", md: "86%", lg: "95%" }}>
                 <FormControl
                   isRequired
                   px="10"
@@ -397,4 +417,4 @@ function BuyCryptoConfirm() {
   );
 }
 
-export default BuyCryptoConfirm;
+export default SellCryptoConfirm;

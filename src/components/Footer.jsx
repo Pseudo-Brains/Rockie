@@ -28,7 +28,7 @@ function Footer() {
 
   return (
     <Box w={"100%"} bg={bg} px="2">
-      <Box>
+      <Box maxW={"1450px"} w="100%" m="auto">
         <Flex
           justify={"center"}
           flexDir={{ base: "column", md: "row", lg: "row" }}
