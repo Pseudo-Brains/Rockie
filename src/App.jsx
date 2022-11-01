@@ -15,7 +15,6 @@ import SellSelect from "./pages/SellPages/SellSelect";
 import SellCryptoAmount from "./pages/SellPages/Sell-Crypto-Amount";
 import SellCryptoDetails from "./pages/SellPages/Sell-Crypto-Details";
 import SellCryptoConfirm from "./pages/SellPages/Sell-Crypto-Confirm";
-import Home3 from "./pages/homePage/Home3";
 function App() {
   return (
     <BrowserRouter>
@@ -23,7 +22,6 @@ function App() {
       <Routes>
         <Route index element={<Home1 />} />
         <Route path="/home2" element={<Home2 />} />
-        <Route path="/home3" element={<Home3 />} />
         <Route path="/blogdefault" element={<Blogdefault />} />
         <Route path="/blogdefaultV1" element={<BlogGridV1 />} />
         <Route path="/blogdefaultV2" element={<BlogGridV2 />} />

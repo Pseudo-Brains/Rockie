@@ -32,6 +32,7 @@ import {
   AvatarBadge,
   AvatarGroup,
   useModal,
+  chakra,
 } from "@chakra-ui/react";
 import "../../main.css";
 import EarnUp from "../../components/EarnUp";
@@ -44,8 +45,21 @@ function Home1() {
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
   const bgTr = useColorModeValue("#17181C", "#FFFFFF");
   const bgTrSub = useColorModeValue("#131315", "#FFFFFF");
+  // Function
   const ShowBg = function (e) {
-    console.log(e.target);
+    let check = e.target.classList.contains("btn-show");
+    if (check) {
+      let listOfBtn = e.target.parentElement.childNodes;
+      console.log(listOfBtn);
+      listOfBtn.forEach((item) => {
+        if (item.classList.contains("btn-active")) {
+          item.style.backgroundColor = "transparent";
+        }
+      });
+      let clicked = e.target;
+      clicked.classList.add("btn-active");
+      clicked.style.backgroundColor = "blue";
+    }
   };
   return (
     <Box bg={bg} w="100%">
@@ -82,6 +96,7 @@ function Home1() {
                 fontSize={"20"}
                 fontWeight="bold"
                 mt="12"
+                _hover={{ bg: "blue" }}
                 py="6"
                 px="10"
                 borderRadius={"full"}
@@ -162,7 +177,6 @@ function Home1() {
       >
         {/* <Flex > */}
         <Box
-          onChange={() => ShowBg()}
           // m="auto"
           p="3"
           mb="6"
@@ -170,39 +184,79 @@ function Home1() {
           borderBottom="2px"
           borderBottomColor={"#22252E"}
         >
-          <Flex color={TextColor} fontSize="2xl">
+          <Flex onClick={ShowBg} color={TextColor} justify="" fontSize="2xl">
             <Button color={TextColor} bg="transparent" className="btn-show">
               {" "}
               Crypto
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              bg="transparent"
+              mx="2"
+              className="btn-show"
+            >
               {" "}
               DeFi
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              mx="2"
+              bg="transparent"
+              className="btn-show"
+            >
               {" "}
               BSC
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              mx="2"
+              bg="transparent"
+              className="btn-show"
+            >
               {" "}
               NFT
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              _hover={{ bg: "transparent" }}
+              bg="transparent"
+              className="btn-show"
+            >
               Metaverse
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              mx="2"
+              bg="transparent"
+              className="btn-show"
+            >
               {" "}
               Polkadot
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              mx="2"
+              bg="transparent"
+              className="btn-show"
+            >
               {" "}
               Solana
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              mx="2"
+              bg="transparent"
+              className="btn-show"
+            >
               {" "}
               Opensea
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              mx="2"
+              bg="transparent"
+              className="btn-show"
+            >
               {" "}
               Makersplace
             </Button>
@@ -411,7 +465,7 @@ function Home1() {
             See All Coins
           </Text>{" "}
         </HStack>
-        <HStack spacing={"8"} ml="8" h={"80px"}>
+        <HStack spacing={"8"} ml="8" h={"80px"} onClick={ShowBg}>
           {" "}
           <Button
             color={TextColor}
@@ -436,6 +490,7 @@ function Home1() {
           <Button
             color={TextColor}
             bg="transparent"
+            className="btn-show"
             fontWeight={"bold"}
             fontSize="20"
           >
@@ -470,7 +525,7 @@ function Home1() {
           </Button>{" "}
           <Button
             color={TextColor}
-            className="btn-show"
+            className="btn-show "
             fontWeight={"bold"}
             fontSize="20"
             bg="transparent"
