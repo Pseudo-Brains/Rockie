@@ -24,7 +24,7 @@ import { Link } from "react-router-dom";
 import { refreshicon } from "../../../public/Icons/icons";
 import EarnUp from "../../components/EarnUp";
 import SubHeader from "../../components/SubHeader";
-function BuyCryptoSelect() {
+function SellCryptoAmount() {
   const bg = useColorModeValue("#141416", "#FFFFFF");
   const bgSub = useColorModeValue("#17181C", "#FFFFFF");
   const InputColor = useColorModeValue("#222630", "#FFFFFF");
@@ -33,7 +33,7 @@ function BuyCryptoSelect() {
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
   return (
     <Box display={"flex"} flexDir="column" alignItems={"center"} bg={bg}>
-      <SubHeader title={"Buy Crypto"} />
+      <SubHeader title={"Sell Crypto"} />
       <Box py="20" maxW={"1450px"} w="100%" bg={bg}>
         <Flex>
           <Box
@@ -84,9 +84,29 @@ function BuyCryptoSelect() {
             w={{ base: "100%", md: "100%", lg: "70%" }}
             alignItems={"center"}
           >
-            <Flex justify={"center"} alignItems="center" flexDir="column">
-              <HStack w="90%" alignItems={"center"} ml="12">
+            <Flex justify={"center"} alignItems="flex-end" flexDir="column">
+              <HStack
+                w={{ base: "90%", md: "86%", lg: "95%" }}
+                justify="space-between"
+                ml={{ base: "2", md: "2", lg: "2" }}
+              >
                 {" "}
+                <Icon
+                  as={MdRadioButtonChecked}
+                  fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  color="green.400"
+                />{" "}
+                <Text
+                  fontSize={{ base: "sm", md: "1xl", lg: "md" }}
+                  color={headerColor}
+                >
+                  Select crypto
+                </Text>{" "}
+                <Image
+                  src="/image/whitedash.png"
+                  w={{ base: "1rem", md: "1.3rem", lg: "4rem" }}
+                  alt="Dot arrow"
+                />
                 <Icon
                   as={MdRadioButtonChecked}
                   fontSize={{ base: "sm", md: "md", lg: "lg" }}
@@ -96,27 +116,27 @@ function BuyCryptoSelect() {
                   fontSize={{ base: "sm", md: "md", lg: "lg" }}
                   color={headerColor}
                 >
-                  Select currency
-                </Text>{" "}
+                  {" "}
+                  Confirm Payment
+                </Text>
                 <Image
                   src="/image/whitedash.png"
-                  w={{ base: "1rem", md: "1.3rem", lg: "8.5rem" }}
+                  w={{ base: "1rem", md: "1.3rem", lg: "5.5rem" }}
                   alt="Dot arrow"
                 />
                 <Icon
                   as={MdRadioButtonChecked}
                   fontSize={{ base: "sm", md: "md", lg: "lg" }}
-                />{" "}
+                />
                 <Text
                   fontSize={{ base: "sm", md: "md", lg: "lg" }}
                   color={headerColor}
                 >
-                  {" "}
-                  Important Notes
+                  Payment Details
                 </Text>
                 <Image
                   src="/image/whitedash.png"
-                  w={{ base: "1rem", md: "1.3rem", lg: "8.5rem" }}
+                  w={{ base: "1rem", md: "1.3rem", lg: "5.5rem" }}
                   alt="Dot arrow"
                 />
                 <Icon
@@ -130,12 +150,12 @@ function BuyCryptoSelect() {
                   Payment Details
                 </Text>
               </HStack>
-              <VStack w={{ base: "90%", md: "86%", lg: "80%" }}>
+              <VStack w={{ base: "90%", md: "86%", lg: "95%" }}>
                 <FormControl
                   isRequired
-                  px="10"
+                  px="6"
                   pt="6"
-                  pb="6"
+                  pb="14"
                   mt="8"
                   borderRadius={"2xl"}
                   bg={bgFormcolor}
@@ -144,17 +164,14 @@ function BuyCryptoSelect() {
                     <Text
                       textAlign={"left"}
                       color={TextColor}
-                      mb="-2"
+                      mb="2"
                       fontSize="2xl"
                     >
-                      Select Currency
-                    </Text>
-                    <Text textAlign={"left"} color={"#AAAEBD"} fontSize="lg">
-                      Reference Price: 1,450,939,280.43 VND/BTC
+                      Confirm Information
                     </Text>
                   </VStack>
-                  <HStack justify={"space-between"} columnGap="20px">
-                    <Box>
+                  <HStack justify={"space-between"} columnGap="10px" w="100%">
+                    <Box w="42%">
                       <FormLabel
                         fontWeight={"bold"}
                         fontSize={"1xl"}
@@ -162,16 +179,17 @@ function BuyCryptoSelect() {
                         requiredIndicator={false}
                         border="none"
                       >
-                        Pay
+                        Sell
                       </FormLabel>
                       <Input
                         placeholder="US$"
                         py="6"
                         pl="4"
-                        pr="14"
+                        // pr="14"
                         border={"none"}
                         borderRadius="2xl"
                         bg={InputColor}
+                        w="100%"
                       />
                     </Box>
                     <Box
@@ -187,7 +205,7 @@ function BuyCryptoSelect() {
                         requiredIndicator={false}
                       />
                     </Box>
-                    <Box>
+                    <Box w="42%">
                       <FormLabel
                         fontWeight={"bold"}
                         fontSize={"1xl"}
@@ -195,7 +213,7 @@ function BuyCryptoSelect() {
                         requiredIndicator={false}
                         border="none"
                       >
-                        Receive
+                        Get
                       </FormLabel>
                       <Input
                         placeholder="BTC"
@@ -203,9 +221,10 @@ function BuyCryptoSelect() {
                         borderRadius="2xl"
                         py="6"
                         pl="4"
-                        pr="14"
+                        // pr="14"
                         border={"none"}
                         bg={InputColor}
+                        w="100%"
                       />
                     </Box>
                   </HStack>
@@ -215,8 +234,8 @@ function BuyCryptoSelect() {
                     <Button
                       bg="#5084FF"
                       py="4"
-                      px="10"
-                      mt="25px"
+                      px="14"
+                      mt="8"
                       _hidden={{ bg: "#141416" }}
                       borderRadius={"full"}
                       color={TextColor}
@@ -236,4 +255,4 @@ function BuyCryptoSelect() {
   );
 }
 
-export default BuyCryptoSelect;
+export default SellCryptoAmount;

@@ -11,6 +11,10 @@ import BuyCryptoSelect from "./pages/buyPages/Buy-Crypto-Select";
 import Footer from "./components/Footer";
 import BuyCryptoConfirm from "./pages/buyPages/Buy-Crypto-Confirm";
 import BuyCryptoDetails from "./pages/buyPages/Buy-Crypto-Details";
+import SellSelect from "./pages/SellPages/SellSelect";
+import SellCryptoAmount from "./pages/SellPages/Sell-Crypto-Amount";
+import SellCryptoDetails from "./pages/SellPages/Sell-Crypto-Details";
+import SellCryptoConfirm from "./pages/SellPages/Sell-Crypto-Confirm";
 import Home3 from "./pages/homePage/Home3";
 function App() {
   return (
@@ -28,6 +32,10 @@ function App() {
         <Route path="/buyryptoselect" element={<BuyCryptoSelect />} />
         <Route path="/buyryptoconfirm" element={<BuyCryptoConfirm />} />
         <Route path="/buyryptodetails" element={<BuyCryptoDetails />} />
+        <Route path="/sellselect" element={<SellSelect />} />
+        <Route path="/sellcryptoamount" element={<SellCryptoAmount />} />
+        <Route path="/sellcryptodetails" element={<SellCryptoDetails />} />
+        <Route path="/sellcryptoconfirm" element={<SellCryptoConfirm />} />
       </Routes>
       <Footer />
     </BrowserRouter>
