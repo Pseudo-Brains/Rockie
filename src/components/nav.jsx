@@ -58,10 +58,10 @@ const Nav = () => {
                 <Link href="/">Home1</Link>
               </MenuItem>
               <MenuItem _hover={{ background: "none" }}>
-                <Link href="/Home1">Home2</Link>
+                <Link href="/home2">Home2</Link>
               </MenuItem>
               <MenuItem _hover={{ background: "none" }}>
-                <Link href="/Home2">Home3</Link>
+                <Link href="/home3">Home3</Link>
               </MenuItem>
             </MenuList>
           </Menu>
@@ -74,13 +74,13 @@ const Nav = () => {
               _hover={{ background: "none" }}
             >
               <MenuItem _hover={{ background: "none" }}>
-                <Link href="/BuyCryptoSelect">Buy Crypto Select</Link>
+                <Link href="/buycryptoselect">Buy Crypto Select</Link>
               </MenuItem>
               <MenuItem _hover={{ background: "none" }}>
-                <Link href="/BuyCryptoConfirm">Buy Crypto Confirm</Link>
+                <Link href="/buycryptoconfirm">Buy Crypto Confirm</Link>
               </MenuItem>
               <MenuItem _hover={{ background: "none" }}>
-                <Link href="/BuyCryptoDetails">Buy Crypto Details</Link>
+                <Link href="/buycryptodetails">Buy Crypto Details</Link>
               </MenuItem>
             </MenuList>
           </Menu>
@@ -109,19 +109,19 @@ const Nav = () => {
               _hover={{ background: "none" }}
             >
               <MenuItem _hover={{ background: "none" }}>
-                <Link href="/Blogdefault">Blog Default</Link>
+                <Link href="/blogdefault">Blog Default</Link>
               </MenuItem>
               <MenuItem _hover={{ background: "none" }}>
-                <Link href="/BlogdefaultV1">Blog Grid v1</Link>
+                <Link href="/blogdefaultV1">Blog Grid v1</Link>
               </MenuItem>
               <MenuItem _hover={{ background: "none" }}>
-                <Link href="/BlogdefaultV2">Blog Grid v2</Link>
+                <Link href="/blogdefaultV2">Blog Grid v2</Link>
               </MenuItem>
               <MenuItem _hover={{ background: "none" }}>
-                <Link href="/BlogList">Blog List</Link>
+                <Link href="/bloglist">Blog List</Link>
               </MenuItem>
               <MenuItem _hover={{ background: "none" }}>
-                <Link href="/Blogdetail">Blog Details</Link>
+                <Link href="/blogdetail">Blog Details</Link>
               </MenuItem>
             </MenuList>
           </Menu>

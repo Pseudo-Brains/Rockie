@@ -21,15 +21,15 @@ function App() {
       <Nav />
       <Routes>
         <Route index element={<Home1 />} />
-        <Route path="/Home1" element={<Home2 />} />
-        <Route path="/Blogdefault" element={<Blogdefault />} />
-        <Route path="/BlogdefaultV1" element={<BlogGridV1 />} />
-        <Route path="/BlogdefaultV2" element={<BlogGridV2 />} />
-        <Route path="/Blogdetail" element={<Blogdetail />} />
-        <Route path="/BlogList" element={<BlogList />} />
-        <Route path="/BuyCryptoSelect" element={<BuyCryptoSelect />} />
-        <Route path="/BuyCryptoConfirm" element={<BuyCryptoConfirm />} />
-        <Route path="/BuyCryptoDetails" element={<BuyCryptoDetails />} />
+        <Route path="/home2" element={<Home2 />} />
+        <Route path="/blogdefault" element={<Blogdefault />} />
+        <Route path="/blogdefaultV1" element={<BlogGridV1 />} />
+        <Route path="/blogdefaultV2" element={<BlogGridV2 />} />
+        <Route path="/blogdetail" element={<Blogdetail />} />
+        <Route path="/bloglist" element={<BlogList />} />
+        <Route path="/buyryptoselect" element={<BuyCryptoSelect />} />
+        <Route path="/buyryptoconfirm" element={<BuyCryptoConfirm />} />
+        <Route path="/buyryptodetails" element={<BuyCryptoDetails />} />
         <Route path="/sellselect" element={<SellSelect />} />
         <Route path="/sellcryptoamount" element={<SellCryptoAmount />} />
         <Route path="/sellcryptodetails" element={<SellCryptoDetails />} />
