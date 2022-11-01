@@ -23,7 +23,7 @@ import { useInView } from "react-intersection-observer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-function Home3() {
+const Home3 = () => {
   const { ref: myRef, inView: myElementIsVisible } = useInView();
   const { ref: myRef2, inView: myElementIsVisible2 } = useInView();
   const { ref: myRef3, inView: myElementIsVisible3 } = useInView();
