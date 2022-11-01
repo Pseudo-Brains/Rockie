@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Box,
   Flex,
@@ -15,6 +16,8 @@ import {
   Td,
   TableContainer,
   Link,
+  UnorderedList,
+  ListItem,
 } from "@chakra-ui/react";
 import { FaArrowUp, FaStar, FaCircle } from "react-icons/fa";
 
@@ -24,8 +27,23 @@ const Home2 = () => {
   const bgSub = useColorModeValue("#17181C", "#f6f6f6");
   const bgSubc = useColorModeValue("#17181C", "#E2E2E2");
   const bgSubcc = useColorModeValue("#17181C", "#ffffff");
-
   const headerColor = useColorModeValue("#FFFFFF", "#23262F");
+  const [red, setRed] = useState(false);
+  const [actve, isactive] = useState(false);
+
+  const ShowBg = function () {
+    setRed((prev) => prev == true);
+    console.log(red);
+  };
+
+  const ShowBgs = function () {
+    isactive((prev) => !prev);
+    // if (red && isactive) {
+
+    // }
+    console.log(actve);
+  };
+
   return (
     <Box width="100%" pt="0px" minH="100vh" bg={bg}>
       <Box w="100%" minH="100px" bg={bgx}>
@@ -417,9 +435,98 @@ const Home2 = () => {
             <Link>See All Coins</Link>
           </Text>
         </Flex>
-        <Flex h="50px" align="center" w="60%">
-          sas
+        {/* <Flex h="50px" align="center" color={headerColor} w="60%"> */}
+        <Flex wrap="wrap" justify="space-around" w="100%" align="center">
+          <UnorderedList>
+            <ListItem
+              className="btn-focus"
+              mx="10px"
+              p="3px 10px"
+              width="fit-content"
+              borderRadius="30px"
+              border="1px solid"
+              display="block"
+              onMouseEnter={() => ShowBg()}
+              onClick={() => ShowBgs()}
+              style={{
+                backgroundColor: actve == true && red == true ? "red" : "",
+              }}
+            >
+              Crypto
+            </ListItem>
+            <ListItem
+              mx="10px"
+              p="3px 10px"
+              border="1px solid"
+              width="fit-content"
+              borderRadius="30px"
+              display="block"
+            >
+              Virtual Land
+            </ListItem>{" "}
+            <ListItem
+              mx="10px"
+              p="3px 10px"
+              border="1px solid"
+              width="fit-content"
+              borderRadius="30px"
+              display="block"
+            >
+              Metaverse
+            </ListItem>{" "}
+            <ListItem
+              mx="10px"
+              p="3px 10px"
+              border="1px solid"
+              width="fit-content"
+              borderRadius="30px"
+              display="block"
+            >
+              NFT Marketplace
+            </ListItem>{" "}
+            <ListItem
+              mx="10px"
+              p="3px 10px"
+              border="1px solid"
+              width="fit-content"
+              borderRadius="30px"
+              display="block"
+            >
+              Token
+            </ListItem>{" "}
+            <ListItem
+              mx="10px"
+              p="3px 10px"
+              border="1px solid"
+              width="fit-content"
+              borderRadius="30px"
+              display="block"
+            >
+              NFTs
+            </ListItem>{" "}
+            <ListItem
+              mx="10px"
+              p="3px 10px"
+              border="1px solid"
+              width="fit-content"
+              borderRadius="30px"
+              display="block"
+            >
+              Bitcoin
+            </ListItem>{" "}
+            <ListItem
+              mx="10px"
+              p="3px 10px"
+              border="1px solid"
+              width="fit-content"
+              borderRadius="30px"
+              display="block"
+            >
+              Arts
+            </ListItem>
+          </UnorderedList>
         </Flex>
+        {/* </Flex> */}
         <TableContainer>
           <Table size="lg" fontSize="20px" fontWeight="900">
             <Thead>
@@ -435,7 +542,7 @@ const Home2 = () => {
               </Tr>
             </Thead>
             <Tbody color={headerColor}>
-              <Tr _hover="red">
+              <Tr className="show-Btn-Hover">
                 <Td>
                   <Icon as={FaStar} />
                 </Td>
@@ -465,6 +572,7 @@ const Home2 = () => {
                 <Td>
                   <Box
                     border="2px solid"
+                    className="btn-hover"
                     borderRadius="20px"
                     px="20px"
                     w="fit-content"
@@ -473,7 +581,7 @@ const Home2 = () => {
                   </Box>
                 </Td>
               </Tr>
-              <Tr _hover="red">
+              <Tr className="show-Btn-Hover">
                 <Td>
                   <Icon as={FaStar} />
                 </Td>
@@ -503,6 +611,7 @@ const Home2 = () => {
                 <Td>
                   <Box
                     border="2px solid"
+                    className="btn-hover"
                     borderRadius="20px"
                     px="20px"
                     w="fit-content"
@@ -511,7 +620,7 @@ const Home2 = () => {
                   </Box>
                 </Td>
               </Tr>
-              <Tr _hover="red">
+              <Tr className="show-Btn-Hover">
                 <Td>
                   <Icon as={FaStar} />
                 </Td>
@@ -541,6 +650,7 @@ const Home2 = () => {
                 <Td>
                   <Box
                     border="2px solid"
+                    className="btn-hover"
                     borderRadius="20px"
                     px="20px"
                     w="fit-content"
@@ -549,7 +659,7 @@ const Home2 = () => {
                   </Box>
                 </Td>
               </Tr>
-              <Tr _hover="red">
+              <Tr className="show-Btn-Hover">
                 <Td>
                   <Icon as={FaStar} />
                 </Td>
@@ -579,6 +689,7 @@ const Home2 = () => {
                 <Td>
                   <Box
                     border="2px solid"
+                    className="btn-hover"
                     borderRadius="20px"
                     px="20px"
                     w="fit-content"
@@ -587,7 +698,7 @@ const Home2 = () => {
                   </Box>
                 </Td>
               </Tr>
-              <Tr _hover="red">
+              <Tr className="show-Btn-Hover">
                 <Td>
                   <Icon as={FaStar} />
                 </Td>
@@ -617,6 +728,7 @@ const Home2 = () => {
                 <Td>
                   <Box
                     border="2px solid"
+                    className="btn-hover"
                     borderRadius="20px"
                     px="20px"
                     w="fit-content"
@@ -625,7 +737,7 @@ const Home2 = () => {
                   </Box>
                 </Td>
               </Tr>
-              <Tr _hover="red">
+              <Tr className="show-Btn-Hover">
                 <Td>
                   <Icon as={FaStar} />
                 </Td>
@@ -655,6 +767,7 @@ const Home2 = () => {
                 <Td>
                   <Box
                     border="2px solid"
+                    className="btn-hover"
                     borderRadius="20px"
                     px="20px"
                     w="fit-content"
@@ -663,7 +776,7 @@ const Home2 = () => {
                   </Box>
                 </Td>
               </Tr>
-              <Tr _hover="red">
+              <Tr className="show-Btn-Hover">
                 <Td>
                   <Icon as={FaStar} />
                 </Td>
@@ -693,6 +806,7 @@ const Home2 = () => {
                 <Td>
                   <Box
                     border="2px solid"
+                    className="btn-hover"
                     borderRadius="20px"
                     px="20px"
                     w="fit-content"
@@ -701,7 +815,7 @@ const Home2 = () => {
                   </Box>
                 </Td>
               </Tr>
-              <Tr _hover="red">
+              <Tr className="show-Btn-Hover">
                 <Td>
                   <Icon as={FaStar} />
                 </Td>
@@ -731,6 +845,7 @@ const Home2 = () => {
                 <Td>
                   <Box
                     border="2px solid"
+                    className="btn-hover"
                     borderRadius="20px"
                     px="20px"
                     w="fit-content"
