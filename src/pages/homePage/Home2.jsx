@@ -584,17 +584,18 @@ const Home2 = () => {
         minH="600px"
       >
         <Flex
+          // bgColor={"pink"}
           w="100%"
           justify="space-between"
           direction={{ base: "column", lg: "row", xl: "row" }}
           minH="600px"
         >
           <Flex
-            maxH="100%"
+            h="600px"
             backgroundImage="url('/image/Globaly.png')"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
-            w={{ base: "100", lg: "45%", xl: "45%" }}
+            w="100%"
             align="center"
           >
             <Flex
@@ -676,7 +677,11 @@ const Home2 = () => {
               </Flex>
             </Flex>
           </Flex>
-          <Box width="50%" color={headerColor}>
+          <Box
+            py={"30px"}
+            w={{ base: "100%", lg: "50%", xl: "50%" }}
+            color={headerColor}
+          >
             <Heading py="13px">
               We Are The Most Trusted Cryptocurrency Platform.
             </Heading>
@@ -690,10 +695,15 @@ const Home2 = () => {
               h="60%"
               color={headerColor}
             >
-              <Flex align="center" w="70%" h="22%" justify="space-between">
+              <Flex
+                align="center"
+                w={{ base: "100", lg: "70%", xl: "70%" }}
+                h="22%"
+                justify="space-between"
+              >
                 <Flex
                   h="100%"
-                  w="18%"
+                  w={{ base: "10%", lg: "18%", xl: "18%" }}
                   justify="center"
                   align="center"
                   borderRadius="10px"
@@ -702,12 +712,12 @@ const Home2 = () => {
                 >
                   <Image
                     objectFit="cover"
-                    h="30px"
+                    h="50px"
                     src="/image/refresh.png"
                     alt="Homebanner"
                   />
                 </Flex>
-                <Box w="75%">
+                <Box w={{ base: "85%", lg: "75%", xl: "75%" }}>
                   <Heading fontSize="27px">Clarity</Heading>
                   <Text fontWeight="bold">
                     We Help You Make Sense Of The Coins, The Terms, The Dense
@@ -715,10 +725,15 @@ const Home2 = () => {
                   </Text>
                 </Box>
               </Flex>
-              <Flex align="center" w="70%" h="22%" justify="space-between">
+              <Flex
+                align="center"
+                w={{ base: "100", lg: "70%", xl: "70%" }}
+                h="22%"
+                justify="space-between"
+              >
                 <Flex
                   h="100%"
-                  w="18%"
+                  w={{ base: "10%", lg: "18%", xl: "18%" }}
                   justify="center"
                   align="center"
                   borderRadius="10px"
@@ -727,12 +742,12 @@ const Home2 = () => {
                 >
                   <Image
                     objectFit="cover"
-                    h="30px"
+                    h="50px"
                     src="/image/piggyb.png"
                     alt="Homebanner"
                   />
                 </Flex>
-                <Box w="75%">
+                <Box w={{ base: "85%", lg: "75%", xl: "75%" }}>
                   <Heading fontSize="27px">Confidence</Heading>
                   <Text fontWeight="bold">
                     Our Markets Are Always Up To Date, Sparking Curiosity With
@@ -740,10 +755,15 @@ const Home2 = () => {
                   </Text>
                 </Box>
               </Flex>
-              <Flex align="center" w="70%" h="22%" justify="space-between">
+              <Flex
+                align="center"
+                w={{ base: "100", lg: "70%", xl: "70%" }}
+                h="22%"
+                justify="space-between"
+              >
                 <Flex
                   h="100%"
-                  w="18%"
+                  w={{ base: "10%", lg: "18%", xl: "18%" }}
                   justify="center"
                   align="center"
                   borderRadius="10px"
@@ -757,7 +777,7 @@ const Home2 = () => {
                     alt="Homebanner"
                   />
                 </Flex>
-                <Box w="75%">
+                <Box w={{ base: "85%", lg: "75%", xl: "75%" }}>
                   <Heading fontSize="27px">Community</Heading>
                   <Text fontWeight="bold">
                     We Supports The Crypto Community, Putting Data In The Hands
@@ -769,18 +789,33 @@ const Home2 = () => {
           </Box>
         </Flex>
       </Box>
-      <Box w="80%" m="30px auto" color={headerColor}>
+      <Box
+        w={{ base: "100%", lg: "100%", xl: "80%" }}
+        m="30px auto"
+        color={headerColor}
+      >
         <Flex align="center" w="100%" direction="column">
           <Heading pt="20px">How It Works</Heading>
-          <Text py="20px" w="40%" textAlign="center" fontSize="22px">
+          <Text
+            py="20px"
+            w={{ base: "100%", lg: "40%", xl: "40%" }}
+            textAlign="center"
+            fontSize="22px"
+          >
             Stacks is a production-ready library of stackable content blocks
             built in React Native.
           </Text>
-          <Flex w="100%" py="50px" justify="space-between" minH="80%">
+          <Flex
+            w="100%"
+            py="50px"
+            direction={{ base: "column", lg: "row", xl: "row" }}
+            justify="space-between"
+            minH="80%"
+          >
             <Flex
               align="center"
               justify="center"
-              w="21%"
+              w={{ base: "100%", lg: "21%", xl: "21%" }}
               direction="column"
               position="relative"
             >
@@ -805,12 +840,13 @@ const Home2 = () => {
                 objectFit="cover"
                 src="/image/linerr.png"
                 alt="Homebanner"
+                display={{ base: "none", lg: "none", xl: "flex" }}
               />
             </Flex>
             <Flex
               align="center"
               justify="center"
-              w="21%"
+              w={{ base: "100%", lg: "21%", xl: "21%" }}
               direction="column"
               position="relative"
             >
@@ -835,12 +871,13 @@ const Home2 = () => {
                 objectFit="cover"
                 src="/image/linerr.png"
                 alt="Homebanner"
+                display={{ base: "none", lg: "none", xl: "flex" }}
               />
             </Flex>
             <Flex
               align="center"
               justify="center"
-              w="21%"
+              w={{ base: "100%", lg: "21%", xl: "21%" }}
               direction="column"
               position="relative"
             >
@@ -865,12 +902,13 @@ const Home2 = () => {
                 objectFit="cover"
                 src="/image/linerr.png"
                 alt="Homebanner"
+                display={{ base: "none", lg: "none", xl: "flex" }}
               />
             </Flex>
             <Flex
               align="center"
               justify="center"
-              w="21%"
+              w={{ base: "100%", lg: "21%", xl: "21%" }}
               direction="column"
               position="relative"
             >
@@ -891,10 +929,19 @@ const Home2 = () => {
           </Flex>
         </Flex>
       </Box>
-      <Box w="80%" m="30px auto" color={headerColor}>
+      <Box
+        w={{ base: "100%", lg: "80%", xl: "80%" }}
+        m="30px auto"
+        color={headerColor}
+      >
         <Flex align="center" w="100%" direction="column">
           <Heading pt="20px">Learn And Earn</Heading>
-          <Text py="20px" w="30%" textAlign="center" fontSize="22px">
+          <Text
+            py="20px"
+            w={{ base: "100%", lg: "40%", xl: "40%" }}
+            textAlign="center"
+            fontSize="22px"
+          >
             Stacks is a production-ready library of stackable content blocks
             built in React Native.
           </Text>
@@ -903,17 +950,17 @@ const Home2 = () => {
             py="30px"
             justify="space-between"
             minH="500px"
+            direction={{ base: "column", lg: "row", xl: "row" }}
             // bgColor="blue"
           >
             <Flex
-              maxH="80%"
+              h="500px"
               direction="column"
-              w="30%"
+              w={{ base: "100%", lg: "30%", xl: "30%" }}
               borderTopRadius="20px"
-              // border="1px solid"
             >
               <Box
-                h="50%"
+                h={{ base: "70%", lg: "50%", xl: "50%" }}
                 borderTopRadius="20px"
                 backgroundImage="url('/image/vidddd.jpg')"
                 backgroundPosition="center"
@@ -954,9 +1001,14 @@ const Home2 = () => {
               </Flex>
             </Flex>
 
-            <Flex maxH="80%" direction="column" w="30%" borderTopRadius="20px">
+            <Flex
+              h="500px"
+              direction="column"
+              w={{ base: "100%", lg: "30%", xl: "30%" }}
+              borderTopRadius="20px"
+            >
               <Box
-                h="50%"
+                h={{ base: "70%", lg: "50%", xl: "50%" }}
                 borderTopRadius="20px"
                 backgroundImage="url('/image/viidaa.jpg')"
                 backgroundPosition="center"
@@ -997,9 +1049,14 @@ const Home2 = () => {
                 <Text>Feb 03, 2021</Text>
               </Flex>
             </Flex>
-            <Flex maxH="80%" direction="column" w="30%" borderTopRadius="20px">
+            <Flex
+              h="500px"
+              direction="column"
+              w={{ base: "100%", lg: "30%", xl: "30%" }}
+              borderTopRadius="20px"
+            >
               <Box
-                h="50%"
+                h={{ base: "70%", lg: "50%", xl: "50%" }}
                 borderTopRadius="20px"
                 backgroundImage="url('/image/viidaa.jpg')"
                 backgroundPosition="center"
