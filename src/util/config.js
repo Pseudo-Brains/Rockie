@@ -1,5 +1,28 @@
 import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
+import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
+
+const brandPrimary = defineStyle({
+  background: "#3772FF",
+  color: "#FFFFFF",
+  fontFamily: "serif",
+  fontWeight: "normal",
+  // let's also provide dark mode alternatives
+  _dark: {
+    background: "blue",
+    color: "#FFFFFF",
+  },
+  _hover: {
+    background: "transparent",
+  },
+});
+
+export const buttonTheme = defineStyleConfig({
+  variants: { brandPrimary },
+  defaultProps: {
+    variant: "brandPrimary",
+  },
+});
 
 export const theme = extendTheme({
   config: {
@@ -17,6 +40,7 @@ export const theme = extendTheme({
       },
     }),
   },
+  components: { Button: buttonTheme },
 });
 
 // e extendTheme({ zIndices, ...})
