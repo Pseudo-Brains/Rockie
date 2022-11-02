@@ -10,6 +10,7 @@ import {
 import "../main.css";
 
 import { Link } from "react-router-dom";
+import { useMemo } from "react";
 
 function SubHeader(props) {
   const bg = useColorModeValue("#141416", "#FFFFFF");

@@ -18,7 +18,7 @@ import { FaBell, FaMoon, FaUser, FaSun } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiFillCaretDown } from "react-icons/ai";
 import { GrClose } from "react-icons/gr";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 const Nav = () => {
   const { colorMode, toggleColorMode } = useColorMode();

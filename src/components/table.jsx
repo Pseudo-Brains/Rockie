@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Box,
   Flex,
@@ -15,6 +14,7 @@ import {
   TableContainer,
 } from "@chakra-ui/react";
 import { FaStar } from "react-icons/fa";
+import { useState, useMemo } from "react";
 const Tableer = () => {
   const headerColor = useColorModeValue("#FFFFFF", "#23262F");
   return (

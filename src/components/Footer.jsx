@@ -18,7 +18,7 @@ import {
 } from "@chakra-ui/react";
 import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
-import React from "react";
+import React, { useMemo } from "react";
 
 function Footer() {
   const bg = useColorModeValue("#141416", "#FFFFFF");
