@@ -17,8 +17,12 @@ import { Link } from "react-router-dom";
 import { FaBell, FaMoon, FaUser, FaSun } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiFillCaretDown } from "react-icons/ai";
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+=======
 import { GrClose } from "react-icons/gr";
 import { useState } from "react";
+>>>>>>> 16a1b05698df4fa4c261fcfde104c798e43b71ed
 
 const Nav = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -388,9 +392,11 @@ const Nav = () => {
           <Menu>
             <MenuButton fontWeight="700">Pages</MenuButton>
             <MenuList>
-              <MenuItem>New Window</MenuItem>
-              <MenuItem>Open Closed Tab</MenuItem>
-              <MenuItem>Open File</MenuItem>
+              <MenuItem><Link to='/profile'>User Profile</Link></MenuItem>
+              <MenuItem><Link to='/login'>Login</Link></MenuItem>
+              <MenuItem><Link to='/register'>Register</Link></MenuItem>
+              <MenuItem><Link to='/contact'>Contact</Link></MenuItem>
+              <MenuItem><Link to='/faq'>FAQs</Link></MenuItem>
             </MenuList>
           </Menu>
           <Menu>

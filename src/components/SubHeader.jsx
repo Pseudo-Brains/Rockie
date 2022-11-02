@@ -18,7 +18,11 @@ function SubHeader(props) {
   const headerColor = useColorModeValue("#FFFFFF", "#23262F");
   const bgFormcolor = useColorModeValue("#18191D", "#F7F7F7");
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
+<<<<<<< HEAD
+  
+=======
 
+>>>>>>> 16a1b05698df4fa4c261fcfde104c798e43b71ed
   return (
     <Box
       px="10"

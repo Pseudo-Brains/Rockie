@@ -61,6 +61,7 @@ function Home1() {
       clicked.style.backgroundColor = "blue";
     }
   };
+  
   return (
     <Box bg={bg} w="100%">
       <Box w="100%" bg={bgSub}>
