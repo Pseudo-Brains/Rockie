@@ -34,3 +34,17 @@
 .btn-style-Nohover {
   background-color: #3772ff;
 }
+
+/* working for navlinks */
+.active{
+  background-color: #3772ff;
+}
+
+.row{
+  border-radius: "100px";
+  cursor: pointer;
+}
+.row:hover .btn-hover {
+  background-color: #3772ff;
+  border-color: transparent;
+}

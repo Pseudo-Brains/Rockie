@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import BuyCryptoConfirm from "./pages/buyPages/Buy-Crypto-Confirm";
 import BuyCryptoDetails from "./pages/buyPages/Buy-Crypto-Details";
 import Home3 from "./pages/homePage/Home3";
+import Market from "./pages/Market"
 function App() {
   return (
     <BrowserRouter>
@@ -25,6 +26,7 @@ function App() {
         <Route path="/blogdefaultV2" element={<BlogGridV2 />} />
         <Route path="/blogdetail" element={<Blogdetail />} />
         <Route path="/bloglist" element={<BlogList />} />
+        <Route path="/market/*" element={<Market />} />
         <Route path="/buyryptoselect" element={<BuyCryptoSelect />} />
         <Route path="/buyryptoconfirm" element={<BuyCryptoConfirm />} />
         <Route path="/buyryptodetails" element={<BuyCryptoDetails />} />
