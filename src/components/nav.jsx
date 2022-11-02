@@ -101,30 +101,39 @@ const Nav = () => {
                 // _hover={{ background: "none" }}
               >
                 <MenuItem _hover={{ background: "none" }}>
-                  <Link to="/buycryptoselect">Buy Crypto Select</Link>
+                  <Link to="/buyryptoselect">Buy Crypto Select</Link>
                 </MenuItem>
                 <MenuItem _hover={{ background: "none" }}>
-                  <Link to="/buycryptoconfirm">Buy Crypto Confirm</Link>
+                  <Link to="/buyryptoconfirm">Buy Crypto Confirm</Link>
                 </MenuItem>
                 <MenuItem _hover={{ background: "none" }}>
-                  <Link to="/buycryptodetails">Buy Crypto Details</Link>
+                  <Link to="/buyryptodetails">Buy Crypto Details</Link>
                 </MenuItem>
               </MenuList>
             </Menu>
             <Menu>
               <MenuButton fontWeight="700">Markets</MenuButton>
-              <MenuList>
-                <MenuItem>New Window</MenuItem>
-                <MenuItem>Open Closed Tab</MenuItem>
-                <MenuItem>Open File</MenuItem>
-              </MenuList>
             </Menu>
             <Menu>
               <MenuButton fontWeight="700">Sell crypto</MenuButton>
-              <MenuList>
-                <MenuItem>New Window</MenuItem>
-                <MenuItem>Open Closed Tab</MenuItem>
-                <MenuItem>Open File</MenuItem>
+              <MenuList
+                bg={bg}
+                border="none"
+                mt="10px"
+                // _hover={{ background: "none" }}
+              >
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link to="/sellselect">Sell Select</Link>
+                </MenuItem>
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link to="/sellcryptoamount">Sell Crypto amt</Link>
+                </MenuItem>
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link to="/sellcryptoconfirm">sell Crypto confirm</Link>
+                </MenuItem>
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link to="/sellcryptodetails">sell Crypto Details</Link>
+                </MenuItem>
               </MenuList>
             </Menu>
             <Menu>
@@ -154,18 +163,30 @@ const Nav = () => {
             </Menu>
             <Menu>
               <MenuButton fontWeight="700">BITUSDT</MenuButton>
-              <MenuList>
-                <MenuItem>New Window</MenuItem>
-                <MenuItem>Open Closed Tab</MenuItem>
-                <MenuItem>Open File</MenuItem>
-              </MenuList>
             </Menu>
             <Menu>
               <MenuButton fontWeight="700">Pages</MenuButton>
-              <MenuList>
-                <MenuItem>New Window</MenuItem>
-                <MenuItem>Open Closed Tab</MenuItem>
-                <MenuItem>Open File</MenuItem>
+              <MenuList
+                bg={bg}
+                border="none"
+                mt="10px"
+                // _hover={{ background: "none" }}
+              >
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link to="/blogdefault">User profile </Link>
+                </MenuItem>
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link to="/blogdefaultV1">Login</Link>
+                </MenuItem>
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link to="/blogdefaultV2">Register</Link>
+                </MenuItem>
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link to="/bloglist">Contact</Link>
+                </MenuItem>
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link to="/blogdetail">Faq</Link>
+                </MenuItem>
               </MenuList>
             </Menu>
           </Flex>
@@ -211,11 +232,24 @@ const Nav = () => {
                   Order & Trades <Icon as={AiFillCaretDown} />
                 </Flex>
               </MenuButton>
-              <MenuList>
-                {/* MenuItems are not rendered unless Menu is open */}
-                <MenuItem>New Window</MenuItem>
-                <MenuItem>Open Closed Tab</MenuItem>
-                <MenuItem>Open File</MenuItem>
+              <MenuList
+                bg={bg}
+                border="none"
+                mt="10px"
+                // _hover={{ background: "none" }}
+              >
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link>Binance Converts</Link>
+                </MenuItem>
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link>Spot</Link>
+                </MenuItem>
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link to="/BlogdefaultV2">Margin</Link>
+                </MenuItem>
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link to="/BlogdefaultV2">P2P</Link>
+                </MenuItem>
               </MenuList>
             </Menu>
             <Menu>
@@ -224,11 +258,17 @@ const Nav = () => {
                   EN/USD <Icon as={AiFillCaretDown} />
                 </Flex>
               </MenuButton>
-              <MenuList>
-                {/* MenuItems are not rendered unless Menu is open */}
-                <MenuItem>New Window</MenuItem>
-                <MenuItem>Open Closed Tab</MenuItem>
-                <MenuItem>Open File</MenuItem>
+              <MenuList bg={bg} border="none" mt="10px">
+                <MenuItem _hover={{ background: "none" }}>English</MenuItem>
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link>English</Link>
+                </MenuItem>
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link to="/BlogdefaultV2">English</Link>
+                </MenuItem>
+                <MenuItem _hover={{ background: "none" }}>
+                  <Link to="/BlogdefaultV2">English</Link>
+                </MenuItem>
               </MenuList>
             </Menu>
           </Flex>
