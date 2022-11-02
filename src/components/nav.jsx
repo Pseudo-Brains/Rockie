@@ -17,12 +17,11 @@ import { Link } from "react-router-dom";
 import { FaBell, FaMoon, FaUser, FaSun } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiFillCaretDown } from "react-icons/ai";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-=======
 import { GrClose } from "react-icons/gr";
-import { useState } from "react";
->>>>>>> 16a1b05698df4fa4c261fcfde104c798e43b71ed
+
+import { useState, useMemo } from "react";
+
+
 
 const Nav = () => {
   const { colorMode, toggleColorMode } = useColorMode();

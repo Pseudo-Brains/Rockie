@@ -1061,9 +1061,12 @@ const Home3 = () => {
             See all article
           </Link>
         </Flex>
-        <Flex as="div" className="wrapper" 
-        direction={["column","column","row"]}
-        justify="space-between">
+        <Flex
+          as="div"
+          className="wrapper"
+          direction={["column", "column", "row"]}
+          justify="space-between"
+        >
           <Flex
             as="div"
             w={["100%", "100%", "45%"]}
@@ -1152,11 +1155,7 @@ const Home3 = () => {
           </Flex>
 
           <Box as="div" w={["100%", "100%", "45%"]} className="box" h="auto">
-            <Flex 
-            gap="10px 20px"
-            align="center"
-            m="40px 0px"
-            >
+            <Flex gap="10px 20px" align="center" m="40px 0px">
               <Box
                 w="50%"
                 h="300px"
@@ -1166,10 +1165,7 @@ const Home3 = () => {
                 display="flex"
                 alignItems="center"
               >
-                <Image
-                src="/image/blog-01.jpg"
-                w="100%"
-                />
+                <Image src="/image/blog-01.jpg" w="100%" />
                 <Link
                   w="70px"
                   h="70px"
@@ -1186,10 +1182,8 @@ const Home3 = () => {
                   <Image src="/image/svg9.svg" w="25%" />
                 </Link>
               </Box>
-              <Box
-              w="50%"
-              >
-              <Link
+              <Box w="50%">
+                <Link
                   href="#"
                   color="#fff"
                   w="150px"
@@ -1207,25 +1201,21 @@ const Home3 = () => {
                   Learn & Earn
                 </Link>
                 <Link
-                as="a"
-                display="block"
-                m="20px 0px"
-                fontSize="25px"
-                _hover={{ textDecoration: "none", color: "#3772ff" }}
-              >
-                Learn about UI8 coin and earn an All-Access Pass
-              </Link>
-              <Text as="p" color="#b1b5c3" fontSize="17px">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Facilisi id vestibulum sem
-              </Text>
+                  as="a"
+                  display="block"
+                  m="20px 0px"
+                  fontSize="25px"
+                  _hover={{ textDecoration: "none", color: "#3772ff" }}
+                >
+                  Learn about UI8 coin and earn an All-Access Pass
+                </Link>
+                <Text as="p" color="#b1b5c3" fontSize="17px">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Facilisi id vestibulum sem
+                </Text>
               </Box>
             </Flex>
-            <Flex 
-            gap="10px 20px"
-            align="center"
-            m="40px 0px"
-            >
+            <Flex gap="10px 20px" align="center" m="40px 0px">
               <Box
                 w="50%"
                 h="300px"
@@ -1235,10 +1225,7 @@ const Home3 = () => {
                 display="flex"
                 alignItems="center"
               >
-                <Image
-                src="/image/blog-01.jpg"
-                w="100%"
-                />
+                <Image src="/image/blog-01.jpg" w="100%" />
                 <Link
                   w="70px"
                   h="70px"
@@ -1255,10 +1242,8 @@ const Home3 = () => {
                   <Image src="/image/svg9.svg" w="25%" />
                 </Link>
               </Box>
-              <Box
-              w="50%"
-              >
-              <Link
+              <Box w="50%">
+                <Link
                   href="#"
                   color="#fff"
                   w="150px"
@@ -1276,25 +1261,21 @@ const Home3 = () => {
                   Learn & Earn
                 </Link>
                 <Link
-                as="a"
-                display="block"
-                m="20px 0px"
-                fontSize="25px"
-                _hover={{ textDecoration: "none", color: "#3772ff" }}
-              >
-                Learn about UI8 coin and earn an All-Access Pass
-              </Link>
-              <Text as="p" color="#b1b5c3" fontSize="17px">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Facilisi id vestibulum sem
-              </Text>
+                  as="a"
+                  display="block"
+                  m="20px 0px"
+                  fontSize="25px"
+                  _hover={{ textDecoration: "none", color: "#3772ff" }}
+                >
+                  Learn about UI8 coin and earn an All-Access Pass
+                </Link>
+                <Text as="p" color="#b1b5c3" fontSize="17px">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Facilisi id vestibulum sem
+                </Text>
               </Box>
             </Flex>
-            <Flex 
-            gap="10px 20px"
-            align="center"
-            m="40px 0px"
-            >
+            <Flex gap="10px 20px" align="center" m="40px 0px">
               <Box
                 w="50%"
                 h="300px"
@@ -1304,10 +1285,7 @@ const Home3 = () => {
                 display="flex"
                 alignItems="center"
               >
-                <Image
-                src="/image/blog-01.jpg"
-                w="100%"
-                />
+                <Image src="/image/blog-01.jpg" w="100%" />
                 <Link
                   w="70px"
                   h="70px"
@@ -1324,10 +1302,8 @@ const Home3 = () => {
                   <Image src="/image/svg9.svg" w="25%" />
                 </Link>
               </Box>
-              <Box
-              w="50%"
-              >
-              <Link
+              <Box w="50%">
+                <Link
                   href="#"
                   color="#fff"
                   w="150px"
@@ -1345,18 +1321,18 @@ const Home3 = () => {
                   Learn & Earn
                 </Link>
                 <Link
-                as="a"
-                display="block"
-                m="20px 0px"
-                fontSize="25px"
-                _hover={{ textDecoration: "none", color: "#3772ff" }}
-              >
-                Learn about UI8 coin and earn an All-Access Pass
-              </Link>
-              <Text as="p" color="#b1b5c3" fontSize="17px">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Facilisi id vestibulum sem
-              </Text>
+                  as="a"
+                  display="block"
+                  m="20px 0px"
+                  fontSize="25px"
+                  _hover={{ textDecoration: "none", color: "#3772ff" }}
+                >
+                  Learn about UI8 coin and earn an All-Access Pass
+                </Link>
+                <Text as="p" color="#b1b5c3" fontSize="17px">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Facilisi id vestibulum sem
+                </Text>
               </Box>
             </Flex>
           </Box>
@@ -1364,6 +1340,6 @@ const Home3 = () => {
       </Box>
     </React.Fragment>
   );
-}
+};
 
 export default Home3;

@@ -36,6 +36,12 @@ import {
 } from "@chakra-ui/react";
 import "../../main.css";
 import EarnUp from "../../components/EarnUp";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Tableer from "../../components/table";
+import "swiper/css";
+
 function Home1() {
   const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("#141416", "#FFFFFF");
@@ -61,7 +67,13 @@ function Home1() {
       clicked.style.backgroundColor = "blue";
     }
   };
-  
+
+  // Inter section Observer
+
+  const { ref: myRef, inView: myElementIsVisible } = useInView();
+  const { ref: myRef2, inView: myElementIsVisible2 } = useInView();
+  const { ref: myRef3, inView: myElementIsVisible3 } = useInView();
+
   return (
     <Box bg={bg} w="100%">
       <Box w="100%" bg={bgSub}>
@@ -164,17 +176,27 @@ function Home1() {
       </Box>
       {/* end of box1 */}
       <Box
+        ref={myRef}
+        as={motion.div}
         flexWrap="wrap"
         m={"auto"}
         bg={bgTr}
         py="2"
-        mt="-24"
+        mt="-28"
         borderRadius={"2xl"}
         px={"8"}
         w="84%"
         border="2px"
         boxShadow="2xl"
         borderColor={useColorModeValue("#22252D", "#fff")}
+        initial={myElementIsVisible ? "" : { y: "0%", opacity: 1 }}
+        animate={myElementIsVisible ? "" : { y: "100%", opacity: 0 }}
+        transition={{
+          type: "Tween",
+          // bounce: 2.5,
+          duration: 10,
+          delay: 2,
+        }}
       >
         {/* <Flex > */}
         <Box
@@ -534,7 +556,7 @@ function Home1() {
             Music
           </Button>{" "}
         </HStack>
-        <TableContainer px="6">
+        {/* <TableContainer px="6">
           <Table variant="simple">
             <TableCaption></TableCaption>
             <Thead borderBottom={"4px"} borderColor="white" colorScheme="teal">
@@ -867,7 +889,8 @@ function Home1() {
               <Tr> ..</Tr>
             </Tfoot>
           </Table>
-        </TableContainer>
+        </TableContainer> */}
+        <Tableer />
       </Box>
       {/* end of box 3 */}
       <Box bg={bgSub} py="28">
@@ -902,7 +925,14 @@ function Home1() {
               w={{ base: "90%", md: "90%", lg: "23%" }}
               // h={{ base: "200px", md: "250px", lg: "300px" }}
             >
-              <Image objectFit="cover" src="/image/step1.png" alt="step1" />
+              <Image
+                as={motion.img}
+                whileHover={{ scaleX: 1.4 }}
+                transition={{ yoyo: "linear" }}
+                objectFit="cover"
+                src="/image/step1.png"
+                alt="step1"
+              />
               <Text
                 fontSize={"lg"}
                 mt="0.5"

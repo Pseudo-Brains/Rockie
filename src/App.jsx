@@ -23,6 +23,7 @@ import SellSelect from "./pages/SellPages/SellSelect";
 import SellCryptoAmount from "./pages/SellPages/Sell-Crypto-Amount";
 import SellCryptoDetails from "./pages/SellPages/Sell-Crypto-Details";
 import SellCryptoConfirm from "./pages/SellPages/Sell-Crypto-Confirm";
+import NotFound from "./pages/NotFound";
 function App() {
   return (
     <BrowserRouter>
@@ -56,6 +57,7 @@ function App() {
         <Route path="/sellcryptoamount" element={<SellCryptoAmount />} />
         <Route path="/sellcryptodetails" element={<SellCryptoDetails />} />
         <Route path="/sellcryptoconfirm" element={<SellCryptoConfirm />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>

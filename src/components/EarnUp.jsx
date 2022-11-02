@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { BiStar } from "react-icons/bi";
 import { FaRegCheckCircle, FaCheckCircle } from "react-icons/fa";
 import {
