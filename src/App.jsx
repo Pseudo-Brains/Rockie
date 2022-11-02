@@ -9,28 +9,26 @@ import Blogdetail from "./pages/BlogPost/Blogdetail";
 import Nav from "./components/nav";
 import BuyCryptoSelect from "./pages/buyPages/Buy-Crypto-Select";
 import Footer from "./components/Footer";
-<<<<<<< HEAD
 import Profile from "./pages/userProfile/Profile";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Contact from "./pages/contact/Contact";
 import Faq from "./pages/faq/Faq";
 
-=======
 import BuyCryptoConfirm from "./pages/buyPages/Buy-Crypto-Confirm";
 import BuyCryptoDetails from "./pages/buyPages/Buy-Crypto-Details";
+import Home3 from "./pages/homePage/Home3";
+import Market from "./pages/Market"
 import SellSelect from "./pages/SellPages/SellSelect";
 import SellCryptoAmount from "./pages/SellPages/Sell-Crypto-Amount";
 import SellCryptoDetails from "./pages/SellPages/Sell-Crypto-Details";
 import SellCryptoConfirm from "./pages/SellPages/Sell-Crypto-Confirm";
->>>>>>> 16a1b05698df4fa4c261fcfde104c798e43b71ed
 function App() {
   return (
     <BrowserRouter>
       <Nav />
       <Routes>
         <Route index element={<Home1 />} />
-<<<<<<< HEAD
         <Route path="/Home1" element={<Home2 />} />
         {/* BuyCryptoSelect */}
         <Route path="/BuyCryptoSelect" element={<BuyCryptoSelect />} />
@@ -44,13 +42,13 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         {/* faq */}
         <Route path="/faq" element={<Faq />} />
-=======
         <Route path="/home2" element={<Home2 />} />
         <Route path="/blogdefault" element={<Blogdefault />} />
         <Route path="/blogdefaultV1" element={<BlogGridV1 />} />
         <Route path="/blogdefaultV2" element={<BlogGridV2 />} />
         <Route path="/blogdetail" element={<Blogdetail />} />
         <Route path="/bloglist" element={<BlogList />} />
+        <Route path="/market/*" element={<Market />} />
         <Route path="/buyryptoselect" element={<BuyCryptoSelect />} />
         <Route path="/buyryptoconfirm" element={<BuyCryptoConfirm />} />
         <Route path="/buyryptodetails" element={<BuyCryptoDetails />} />
@@ -58,7 +56,6 @@ function App() {
         <Route path="/sellcryptoamount" element={<SellCryptoAmount />} />
         <Route path="/sellcryptodetails" element={<SellCryptoDetails />} />
         <Route path="/sellcryptoconfirm" element={<SellCryptoConfirm />} />
->>>>>>> 16a1b05698df4fa4c261fcfde104c798e43b71ed
       </Routes>
       <Footer />
     </BrowserRouter>
