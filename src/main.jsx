@@ -12,3 +12,18 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </ChakraProvider>
   </React.StrictMode>
 );
+
+/**
+ *     --bg: #141416;
+    --bg1: #222630;
+    --onsurface: #fff;
+    --surface: #18191d;
+    --line: #23262f;
+    --text: #b1b5c3;
+    <html>
+ <body>
+  <iframe src="http://www.youtube.com/embed/W7qWa52k-nE"
+   width="560" height="315" frameborder="0" allowfullscreen></iframe>
+ </body>
+</html>
+ */

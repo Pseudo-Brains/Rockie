@@ -26,130 +26,158 @@ import {
   VStack,
   color,
   Wrap,
+  useColorMode,
   WrapItem,
   Avatar,
   AvatarBadge,
   AvatarGroup,
+  useModal,
+  chakra,
 } from "@chakra-ui/react";
 import "../../main.css";
 import EarnUp from "../../components/EarnUp";
 function Home1() {
+  const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("#141416", "#FFFFFF");
-  const bgSub = useColorModeValue("#17181C", "#FFFFFF");
-
+  const bgSub = useColorModeValue("#17181C", "#F6F6F6");
+  const bgSubc = useColorModeValue("#17181C", "#E2E2E2");
   const headerColor = useColorModeValue("#FFFFFF", "#23262F");
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
-
+  const bgTr = useColorModeValue("#17181C", "#FFFFFF");
+  const bgTrSub = useColorModeValue("#131315", "#FFFFFF");
+  // Function
   const ShowBg = function (e) {
-    e.target.closest(".btn-show").classList.toggle("btn-show-bg");
+    let check = e.target.classList.contains("btn-show");
+    if (check) {
+      let listOfBtn = e.target.parentElement.childNodes;
+      console.log(listOfBtn);
+      listOfBtn.forEach((item) => {
+        if (item.classList.contains("btn-active")) {
+          item.style.backgroundColor = "transparent";
+        }
+      });
+      let clicked = e.target;
+      clicked.classList.add("btn-active");
+      clicked.style.backgroundColor = "blue";
+    }
   };
   
   return (
-    <Box bg={bg}>
-      <Box pt="10">
-        <Flex
-          flexDir={{ base: "column", md: "column", lg: "row" }}
-          justify={"center"}
-        >
-          <Box w={{ base: "100%", md: "100%", lg: "48%" }}>
-            <Heading
-              color={headerColor}
-              fontSize={{ base: "6xl", md: "6xl", lg: "7xl" }}
-              p={{ base: "1", md: "3", lg: "3" }}
-              mt="12"
-            >
-              Buy & Sell Digital Assets In The Rockie
-            </Heading>
-            <Text
-              color={"#AEB2C0"}
-              fontSize="3xl"
-              fontWeight={"bold"}
-              pr="28"
-              lineHeight={"1"}
-              mt={"8"}
-            >
-              Coin rockie is the easiest, safest, and fastest way to buy & sell
-              crypto asset exchange.
-            </Text>
-            <Button
-              colorScheme="blue"
-              fontSize={"20"}
-              fontWeight="bold"
-              mt="12"
-              py="8"
-              px="16"
-              borderRadius={"full"}
-            >
-              Get Started Now
-            </Button>
-            <Heading mt="10" color={TextColor}>
-              Our Partners
-            </Heading>
-            <HStack w={"80%"} overflowX="clip" spacing={"20"}>
-              <Image
-                objectFit="contain"
-                src="/image/OurPartners1.png"
-                alt="OurPartner1"
-                boxSize={"150px"}
-              />
-              <Image
-                objectFit="contain"
-                src={"/image/OurPartners2.png"}
-                alt="OurPartner2"
-                boxSize={"150px"}
-              />
-              <Image
-                objectFit="contain"
-                src={"/image/OurPartners3.png"}
-                alt="OurPartner3"
-                boxSize={"100px"}
-              />
+    <Box bg={bg} w="100%">
+      <Box w="100%" bg={bgSub}>
+        {" "}
+        <Box pt="10" p={{ base: "4" }} pb="20" m="auto" maxW="1450px">
+          <Flex
+            flexDir={{ base: "column", md: "column", lg: "row" }}
+            justify={"space-between"}
+          >
+            <Box w={{ base: "100%", md: "100%", lg: "52%" }}>
+              <Heading
+                color={headerColor}
+                fontSize={{ base: "3xl", md: "4xl", lg: "6xl" }}
+                p={{ base: "3", md: "3", lg: "1" }}
+                mt="12"
+                letterSpacing={"1"}
+              >
+                Buy & Sell Digital Assets In The Rockie
+              </Heading>
+              <Text
+                color={"#AEB2C0"}
+                fontSize="2xl"
+                fontWeight={"bold"}
+                pr="22"
+                lineHeight={"1"}
+                mt={"6"}
+              >
+                Coin rockie is the easiest, safest, and fastest way to buy &
+                sell crypto asset exchange.
+              </Text>
+              <Button
+                colorScheme="blue"
+                fontSize={"20"}
+                fontWeight="bold"
+                mt="12"
+                _hover={{ bg: "blue" }}
+                py="6"
+                px="10"
+                borderRadius={"full"}
+              >
+                Get Started Now
+              </Button>
+              <Heading fontSize={"2xl"} mt="6" color={TextColor}>
+                Our Partners
+              </Heading>
+              <HStack w={"80%"} overflowX="clip" spacing={"10"} mb="8">
+                <Image
+                  objectFit="contain"
+                  src="/image/OurPartners1.png"
+                  alt="OurPartner1"
+                  boxSize={"150px"}
+                />
+                <Image
+                  objectFit="contain"
+                  src={"/image/OurPartners2.png"}
+                  alt="OurPartner2"
+                  boxSize={"150px"}
+                />
+                <Image
+                  objectFit="contain"
+                  src={"/image/OurPartners3.png"}
+                  alt="OurPartner3"
+                  boxSize={"100px"}
+                />
 
+                <Image
+                  objectFit="contain"
+                  src={"/image/OurPartners4.png"}
+                  alt="OurPartner4"
+                  boxSize={"150px"}
+                />
+                <Image
+                  objectFit="contain"
+                  src={"/image/OurPartners2.png"}
+                  alt="OurPartner2"
+                  boxSize={"150px"}
+                />
+                <Image
+                  objectFit="contain"
+                  src={"/image/OurPartners3.png"}
+                  alt="OurPartner3"
+                  boxSize={"100px"}
+                />
+              </HStack>
+            </Box>
+            <Box
+              w={{ base: "100%", md: "100%", lg: "48%" }}
+              display="flex"
+              pl="20"
+              pb="14"
+            >
               <Image
-                objectFit="contain"
-                src={"/image/OurPartners4.png"}
-                alt="OurPartner4"
-                boxSize={"150px"}
+                objectFit="scale-down"
+                src="/image/banner-01.png"
+                alt="OurPartner1"
               />
-              <Image
-                objectFit="contain"
-                src={"/image/OurPartners2.png"}
-                alt="OurPartner2"
-                boxSize={"150px"}
-              />
-              <Image
-                objectFit="contain"
-                src={"/image/OurPartners3.png"}
-                alt="OurPartner3"
-                boxSize={"100px"}
-              />
-            </HStack>
-          </Box>
-          <Box w={{ base: "100%", md: "100%", lg: "48%" }} mt="14">
-            <Image
-              boxSize={"80%"}
-              objectFit="contain"
-              src="/image/banner-01.png"
-              alt="OurPartner1"
-            />
-          </Box>
-        </Flex>
+            </Box>
+          </Flex>
+        </Box>
       </Box>
       {/* end of box1 */}
       <Box
         flexWrap="wrap"
         m={"auto"}
-        bg={bgSub}
-        py="6"
-        px={"8"}
-        w="94%"
+        bg={bgTr}
+        py="2"
+        mt="-24"
         borderRadius={"2xl"}
+        px={"8"}
+        w="84%"
         border="2px"
-        borderColor={"#22252E"}
+        boxShadow="2xl"
+        borderColor={useColorModeValue("#22252D", "#fff")}
       >
         {/* <Flex > */}
         <Box
-          onChange={() => ShowBg()}
           // m="auto"
           p="3"
           mb="6"
@@ -157,50 +185,92 @@ function Home1() {
           borderBottom="2px"
           borderBottomColor={"#22252E"}
         >
-          <Flex color={TextColor} fontSize="2xl">
+          <Flex onClick={ShowBg} color={TextColor} justify="" fontSize="2xl">
             <Button color={TextColor} bg="transparent" className="btn-show">
               {" "}
               Crypto
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              bg="transparent"
+              mx="2"
+              className="btn-show"
+            >
               {" "}
               DeFi
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              mx="2"
+              bg="transparent"
+              className="btn-show"
+            >
               {" "}
               BSC
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              mx="2"
+              bg="transparent"
+              className="btn-show"
+            >
               {" "}
               NFT
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              _hover={{ bg: "transparent" }}
+              bg="transparent"
+              className="btn-show"
+            >
               Metaverse
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              mx="2"
+              bg="transparent"
+              className="btn-show"
+            >
               {" "}
               Polkadot
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              mx="2"
+              bg="transparent"
+              className="btn-show"
+            >
               {" "}
               Solana
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              mx="2"
+              bg="transparent"
+              className="btn-show"
+            >
               {" "}
               Opensea
             </Button>
-            <Button color={TextColor} bg="transparent" className="btn-show">
+            <Button
+              color={TextColor}
+              mx="2"
+              bg="transparent"
+              className="btn-show"
+            >
               {" "}
               Makersplace
             </Button>
           </Flex>{" "}
         </Box>
         {/* </Flex> */}
-        <Box pb={"8"}>
+        <Box pb={"4"}>
           <Flex justify={"space-around"} flexWrap="wrap">
             <Box
               w={{ base: "95%", md: "46%", lg: "24%" }}
-              bg="#141416"
+              bg={bgTrSub}
+              mb="2"
+              _hover={{ boxShadow: "xl" }}
               px="12"
               py="8"
               borderRadius={"lg"}
@@ -244,8 +314,10 @@ function Home1() {
             {/* ttt */}
             <Box
               w={{ base: "95%", md: "46%", lg: "24%" }}
-              bg="#141416"
               px="12"
+              bg={bgTrSub}
+              mb="2"
+              _hover={{ boxShadow: "xl" }}
               py="8"
               borderRadius={"lg"}
             >
@@ -287,10 +359,12 @@ function Home1() {
             {/* ttt */}
             <Box
               w={{ base: "95%", md: "46%", lg: "24%" }}
-              bg="#141416"
               px="12"
               py="8"
               borderRadius={"lg"}
+              bg={bgTrSub}
+              mb="2"
+              _hover={{ boxShadow: "xl" }}
             >
               <HStack spacing={"3"}>
                 <Image
@@ -331,10 +405,12 @@ function Home1() {
             {/* ttt */}
             <Box
               w={{ base: "95%", md: "46%", lg: "24%" }}
-              bg="#141416"
               px="12"
               py="8"
               borderRadius={"lg"}
+              bg={bgTrSub}
+              mb="2"
+              _hover={{ boxShadow: "xl" }}
             >
               <HStack spacing={"3"}>
                 <Image
@@ -390,7 +466,7 @@ function Home1() {
             See All Coins
           </Text>{" "}
         </HStack>
-        <HStack spacing={"8"} ml="8" h={"80px"}>
+        <HStack spacing={"8"} ml="8" h={"80px"} onClick={ShowBg}>
           {" "}
           <Button
             color={TextColor}
@@ -415,6 +491,7 @@ function Home1() {
           <Button
             color={TextColor}
             bg="transparent"
+            className="btn-show"
             fontWeight={"bold"}
             fontSize="20"
           >
@@ -449,7 +526,7 @@ function Home1() {
           </Button>{" "}
           <Button
             color={TextColor}
-            className="btn-show"
+            className="btn-show "
             fontWeight={"bold"}
             fontSize="20"
             bg="transparent"
@@ -820,7 +897,7 @@ function Home1() {
           </Flex>
         </Box>
         <Box>
-          <Flex justify={"space-evenly"} mt="8">
+          <Flex justify={"space-evenly"} flexWrap="wrap" mt="8">
             <VStack
               w={{ base: "90%", md: "90%", lg: "23%" }}
               // h={{ base: "200px", md: "250px", lg: "300px" }}
@@ -934,8 +1011,14 @@ function Home1() {
       </Box>
       {/* end of box 4 */}
       <Box bg={bg} py="10" px="4">
-        <Flex justify={"center"}>
-          <Box w={"60%"} position="relative" mt={"20"}>
+        <Flex justify={"center"} flexWrap="wrap">
+          <Box
+            w={{ base: "100%", md: "100%", lg: "60%" }}
+            position="relative"
+            mt={"20"}
+            // p={{ base: "2", md: "2" }}
+            textAlign="center"
+          >
             <Image
               boxSize={"10%"}
               objectFit="contain"
@@ -983,13 +1066,17 @@ function Home1() {
               left={"180px"}
             />
             <Image
-              boxSize={"98%"}
+              boxSize={{ base: "88%", md: "88%", lg: "90%" }}
               objectFit="contain"
               src="/image/pcandcoin.png"
               alt="pc"
             />
           </Box>
-          <Box w={"40%"} pr="8">
+          <Box
+            w={{ base: "100%", md: "100%", lg: "40%" }}
+            p={{ base: "2", md: "2" }}
+            pr={{ lg: "8" }}
+          >
             <VStack alignItems={"flex-start"}>
               <Heading fontSize={"6xl"} mt="-4" mb={"4"} color={headerColor}>
                 What Is Rockie
@@ -1050,7 +1137,7 @@ function Home1() {
           px="3"
           py="2"
         >
-          <Box w={{ base: "100%", md: "50%", lg: "50%" }}>
+          <Box w={{ base: "100%", md: "100%", lg: "50%" }}>
             <VStack mb="38px" rowGap={"30px"}>
               {" "}
               <Heading fontSize={"6xl"} color={headerColor} pr="6">
@@ -1111,7 +1198,7 @@ function Home1() {
               />
             </HStack>
           </Box>
-          <Box w={{ base: "100%", md: "50%", lg: "50%" }} position="relative">
+          <Box w={{ base: "100%", md: "100%", lg: "50%" }} position="relative">
             <Image
               boxSize="90%"
               objectFit="cover"
@@ -1123,16 +1210,19 @@ function Home1() {
       </Box>
       {/* end of 6 */}
 
-      <Box p="8">
+      <Box p="8" w="100%">
         <Flex
           flexDir={{ base: "column", md: "column", lg: "row" }}
           justify={"space-between"}
           flexWrap="wrap"
         >
-          <Box w="40%" pr={{ base: "2", md: "2", lg: "16" }}>
+          <Box
+            w={{ base: "100%", md: "100%", lg: "40%" }}
+            pr={{ base: "2", md: "2", lg: "16" }}
+          >
             <HStack>
               <Text fontSize={"6xl"} lineHeight="60px" color={headerColor}>
-                Our Customers <br /> Love What We Do
+                Our Customers Love What We Do
               </Text>
             </HStack>
             <HStack my="4">
@@ -1147,7 +1237,6 @@ function Home1() {
               </Text>
             </HStack>
             <HStack>
-              {" "}
               <Wrap>
                 <WrapItem>
                   <Avatar name="Kent Dodds" src="https://bit.ly/kent-c-dodds" />
@@ -1184,9 +1273,8 @@ function Home1() {
               </Text>
             </HStack>
           </Box>
-          <Box w="50%" p="8">
+          <Box w={{ base: "100%", md: "100%", lg: "50%" }} p="8">
             <Flex>
-              {" "}
               <Box
                 borderLeft={"8px"}
                 borderLeftRadius="lg"
@@ -1196,9 +1284,7 @@ function Home1() {
                 bg={"#222630"}
               >
                 <HStack>
-                  {" "}
-                  <Text fontSize={"3xl"} fontWeight="bold" color={headerColor}>
-                    {" "}
+                  <Text fontSize={"3xl"} fontWeight="bold" color={TextColor}>
                     “Great course I really enjoyed it and the course was way
                     easy to learn with very good explanations of the code, I
                     could easily understand and develop applications with the
@@ -1214,7 +1300,6 @@ function Home1() {
                     />
                   </VStack>
                   <VStack mt="2">
-                    {" "}
                     <Text
                       fontSize={"2xl"}
                       fontWeight="bold"
@@ -1222,16 +1307,13 @@ function Home1() {
                     >
                       Johnny Andro
                     </Text>
-                    ,{" "}
                     <Text fontSize={"lg"} color={headerColor}>
                       Director Company
                     </Text>
                   </VStack>
                   <Spacer />
                   <VStack>
-                    {" "}
                     <Image
-                      // boxSize="100px"
                       objectFit="cover"
                       src="/image/comentLogo.png"
                       alt="Dan Abramov"
@@ -1244,33 +1326,6 @@ function Home1() {
         </Flex>
       </Box>
       {/* end of 7 */}
-      {/* <Box bg={bgSub}> 
-        <Stack py="4" px="8" direction={["column", "row"]}>
-          <VStack alignItems={"flex-start"}>
-            <Heading color={headerColor} textAlign="left" fontSize="4xl">
-              Earn up to $25 worth of crypto
-            </Heading>
-            <Text textAlign="left" color={headerColor} fontSize="1.2rem">
-              Discover How Specific Cryptocurrencies Work — And Get A Bit Of
-              Each Crypto To Try Out For Yourself.
-            </Text>
-          </VStack>
-          <Spacer />
-          <VStack alignItems={"center"} justify="center" py="8">
-            <Button
-              borderRadius={"full"}
-              py="8"
-              px="10"
-              bg="#E4DFFD"
-              color={"black"}
-              _hover={{ bg: "#23262F", color: "white" }}
-              fontSize="2xl"
-            >
-              Create Account
-            </Button>
-          </VStack>
-        </Stack>
-      </Box> */}
       <EarnUp />
     </Box>
   );

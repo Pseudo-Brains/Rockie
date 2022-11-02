@@ -1,3 +1,5 @@
+import { useState } from "react";
+import Tableer from "../../components/table";
 import {
   Box,
   Flex,
@@ -5,25 +7,54 @@ import {
   Image,
   Text,
   Heading,
-  Table,
-  Thead,
-  Tbody,
+  useColorModeValue,
   AspectRatio,
-  Tr,
-  Th,
-  Td,
-  TableContainer,
   Link,
+  UnorderedList,
+  ListItem,
 } from "@chakra-ui/react";
-import { FaArrowUp, FaStar, FaCircle } from "react-icons/fa";
+import { FaArrowUp, FaCircle } from "react-icons/fa";
 
 const Home2 = () => {
+  const bg = useColorModeValue("#141416", "#FFFFFF");
+  const bgx = useColorModeValue("#141416", "#f6f6f6");
+  const bgSub = useColorModeValue("#17181C", "#f6f6f6");
+  const bgSubc = useColorModeValue("#17181C", "#E2E2E2");
+  const bgSubcc = useColorModeValue("#17181C", "#ffffff");
+  const headerColor = useColorModeValue("#FFFFFF", "#23262F");
+  const [red, setRed] = useState(false);
+  const [actve, isactive] = useState(false);
+
+  const ShowBg = function () {
+    setRed((prev) => prev == true);
+    console.log(red);
+  };
+
+  const ShowBgs = function () {
+    isactive((prev) => !prev);
+    // if (red && isactive) {
+
+    // }
+    console.log(actve);
+  };
+
   return (
-    <Box width="100%" pt="50px" minH="100vh" bgColor="#141416">
-      <Box w="100%" minH="100px" bgColor="#18191d">
-        <Box w="80%" minH="100px" color="white" m="auto">
-          <Flex bgColor="#" w="100%" justify="space-between" h="700px">
-            <Box h="90%" w="45%" pt="30px">
+    <Box width="100%" pt="0px" minH="100vh" bg={bg}>
+      <Box w="100%" minH="100px" bg={bgx}>
+        <Box
+          pt={"50px"}
+          w={{ base: "100%", lg: "90%", xl: "80%" }}
+          minH="100px"
+          color={headerColor}
+          m="auto"
+        >
+          <Flex
+            direction={{ base: "column", lg: "row", xl: "row" }}
+            w="100%"
+            justify="space-between"
+            minH="700px"
+          >
+            <Box h="90%" w={{ base: "100%", lg: "45%", xl: "45%" }} pt="30px">
               <Heading py="30px" fontSize="6xl" lineHeight="75px">
                 A trusted and secure cryptocurrency exchange.
               </Heading>
@@ -42,7 +73,11 @@ const Home2 = () => {
                 Trading Now
               </Box>
             </Box>
-            <Flex align="center" h="90%" w="50%">
+            <Flex
+              align="center"
+              h="90%"
+              w={{ base: "100%", lg: "50%", xl: "50%" }}
+            >
               <Image
                 objectFit="cover"
                 src="/image/bannerHome2.png"
@@ -54,12 +89,13 @@ const Home2 = () => {
       </Box>
       <Flex
         minH="250px"
-        mt="-100px"
+        mt={{ base: "0", lg: "-100px", xl: "-100px" }}
         mx="auto"
+        px="20px"
+        direction={{ base: "column", lg: "row", xl: "row" }}
         borderRadius="30px"
-        bg="#18191d"
-        w="75%"
-        border="1px solid"
+        bg={bgSubcc}
+        w={{ base: "none", lg: "90%", xl: "75%" }}
         align="center"
         justify="space-around"
       >
@@ -67,22 +103,25 @@ const Home2 = () => {
           align="center"
           justify="center"
           direction="column"
-          width="24%"
+          // bgColor={"violet"}
+          w={{ base: "90%", lg: "24%", xl: "24%" }}
           h="190px"
+          // bg={bgSubc}
         >
           <Flex justify="space-between" w="90%">
             <Flex
+              // bgColor={"green"}
               justify="space-between"
               align="center"
               direction="column"
-              width="30%"
+              w={{ base: "30%", lg: "39%", xl: "30%" }}
             >
               <Image
                 objectFit="cover"
                 src="/image/Bitcoin.png"
                 alt="Homebanner"
               />
-              <Text p="13px" fontWeight="bold" color="white">
+              <Text p="13px" fontWeight="bold" color={headerColor}>
                 Bitcoin
               </Text>
             </Flex>
@@ -109,11 +148,11 @@ const Home2 = () => {
               </Flex>
             </Flex>
           </Flex>
-          <Flex p="13px" justify="space-between" w="80%">
-            <Heading fontSize="22px" fontWeight="bold" color="white">
+          <Flex p="13px" justify="space-between" w="75%">
+            <Heading fontSize="22px" fontWeight="bold" color={headerColor}>
               USD 53,260.20
             </Heading>
-            <Text fontSize="14px" color="white">
+            <Text fontSize="14px" color={headerColor}>
               BTC
             </Text>
           </Flex>
@@ -122,8 +161,9 @@ const Home2 = () => {
           align="center"
           justify="center"
           direction="column"
-          width="24%"
+          w={{ base: "90%", lg: "24%", xl: "24%" }}
           h="190px"
+          bg={bgSubc}
         >
           <Flex justify="space-between" w="90%">
             <Flex
@@ -137,7 +177,7 @@ const Home2 = () => {
                 src="/image/Ether7.png"
                 alt="Homebanner"
               />
-              <Text p="13px" fontWeight="bold" color="white">
+              <Text p="13px" fontWeight="bold" color={headerColor}>
                 Etherium
               </Text>
             </Flex>
@@ -165,10 +205,10 @@ const Home2 = () => {
             </Flex>
           </Flex>
           <Flex p="13px" justify="space-between" w="80%">
-            <Heading fontSize="22px" fontWeight="bold" color="white">
+            <Heading fontSize="22px" fontWeight="bold" color={headerColor}>
               USD 53,260.20
             </Heading>
-            <Text fontSize="14px" color="white">
+            <Text fontSize="14px" color={headerColor}>
               ETH
             </Text>
           </Flex>
@@ -177,8 +217,9 @@ const Home2 = () => {
           align="center"
           justify="center"
           direction="column"
-          width="24%"
+          w={{ base: "90%", lg: "24%", xl: "24%" }}
           h="190px"
+          bg={bgSubc}
         >
           <Flex justify="space-between" w="90%">
             <Flex
@@ -192,7 +233,7 @@ const Home2 = () => {
                 src="/image/Teter.png"
                 alt="Homebanner"
               />
-              <Text p="13px" fontWeight="bold" color="white">
+              <Text p="13px" fontWeight="bold" color={headerColor}>
                 Teter
               </Text>
             </Flex>
@@ -220,10 +261,10 @@ const Home2 = () => {
             </Flex>
           </Flex>
           <Flex p="13px" justify="space-between" w="80%">
-            <Heading fontSize="22px" fontWeight="bold" color="white">
+            <Heading fontSize="22px" fontWeight="bold" color={headerColor}>
               USD 53,260.20
             </Heading>
-            <Text fontSize="14px" color="white">
+            <Text fontSize="14px" color={headerColor}>
               USDT
             </Text>
           </Flex>
@@ -232,8 +273,9 @@ const Home2 = () => {
           align="center"
           justify="center"
           direction="column"
-          width="24%"
+          w={{ base: "90%", lg: "24%", xl: "24%" }}
           h="190px"
+          bg={bgSubc}
         >
           <Flex justify="space-between" w="90%">
             <Flex
@@ -247,7 +289,7 @@ const Home2 = () => {
                 src="/image/BNByy.png"
                 alt="Homebanner"
               />
-              <Text p="13px" fontWeight="bold" color="white">
+              <Text p="13px" fontWeight="bold" color={headerColor}>
                 BNB
               </Text>
             </Flex>
@@ -275,33 +317,49 @@ const Home2 = () => {
             </Flex>
           </Flex>
           <Flex p="13px" justify="space-between" w="80%">
-            <Heading fontSize="22px" fontWeight="bold" color="white">
+            <Heading fontSize="22px" fontWeight="bold" color={headerColor}>
               USD 53,260.20
             </Heading>
-            <Text fontSize="14px" color="white">
+            <Text fontSize="14px" color={headerColor}>
               BNB
             </Text>
           </Flex>
         </Flex>
       </Flex>
-      <Box w="80%" m="30px auto" minH="500px">
-        <Flex w="100%" minH="600px" align="center" justify="space-between">
-          <Flex w="46%" minH="600px">
+      <Box
+        w={{ base: "none", lg: "90%", xl: "80%" }}
+        m="30px auto"
+        minH="500px"
+      >
+        <Flex
+          w="100%"
+          minH="600px"
+          align="center"
+          justify="space-between"
+          direction={{ base: "column", lg: "row", xl: "row" }}
+        >
+          <Flex
+            w={{ base: "100%", lg: "46%", xl: "46%" }}
+            minH="600px"
+            direction={{ base: "column", lg: "row", xl: "row" }}
+          >
             <Flex
               direction="column"
               justify="space-between"
               maxH="100%"
               align="center"
-              w="50%"
+              w={{ base: "100%", lg: "50%", xl: "50%" }}
+              // bgColor={"red"}
             >
               <Flex
                 align="center"
                 direction="column"
-                color="white"
-                bgColor="#18191d"
+                color={headerColor}
+                bg={bgSub}
                 pt="35px"
                 w="100%"
                 h="46%"
+                my={{ base: "10px", lg: "0", xl: "0" }}
                 borderRadius="10px"
               >
                 <Image
@@ -321,8 +379,8 @@ const Home2 = () => {
               <Flex
                 align="center"
                 direction="column"
-                color="white"
-                bgColor="#18191d"
+                color={headerColor}
+                bg={bgSub}
                 pt="35px"
                 w="100%"
                 h="47%"
@@ -343,14 +401,20 @@ const Home2 = () => {
                 </Text>
               </Flex>
             </Flex>
-            <Flex align="center" w="50%" direction="row-reverse" maxH="50%">
+            <Flex
+              align="center"
+              w={{ base: "100%", lg: "50%", xl: "50%" }}
+              direction="row-reverse"
+              maxH="50%"
+            >
               <Flex
                 align="center"
                 direction="column"
-                color="white"
-                bgColor="#18191d"
+                color={headerColor}
+                bg={bgSub}
                 pt="35px"
-                w="90%"
+                w={{ base: "100%", lg: "90%", xl: "90%" }}
+                my={{ base: "10px", lg: "0", xl: "0" }}
                 h="50%"
                 borderRadius="10px"
               >
@@ -371,14 +435,16 @@ const Home2 = () => {
             </Flex>
           </Flex>
           <Flex
-            w="48%"
-            color="white"
+            w={{ base: "95%", lg: "48%", xl: "48%" }}
+            color={headerColor}
             align="center"
-            // border="1px solid"
             minH="600px"
           >
-            <Box minH="300px" w="100%">
-              <Heading pt="20px" fontSize="50px">
+            <Box minH="30px" w="100%">
+              <Heading
+                pt="20px"
+                fontSize={{ base: "29px", lg: "45px", xl: "50px" }}
+              >
                 The Most Trusted Cryptocurrency Platform.
               </Heading>
               <Text py="30px" fontSize="20px">
@@ -398,347 +464,137 @@ const Home2 = () => {
           </Flex>
         </Flex>
       </Box>
-      <Box w="80%" m="30px auto" minH="500px" bgColor="#18191d">
+      <Box
+        w={{ base: "none", lg: "90%", xl: "80%" }}
+        m="30px auto"
+        minH="500px"
+        bgColor={bg}
+      >
         <Flex color="white" justify="space-between" w="100%" align="center">
-          <Heading fontSize="42px">Market Update</Heading>
+          <Heading fontSize="42px" py={"10px"}>
+            Market Update
+          </Heading>
           <Text fontSize="20px">
             <Link>See All Coins</Link>
           </Text>
         </Flex>
-        <Flex h="50px" align="center" w="60%">
-          sas
+        <Flex h="50px" align="center" color={headerColor} w="100%">
+          <UnorderedList>
+            <Flex
+              wrap="wrap"
+              overflowX={"hidden"}
+              justify="space-around"
+              w="100%"
+              align="center"
+            >
+              <ListItem
+                className="btn-focus"
+                mx="10px"
+                p="3px 10px"
+                width="fit-content"
+                borderRadius="30px"
+                border="1px solid"
+                display="block"
+                onMouseEnter={() => ShowBg()}
+                onClick={() => ShowBgs()}
+                style={{
+                  backgroundColor: actve == true && red == true ? "red" : "",
+                }}
+              >
+                Crypto
+              </ListItem>
+              <ListItem
+                mx="10px"
+                p="3px 10px"
+                border="1px solid"
+                width="fit-content"
+                borderRadius="30px"
+                display="block"
+              >
+                Virtual Land
+              </ListItem>{" "}
+              <ListItem
+                mx="10px"
+                p="3px 10px"
+                border="1px solid"
+                width="fit-content"
+                borderRadius="30px"
+                display="block"
+              >
+                Metaverse
+              </ListItem>{" "}
+              <ListItem
+                mx="10px"
+                p="3px 10px"
+                border="1px solid"
+                width="fit-content"
+                borderRadius="30px"
+                display="block"
+              >
+                NFT Marketplace
+              </ListItem>{" "}
+              <ListItem
+                mx="10px"
+                p="3px 10px"
+                border="1px solid"
+                width="fit-content"
+                borderRadius="30px"
+                display="block"
+              >
+                Token
+              </ListItem>{" "}
+              <ListItem
+                mx="10px"
+                p="3px 10px"
+                border="1px solid"
+                width="fit-content"
+                borderRadius="30px"
+                display="block"
+              >
+                NFTs
+              </ListItem>{" "}
+              <ListItem
+                mx="10px"
+                p="3px 10px"
+                border="1px solid"
+                width="fit-content"
+                borderRadius="30px"
+                display="block"
+              >
+                Bitcoin
+              </ListItem>{" "}
+              <ListItem
+                mx="10px"
+                p="3px 10px"
+                border="1px solid"
+                width="fit-content"
+                borderRadius="30px"
+                display="block"
+              >
+                Arts
+              </ListItem>
+            </Flex>
+          </UnorderedList>
         </Flex>
-        <TableContainer>
-          <Table size="lg" fontSize="20px" fontWeight="900">
-            <Thead>
-              <Tr>
-                <Th></Th>
-                <Th>#</Th>
-                <Th>Name</Th>
-                <Th>Last Price</Th>
-                <Th>24h %</Th>
-                <Th>Market Cap</Th>
-                <Th>Last 7 Days</Th>
-                <Th></Th>
-              </Tr>
-            </Thead>
-            <Tbody color="white">
-              <Tr _hover="red">
-                <Td>
-                  <Icon as={FaStar} />
-                </Td>
-                <Td>1</Td>
-                <Td>
-                  <Flex align="center">
-                    <Image
-                      objectFit="cover"
-                      h="20px"
-                      src="/image/Bitcoin.png"
-                      alt="Homebanner"
-                    />
-                    <Text pl="10px">Bitcoin</Text>
-                  </Flex>
-                </Td>
-                <Td>$56,623.54</Td>
-                <Td>+1.45%</Td>
-                <Td>$880,423,640,582</Td>
-                <Td>
-                  <Image
-                    objectFit="cover"
-                    h="20px"
-                    src="/image/chart-bit.png"
-                    alt="Homebanner"
-                  />
-                </Td>
-                <Td>
-                  <Box
-                    border="2px solid"
-                    borderRadius="20px"
-                    px="20px"
-                    w="fit-content"
-                  >
-                    Trade
-                  </Box>
-                </Td>
-              </Tr>
-              <Tr _hover="red">
-                <Td>
-                  <Icon as={FaStar} />
-                </Td>
-                <Td>2</Td>
-                <Td>
-                  <Flex align="center">
-                    <Image
-                      objectFit="cover"
-                      h="20px"
-                      src="/image/Ether7.png"
-                      alt="Homebanner"
-                    />
-                    <Text pl="10px">Etherium</Text>
-                  </Flex>
-                </Td>
-                <Td>$56,623.54</Td>
-                <Td>-5.12%</Td>
-                <Td>$880,423,640,582</Td>
-                <Td>
-                  <Image
-                    objectFit="cover"
-                    h="20px"
-                    src="/image/downchart.png"
-                    alt="Homebanner"
-                  />
-                </Td>
-                <Td>
-                  <Box
-                    border="2px solid"
-                    borderRadius="20px"
-                    px="20px"
-                    w="fit-content"
-                  >
-                    Trade
-                  </Box>
-                </Td>
-              </Tr>
-              <Tr _hover="red">
-                <Td>
-                  <Icon as={FaStar} />
-                </Td>
-                <Td>3</Td>
-                <Td>
-                  <Flex align="center">
-                    <Image
-                      objectFit="cover"
-                      h="20px"
-                      src="/image/BNByy.png"
-                      alt="Homebanner"
-                    />
-                    <Text pl="10px">Binance</Text>
-                  </Flex>
-                </Td>
-                <Td>$56,623.54</Td>
-                <Td>-3.75%</Td>
-                <Td>$880,423,640,582</Td>
-                <Td>
-                  <Image
-                    objectFit="cover"
-                    h="20px"
-                    src="/image/downchart.png"
-                    alt="Homebanner"
-                  />
-                </Td>
-                <Td>
-                  <Box
-                    border="2px solid"
-                    borderRadius="20px"
-                    px="20px"
-                    w="fit-content"
-                  >
-                    Trade
-                  </Box>
-                </Td>
-              </Tr>
-              <Tr _hover="red">
-                <Td>
-                  <Icon as={FaStar} />
-                </Td>
-                <Td>4</Td>
-                <Td>
-                  <Flex align="center">
-                    <Image
-                      objectFit="cover"
-                      h="20px"
-                      src="/image/Teter.png"
-                      alt="Homebanner"
-                    />
-                    <Text pl="10px">Tether</Text>
-                  </Flex>
-                </Td>
-                <Td>$56,623.54</Td>
-                <Td>+1.45%</Td>
-                <Td>$880,423,640,582</Td>
-                <Td>
-                  <Image
-                    objectFit="cover"
-                    h="20px"
-                    src="/image/chart-bit.png"
-                    alt="Homebanner"
-                  />
-                </Td>
-                <Td>
-                  <Box
-                    border="2px solid"
-                    borderRadius="20px"
-                    px="20px"
-                    w="fit-content"
-                  >
-                    Trade
-                  </Box>
-                </Td>
-              </Tr>
-              <Tr _hover="red">
-                <Td>
-                  <Icon as={FaStar} />
-                </Td>
-                <Td>5</Td>
-                <Td>
-                  <Flex align="center">
-                    <Image
-                      objectFit="cover"
-                      h="20px"
-                      src="/image/Bitcoin.png"
-                      alt="Homebanner"
-                    />
-                    <Text pl="10px">Bitcoin</Text>
-                  </Flex>
-                </Td>
-                <Td>$56,623.54</Td>
-                <Td>+1.45%</Td>
-                <Td>$880,423,640,582</Td>
-                <Td>
-                  <Image
-                    objectFit="cover"
-                    h="20px"
-                    src="/image/chart-bit.png"
-                    alt="Homebanner"
-                  />
-                </Td>
-                <Td>
-                  <Box
-                    border="2px solid"
-                    borderRadius="20px"
-                    px="20px"
-                    w="fit-content"
-                  >
-                    Trade
-                  </Box>
-                </Td>
-              </Tr>
-              <Tr _hover="red">
-                <Td>
-                  <Icon as={FaStar} />
-                </Td>
-                <Td>6</Td>
-                <Td>
-                  <Flex align="center">
-                    <Image
-                      objectFit="cover"
-                      h="20px"
-                      src="/image/Bitcoin.png"
-                      alt="Homebanner"
-                    />
-                    <Text pl="10px">Bitcoin</Text>
-                  </Flex>
-                </Td>
-                <Td>$56,623.54</Td>
-                <Td>+1.45%</Td>
-                <Td>$880,423,640,582</Td>
-                <Td>
-                  <Image
-                    objectFit="cover"
-                    h="20px"
-                    src="/image/downchart.png"
-                    alt="Homebanner"
-                  />
-                </Td>
-                <Td>
-                  <Box
-                    border="2px solid"
-                    borderRadius="20px"
-                    px="20px"
-                    w="fit-content"
-                  >
-                    Trade
-                  </Box>
-                </Td>
-              </Tr>
-              <Tr _hover="red">
-                <Td>
-                  <Icon as={FaStar} />
-                </Td>
-                <Td>7</Td>
-                <Td>
-                  <Flex align="center">
-                    <Image
-                      objectFit="cover"
-                      h="20px"
-                      src="/image/Bitcoin.png"
-                      alt="Homebanner"
-                    />
-                    <Text pl="10px">Bitcoin</Text>
-                  </Flex>
-                </Td>
-                <Td>$56,623.54</Td>
-                <Td>+1.45%</Td>
-                <Td>$880,423,640,582</Td>
-                <Td>
-                  <Image
-                    objectFit="cover"
-                    h="20px"
-                    src="/image/chart-bit.png"
-                    alt="Homebanner"
-                  />
-                </Td>
-                <Td>
-                  <Box
-                    border="2px solid"
-                    borderRadius="20px"
-                    px="20px"
-                    w="fit-content"
-                  >
-                    Trade
-                  </Box>
-                </Td>
-              </Tr>
-              <Tr _hover="red">
-                <Td>
-                  <Icon as={FaStar} />
-                </Td>
-                <Td>8</Td>
-                <Td>
-                  <Flex align="center">
-                    <Image
-                      objectFit="cover"
-                      h="20px"
-                      src="/image/Bitcoin.png"
-                      alt="Homebanner"
-                    />
-                    <Text pl="10px">Bitcoin</Text>
-                  </Flex>
-                </Td>
-                <Td>$56,623.54</Td>
-                <Td>+1.45%</Td>
-                <Td>$880,423,640,582</Td>
-                <Td>
-                  <Image
-                    objectFit="cover"
-                    h="20px"
-                    src="/image/chart-bit.png"
-                    alt="Homebanner"
-                  />
-                </Td>
-                <Td>
-                  <Box
-                    border="2px solid"
-                    borderRadius="20px"
-                    px="20px"
-                    w="fit-content"
-                  >
-                    Trade
-                  </Box>
-                </Td>
-              </Tr>
-            </Tbody>
-          </Table>
-        </TableContainer>
+        <Tableer />
       </Box>
-      <Box w="80%" m="30px auto" minH="600px">
-        <Flex w="100%" justify="space-between" minH="600px">
+      <Box
+        w={{ base: "none", lg: "100%", xl: "80%" }}
+        m="30px auto"
+        minH="600px"
+      >
+        <Flex
+          w="100%"
+          justify="space-between"
+          direction={{ base: "column", lg: "row", xl: "row" }}
+          minH="600px"
+        >
           <Flex
             maxH="100%"
             backgroundImage="url('/image/Globaly.png')"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
-            w="45%"
+            w={{ base: "100", lg: "45%", xl: "45%" }}
             align="center"
           >
             <Flex
@@ -820,7 +676,7 @@ const Home2 = () => {
               </Flex>
             </Flex>
           </Flex>
-          <Box width="50%" color="white">
+          <Box width="50%" color={headerColor}>
             <Heading py="13px">
               We Are The Most Trusted Cryptocurrency Platform.
             </Heading>
@@ -832,7 +688,7 @@ const Home2 = () => {
               direction="column"
               justify="space-between"
               h="60%"
-              color="white"
+              color={headerColor}
             >
               <Flex align="center" w="70%" h="22%" justify="space-between">
                 <Flex
@@ -913,10 +769,10 @@ const Home2 = () => {
           </Box>
         </Flex>
       </Box>
-      <Box w="80%" m="30px auto" color="white">
+      <Box w="80%" m="30px auto" color={headerColor}>
         <Flex align="center" w="100%" direction="column">
           <Heading pt="20px">How It Works</Heading>
-          <Text py="20px" w="30%" textAlign="center" fontSize="22px">
+          <Text py="20px" w="40%" textAlign="center" fontSize="22px">
             Stacks is a production-ready library of stackable content blocks
             built in React Native.
           </Text>
@@ -945,7 +801,7 @@ const Home2 = () => {
                 position="absolute"
                 mt="-150px"
                 zIndex="10"
-                ml="370px"
+                ml={{ base: "none", lg: "250px", xl: "370px" }}
                 objectFit="cover"
                 src="/image/linerr.png"
                 alt="Homebanner"
@@ -975,7 +831,7 @@ const Home2 = () => {
                 position="absolute"
                 zIndex="10"
                 mt="-150px"
-                ml="370px"
+                ml={{ base: "none", lg: "250px", xl: "370px" }}
                 objectFit="cover"
                 src="/image/linerr.png"
                 alt="Homebanner"
@@ -1005,7 +861,7 @@ const Home2 = () => {
                 position="absolute"
                 zIndex="10"
                 mt="-150px"
-                ml="370px"
+                ml={{ base: "none", lg: "250px", xl: "370px" }}
                 objectFit="cover"
                 src="/image/linerr.png"
                 alt="Homebanner"
@@ -1035,7 +891,7 @@ const Home2 = () => {
           </Flex>
         </Flex>
       </Box>
-      <Box w="80%" m="30px auto" color="white">
+      <Box w="80%" m="30px auto" color={headerColor}>
         <Flex align="center" w="100%" direction="column">
           <Heading pt="20px">Learn And Earn</Heading>
           <Text py="20px" w="30%" textAlign="center" fontSize="22px">
@@ -1064,7 +920,6 @@ const Home2 = () => {
                 backgroundSize="cover"
                 backgroundRepeat="no-repeat"
                 w="100%"
-                bgColor="pink"
               >
                 <AspectRatio w="50px" top="20" m="auto" ratio={1}>
                   <iframe
@@ -1087,7 +942,11 @@ const Home2 = () => {
                 Learn about UI8 coin and earn an All-Access Pass
               </Heading>
               <Flex justify="space-between">
-                <Flex w="30%" justify="space-between" align="center">
+                <Flex
+                  w={{ base: "none", lg: "50%", xl: "150px" }}
+                  justify="space-between"
+                  align="center"
+                >
                   <Icon color="whatsapp.300" as={FaCircle} />
                   <Text>Floyd Buckridge</Text>
                 </Flex>
@@ -1127,7 +986,11 @@ const Home2 = () => {
                 Learn about UI8 coin and earn an All-Access Pass
               </Heading>
               <Flex justify="space-between">
-                <Flex w="30%" justify="space-between" align="center">
+                <Flex
+                  w={{ base: "none", lg: "50%", xl: "150px" }}
+                  justify="space-between"
+                  align="center"
+                >
                   <Icon color="whatsapp.300" as={FaCircle} />
                   <Text>Floyd Buckridge</Text>
                 </Flex>
@@ -1166,7 +1029,11 @@ const Home2 = () => {
                 Learn about UI8 coin and earn an All-Access Pass
               </Heading>
               <Flex justify="space-between">
-                <Flex w="30%" justify="space-between" align="center">
+                <Flex
+                  w={{ base: "none", lg: "50%", xl: "150px" }}
+                  justify="space-between"
+                  align="center"
+                >
                   <Icon color="whatsapp.300" as={FaCircle} />
                   <Text>Floyd Buckridge</Text>
                 </Flex>

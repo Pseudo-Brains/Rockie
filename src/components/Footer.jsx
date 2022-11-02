@@ -8,6 +8,7 @@ import {
   VStack,
   Flex,
   useColorModeValue,
+  useColorMode,
   Spacer,
   Input,
   Button,
@@ -23,10 +24,11 @@ function Footer() {
   const bg = useColorModeValue("#141416", "#FFFFFF");
   const headerColor = useColorModeValue("#FFFFFF", "#23262F");
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Box w={"100%"} bg={bg} px="2">
-      <Box>
+      <Box maxW={"1450px"} w="100%" m="auto">
         <Flex
           justify={"center"}
           flexDir={{ base: "column", md: "row", lg: "row" }}
@@ -38,14 +40,26 @@ function Footer() {
             p="4"
             pt="8"
           >
-            <Image
-              objectFit="cover"
-              src="/image/rock-logo1.png"
-              alt="logo"
-              // boxSize={"160px"}
-              width={"230px"}
-              mb={"3"}
-            />
+            {colorMode === "light" ? (
+              <Image
+                objectFit="cover"
+                src="/image/rock-logo1.png"
+                alt="logo"
+                // boxSize={"160px"}
+                width={"230px"}
+                mb={"3"}
+              />
+            ) : (
+              <Image
+                objectFit="cover"
+                src="/image/rockie-logo.png"
+                alt="logo"
+                // boxSize={"160px"}
+                width={"230px"}
+                mb={"3"}
+              />
+            )}
+
             <Heading color={TextColor} fontSize="28" mb="2.5">
               Let's talk! 🤙
             </Heading>
@@ -80,16 +94,14 @@ function Footer() {
           {/* ttt */}
           <VStack
             w={{ base: "100%", md: "50%", lg: "33%" }}
-            p="2"
+            p={{ base: "6", md: "2" }}
             pt="8"
             borderRight={"2px"}
             borderLeft={{ base: "0px", md: "0px", lg: "2px" }}
             borderColor={"#23262F"}
+            alignItems={{ base: "flex-start", md: "center" }}
           >
-            <Flex
-              flexDir={{ base: "column", md: "row" }}
-              justify="space-between"
-            >
+            <Flex flexDir="row" justify="space-between">
               <VStack alignItems={"flex-start"} py="4">
                 <Text
                   color={TextColor}
