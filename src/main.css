@@ -34,3 +34,26 @@
 .btn-style-Nohover {
   background-color: #3772ff;
 }
+
+.active{
+  background-color: #3772ff;
+  border-radius: 20px;
+}
+
+.navLink{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+.box{
+  font-size: small;
+  height: 40px;
+  width: 40%;
+  background: #3772ff;
+  border-radius: 50px;
+
+}
+

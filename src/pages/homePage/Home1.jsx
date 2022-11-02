@@ -43,6 +43,7 @@ function Home1() {
   const ShowBg = function (e) {
     e.target.closest(".btn-show").classList.toggle("btn-show-bg");
   };
+  
   return (
     <Box bg={bg}>
       <Box pt="10">

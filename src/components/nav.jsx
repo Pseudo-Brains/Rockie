@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { FaBell, FaMoon, FaUser, FaSun } from "react-icons/fa";
 import { AiFillCaretDown } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -85,9 +86,11 @@ const Nav = () => {
           <Menu>
             <MenuButton fontWeight="700">Pages</MenuButton>
             <MenuList>
-              <MenuItem>New Window</MenuItem>
-              <MenuItem>Open Closed Tab</MenuItem>
-              <MenuItem>Open File</MenuItem>
+              <MenuItem><Link to='/profile'>User Profile</Link></MenuItem>
+              <MenuItem><Link to='/login'>Login</Link></MenuItem>
+              <MenuItem><Link to='/register'>Register</Link></MenuItem>
+              <MenuItem><Link to='/contact'>Contact</Link></MenuItem>
+              <MenuItem><Link to='/faq'>FAQs</Link></MenuItem>
             </MenuList>
           </Menu>
         </Flex>

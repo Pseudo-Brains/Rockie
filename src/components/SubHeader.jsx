@@ -17,6 +17,7 @@ function SubHeader(props) {
   const InputColor = useColorModeValue("#222630", "#FFFFFF");
   const headerColor = useColorModeValue("#FFFFFF", "#23262F");
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
+  
   return (
     <Box px="8" py="14" bg={bgSub}>
       <Flex
