@@ -7,7 +7,7 @@
 }
 .btn-show:hover {
   background-color: transparent;
-  padding: 20px;
+  /* padding: 20px; */
 }
 .show-Btn-Hover:hover {
   background-color: #171e2e;
@@ -47,4 +47,29 @@
 .row:hover .btn-hover {
   background-color: #3772ff;
   border-color: transparent;
+}
+.active{
+  background-color: #3772ff;
+  border-radius: 20px;
+}
+
+.navLink{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+.box{
+  font-size: small;
+  height: 40px;
+  width: 40%;
+  background: #3772ff;
+  border-radius: 50px;
+
+}
+
+.btn-active {
+  background-color: rgb(21, 21, 237);
 }

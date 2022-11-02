@@ -29,7 +29,7 @@ import { refreshicon } from "../../../public/Icons/icons";
 import EarnUp from "../../components/EarnUp";
 import SubHeader from "../../components/SubHeader";
 
-function BuyCryptoDetails() {
+function SellCryptoDetails() {
   const bg = useColorModeValue("#141416", "#FFFFFF");
   const bgSub = useColorModeValue("#17181C", "#FFFFFF");
   const InputColor = useColorModeValue("#222630", "#FFFFFF");
@@ -90,11 +90,10 @@ function BuyCryptoDetails() {
             w={{ base: "100%", md: "100%", lg: "70%" }}
             alignItems={"center"}
           >
-            <Flex justify={"center"} alignItems="center" flexDir="column">
+            <Flex justify={"center"} alignItems="flex-end" flexDir="column">
               <HStack
-                w={{ base: "90%", md: "86%", lg: "70%" }}
-                alignItems={"center"}
-                justify="space-evenly"
+                w={{ base: "90%", md: "86%", lg: "95%" }}
+                justify="space-between"
                 ml={{ base: "2", md: "2", lg: "2" }}
               >
                 {" "}
@@ -104,36 +103,53 @@ function BuyCryptoDetails() {
                   color="green.400"
                 />{" "}
                 <Text
-                  fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  fontSize={{ base: "sm", md: "1xl", lg: "md" }}
                   color={headerColor}
                 >
-                  Select currency
+                  Select crypto
                 </Text>{" "}
                 <Image
                   src="/image/greenline.png"
-                  w={{ base: "1rem", md: "1.3rem", lg: "8.5rem" }}
+                  w={{ base: "1rem", md: "1.3rem", lg: "4rem" }}
                   alt="Dot arrow"
                 />
                 <Icon
-                  color="green.400"
                   as={FaCheckCircle}
                   fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  color="green.400"
                 />{" "}
                 <Text
                   fontSize={{ base: "sm", md: "md", lg: "lg" }}
                   color={headerColor}
                 >
                   {" "}
-                  Important Notes
+                  Confirm Payment
                 </Text>
                 <Image
                   src="/image/greenline.png"
-                  w={{ base: "1rem", md: "1.3rem", lg: "8.5rem" }}
+                  w={{ base: "1rem", md: "1.3rem", lg: "5.5rem" }}
+                  alt="Dot arrow"
+                />
+                <Icon
+                  as={FaCheckCircle}
+                  fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  color="green.400"
+                />
+                <Text
+                  fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  color={headerColor}
+                >
+                  Payment Details
+                </Text>
+                <Image
+                  src="/image/whitedash.png"
+                  w={{ base: "1rem", md: "1.3rem", lg: "5.5rem" }}
                   alt="Dot arrow"
                 />
                 <Icon
                   as={MdRadioButtonChecked}
                   fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  color="green.400"
                 />
                 <Text
                   fontSize={{ base: "sm", md: "md", lg: "lg" }}
@@ -142,7 +158,7 @@ function BuyCryptoDetails() {
                   Payment Details
                 </Text>
               </HStack>
-              <VStack w={{ base: "90%", md: "86%", lg: "70%" }}>
+              <VStack w={{ base: "90%", md: "86%", lg: "95%" }}>
                 <FormControl
                   isRequired
                   px="10"
@@ -152,8 +168,8 @@ function BuyCryptoDetails() {
                   borderRadius={"2xl"}
                   bg={bgFormcolor}
                 >
-                  <VStack alignItems={"center"}>
-                    <HStack>
+                  <VStack alignItems={"center"} mb="4">
+                    <HStack mt="4" mb="-2">
                       <Text color={"green.300"} fontSize="4xl">
                         Success
                       </Text>
@@ -163,7 +179,7 @@ function BuyCryptoDetails() {
                         fontSize={{ base: "sm", md: "md", lg: "2xl" }}
                       />
                     </HStack>
-                    <Text color={"#AAAEBD"} fontSize="lg" mt="-.5">
+                    <Text color={"#AAAEBD"} fontSize="lg" mt="-0.5">
                       You successfully bought 1.356{" "}
                       <Text as={"samp"} color="green.300" fontWeight={"bold"}>
                         BTC
@@ -175,8 +191,8 @@ function BuyCryptoDetails() {
                   <VStack
                     justify={"space-between"}
                     border={"2px"}
-                    borderColor="#AAAEBD"
                     borderRadius="2xl"
+                    bg={InputColor}
                     px="8"
                   >
                     <HStack
@@ -193,8 +209,6 @@ function BuyCryptoDetails() {
                       color={TextColor}
                       py="4"
                       fontSize={"1xl"}
-                      borderTop="2px"
-                      borderTopColor={"#AAAEBD"}
                       w="100%"
                       justify="space-between"
                     >
@@ -205,7 +219,7 @@ function BuyCryptoDetails() {
                 </FormControl>
               </VStack>
 
-              <VStack w={{ base: "90%", md: "86%", lg: "70%" }}>
+              <VStack w={{ base: "90%", md: "86%", lg: "95%" }}>
                 <FormControl
                   isRequired
                   px="10"
@@ -347,6 +361,7 @@ function BuyCryptoDetails() {
                       w={{ base: "90%", md: "45%", lg: "45%" }}
                       borderRadius="full"
                       bg={InputColor}
+                      _hover={{ bg: "#5084FF" }}
                       color="white"
                       py="6"
                     >
@@ -360,7 +375,7 @@ function BuyCryptoDetails() {
                       color="white"
                       _hover={{ bg: "#5084FF" }}
                     >
-                      wallet
+                      Wallet
                     </Button>
                   </HStack>
                 </FormControl>
@@ -375,4 +390,4 @@ function BuyCryptoDetails() {
   );
 }
 
-export default BuyCryptoDetails;
+export default SellCryptoDetails;

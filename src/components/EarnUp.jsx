@@ -40,8 +40,8 @@ function EarnUp() {
   const headerColor = useColorModeValue("#FFFFFF", "#23262F");
   const TextColor = useColorModeValue("#FFFFFF", "#969BA9");
   return (
-    <Box bg={bgSub}>
-      <Stack py="4" px="8">
+    <Box bg={bgSub} w="100%">
+      <Stack py="4" px="8" maxW="1450px" w="100%" m="auto">
         <Flex
           flexDir={{ base: "column", md: "row", lg: "row" }}
           justify="space-between"
