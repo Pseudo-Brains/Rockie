@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BiStar } from "react-icons/bi";
 import { FaRegCheckCircle, FaCheckCircle } from "react-icons/fa";
 import {
@@ -73,6 +73,9 @@ function Home1() {
   const { ref: myRef, inView: myElementIsVisible } = useInView();
   const { ref: myRef2, inView: myElementIsVisible2 } = useInView();
   const { ref: myRef3, inView: myElementIsVisible3 } = useInView();
+  useEffect(() => {
+    console.log(myElementIsVisible);
+  }, [myElementIsVisible]);
 
   return (
     <Box bg={bg} w="100%">
@@ -175,303 +178,305 @@ function Home1() {
         </Box>
       </Box>
       {/* end of box1 */}
-      <Box
-        ref={myRef}
-        as={motion.div}
-        flexWrap="wrap"
-        m={"auto"}
-        bg={bgTr}
-        py="2"
-        mt="-28"
-        borderRadius={"2xl"}
-        px={"8"}
-        w="84%"
-        border="2px"
-        boxShadow="2xl"
-        borderColor={useColorModeValue("#22252D", "#fff")}
-        initial={myElementIsVisible ? "" : { y: "0%", opacity: 1 }}
-        animate={myElementIsVisible ? "" : { y: "100%", opacity: 0 }}
-        transition={{
-          type: "Tween",
-          // bounce: 2.5,
-          duration: 10,
-          delay: 2,
-        }}
-      >
-        {/* <Flex > */}
+      <Box ref={myRef}>
         <Box
-          // m="auto"
-          p="3"
-          mb="6"
-          w="98%"
-          borderBottom="2px"
-          borderBottomColor={"#22252E"}
+          as={motion.div}
+          flexWrap="wrap"
+          m={"auto"}
+          bg={bgTr}
+          py="2"
+          mt="-28"
+          borderRadius={"2xl"}
+          px={"8"}
+          w="84%"
+          border="2px"
+          boxShadow="2xl"
+          borderColor={useColorModeValue("#22252D", "#fff")}
+          initial={myElementIsVisible ? "" : { y: "0%", opacity: 1 }}
+          animate={myElementIsVisible ? "" : { y: "100%", opacity: 0 }}
+          transition={{
+            type: "Tween",
+            // bounce: 2.5,
+            duration: 10,
+            delay: 2,
+          }}
         >
-          <Flex onClick={ShowBg} color={TextColor} justify="" fontSize="2xl">
-            <Button color={TextColor} bg="transparent" className="btn-show">
-              {" "}
-              Crypto
-            </Button>
-            <Button
-              color={TextColor}
-              bg="transparent"
-              mx="2"
-              className="btn-show"
-            >
-              {" "}
-              DeFi
-            </Button>
-            <Button
-              color={TextColor}
-              mx="2"
-              bg="transparent"
-              className="btn-show"
-            >
-              {" "}
-              BSC
-            </Button>
-            <Button
-              color={TextColor}
-              mx="2"
-              bg="transparent"
-              className="btn-show"
-            >
-              {" "}
-              NFT
-            </Button>
-            <Button
-              color={TextColor}
-              _hover={{ bg: "transparent" }}
-              bg="transparent"
-              className="btn-show"
-            >
-              Metaverse
-            </Button>
-            <Button
-              color={TextColor}
-              mx="2"
-              bg="transparent"
-              className="btn-show"
-            >
-              {" "}
-              Polkadot
-            </Button>
-            <Button
-              color={TextColor}
-              mx="2"
-              bg="transparent"
-              className="btn-show"
-            >
-              {" "}
-              Solana
-            </Button>
-            <Button
-              color={TextColor}
-              mx="2"
-              bg="transparent"
-              className="btn-show"
-            >
-              {" "}
-              Opensea
-            </Button>
-            <Button
-              color={TextColor}
-              mx="2"
-              bg="transparent"
-              className="btn-show"
-            >
-              {" "}
-              Makersplace
-            </Button>
-          </Flex>{" "}
-        </Box>
-        {/* </Flex> */}
-        <Box pb={"4"}>
-          <Flex justify={"space-around"} flexWrap="wrap">
-            <Box
-              w={{ base: "95%", md: "46%", lg: "24%" }}
-              bg={bgTrSub}
-              mb="2"
-              _hover={{ boxShadow: "xl" }}
-              px="12"
-              py="8"
-              borderRadius={"lg"}
-            >
-              <HStack spacing={"3"}>
-                <Image
-                  // boxSize={"80%"}
-                  objectFit="contain"
-                  src="/image/BtC.png"
-                  alt="OurPartner1"
-                />
-                <Text color={TextColor} fontSize="20">
-                  {" "}
-                  Bitcoin
-                </Text>
-                <Text color={"#9497A3"} fontSize="24">
-                  {" "}
-                  BTC/USD
-                </Text>
-              </HStack>
-              <HStack mb="2">
-                <Text color={TextColor} fontSize="4xl">
-                  USD 46,168.95
-                </Text>
-              </HStack>
-              <HStack>
-                <Text color={TextColor} fontSize="lg" fontWeight={"bold"}>
-                  36,641.20
-                </Text>{" "}
-                <Text
-                  color={TextColor}
-                  bg="red.500"
-                  px={"2"}
-                  py="0.5"
-                  borderRadius="full"
-                >
-                  -0.79%
-                </Text>
-              </HStack>
-            </Box>
-            {/* ttt */}
-            <Box
-              w={{ base: "95%", md: "46%", lg: "24%" }}
-              px="12"
-              bg={bgTrSub}
-              mb="2"
-              _hover={{ boxShadow: "xl" }}
-              py="8"
-              borderRadius={"lg"}
-            >
-              <HStack spacing={"3"}>
-                <Image
-                  // boxSize={"80%"}
-                  objectFit="contain"
-                  src="/image/Ether.png"
-                  alt="OurPartner1"
-                />
-                <Text color={TextColor} fontSize="20">
-                  Ethereum
-                </Text>
-                <Text color={"#9497A3"} fontSize="24">
-                  {" "}
-                  ETH/USD
-                </Text>
-              </HStack>
-              <HStack mb="2">
-                <Text color={TextColor} fontSize="4xl">
-                  USD $3,480.04
-                </Text>
-              </HStack>
-              <HStack>
-                <Text color={TextColor} fontSize="lg" fontWeight={"bold"}>
-                  36,641.20
-                </Text>{" "}
-                <Text
-                  color={TextColor}
-                  bg="green.500"
-                  px={"2"}
-                  py="0.5"
-                  borderRadius="full"
-                >
-                  +10.55%
-                </Text>
-              </HStack>
-            </Box>
-            {/* ttt */}
-            <Box
-              w={{ base: "95%", md: "46%", lg: "24%" }}
-              px="12"
-              py="8"
-              borderRadius={"lg"}
-              bg={bgTrSub}
-              mb="2"
-              _hover={{ boxShadow: "xl" }}
-            >
-              <HStack spacing={"3"}>
-                <Image
-                  // boxSize={"80%"}
-                  objectFit="contain"
-                  src="/image/Teth.png"
-                  alt="OurPartner1"
-                />
-                <Text color={TextColor} fontSize="20">
-                  {" "}
-                  Tether
-                </Text>
-                <Text color={"#9497A3"} fontSize="24">
-                  {" "}
-                  USDT/USD
-                </Text>
-              </HStack>
-              <HStack mb="2">
-                <Text color={TextColor} fontSize="4xl">
-                  USD 1.00
-                </Text>
-              </HStack>
-              <HStack>
-                <Text color={TextColor} fontSize="lg" fontWeight={"bold"}>
-                  36,641.20
-                </Text>{" "}
-                <Text
-                  color={TextColor}
-                  bg="red.500"
-                  px={"2"}
-                  py="0.5"
-                  borderRadius="full"
-                >
-                  -0.01%
-                </Text>
-              </HStack>
-            </Box>
-            {/* ttt */}
-            <Box
-              w={{ base: "95%", md: "46%", lg: "24%" }}
-              px="12"
-              py="8"
-              borderRadius={"lg"}
-              bg={bgTrSub}
-              mb="2"
-              _hover={{ boxShadow: "xl" }}
-            >
-              <HStack spacing={"3"}>
-                <Image
-                  // boxSize={"80%"}
-                  objectFit="contain"
-                  src="/image/BNB.png"
-                  alt="OurPartner1"
-                />
-                <Text color={TextColor} fontSize="20">
-                  BNB
-                </Text>
-                <Text color={"#9497A3"} fontSize="24">
-                  BNB/USD
-                </Text>
-              </HStack>
-              <HStack mb="2">
-                <Text color={TextColor} fontSize="4xl">
-                  USD 443.56
-                </Text>
-              </HStack>
-              <HStack>
-                <Text color={TextColor} fontSize="lg" fontWeight={"bold"}>
-                  36,641.20
-                </Text>{" "}
-                <Text
-                  color={TextColor}
-                  bg="red.500"
-                  px={"2"}
-                  py="0.5"
-                  borderRadius="full"
-                >
-                  -1.24%
-                </Text>
-              </HStack>
-            </Box>
-            {/* tttt */}
-          </Flex>
+          {/* <Flex > */}
+          <Box
+            // m="auto"
+            p="3"
+            mb="6"
+            w="98%"
+            borderBottom="2px"
+            borderBottomColor={"#22252E"}
+          >
+            <Flex onClick={ShowBg} color={TextColor} justify="" fontSize="2xl">
+              <Button color={TextColor} bg="transparent" className="btn-show">
+                {" "}
+                Crypto
+              </Button>
+              <Button
+                color={TextColor}
+                bg="transparent"
+                mx="2"
+                className="btn-show"
+              >
+                {" "}
+                DeFi
+              </Button>
+              <Button
+                color={TextColor}
+                mx="2"
+                bg="transparent"
+                className="btn-show"
+              >
+                {" "}
+                BSC
+              </Button>
+              <Button
+                color={TextColor}
+                mx="2"
+                bg="transparent"
+                className="btn-show"
+              >
+                {" "}
+                NFT
+              </Button>
+              <Button
+                color={TextColor}
+                _hover={{ bg: "transparent" }}
+                bg="transparent"
+                className="btn-show"
+              >
+                Metaverse
+              </Button>
+              <Button
+                color={TextColor}
+                mx="2"
+                bg="transparent"
+                className="btn-show"
+              >
+                {" "}
+                Polkadot
+              </Button>
+              <Button
+                color={TextColor}
+                mx="2"
+                bg="transparent"
+                className="btn-show"
+              >
+                {" "}
+                Solana
+              </Button>
+              <Button
+                color={TextColor}
+                mx="2"
+                bg="transparent"
+                className="btn-show"
+              >
+                {" "}
+                Opensea
+              </Button>
+              <Button
+                color={TextColor}
+                mx="2"
+                bg="transparent"
+                className="btn-show"
+              >
+                {" "}
+                Makersplace
+              </Button>
+            </Flex>{" "}
+          </Box>
+          {/* </Flex> */}
+          <Box pb={"4"}>
+            <Flex justify={"space-around"} flexWrap="wrap">
+              <Box
+                w={{ base: "95%", md: "46%", lg: "24%" }}
+                bg={bgTrSub}
+                mb="2"
+                _hover={{ boxShadow: "xl" }}
+                px="12"
+                py="8"
+                borderRadius={"lg"}
+              >
+                <HStack spacing={"3"}>
+                  <Image
+                    // boxSize={"80%"}
+                    objectFit="contain"
+                    src="/image/BtC.png"
+                    alt="OurPartner1"
+                  />
+                  <Text color={TextColor} fontSize="20">
+                    {" "}
+                    Bitcoin
+                  </Text>
+                  <Text color={"#9497A3"} fontSize="24">
+                    {" "}
+                    BTC/USD
+                  </Text>
+                </HStack>
+                <HStack mb="2">
+                  <Text color={TextColor} fontSize="4xl">
+                    USD 46,168.95
+                  </Text>
+                </HStack>
+                <HStack>
+                  <Text color={TextColor} fontSize="lg" fontWeight={"bold"}>
+                    36,641.20
+                  </Text>{" "}
+                  <Text
+                    color={TextColor}
+                    bg="red.500"
+                    px={"2"}
+                    py="0.5"
+                    borderRadius="full"
+                  >
+                    -0.79%
+                  </Text>
+                </HStack>
+              </Box>
+              {/* ttt */}
+              <Box
+                w={{ base: "95%", md: "46%", lg: "24%" }}
+                px="12"
+                bg={bgTrSub}
+                mb="2"
+                _hover={{ boxShadow: "xl" }}
+                py="8"
+                borderRadius={"lg"}
+              >
+                <HStack spacing={"3"}>
+                  <Image
+                    // boxSize={"80%"}
+                    objectFit="contain"
+                    src="/image/Ether.png"
+                    alt="OurPartner1"
+                  />
+                  <Text color={TextColor} fontSize="20">
+                    Ethereum
+                  </Text>
+                  <Text color={"#9497A3"} fontSize="24">
+                    {" "}
+                    ETH/USD
+                  </Text>
+                </HStack>
+                <HStack mb="2">
+                  <Text color={TextColor} fontSize="4xl">
+                    USD $3,480.04
+                  </Text>
+                </HStack>
+                <HStack>
+                  <Text color={TextColor} fontSize="lg" fontWeight={"bold"}>
+                    36,641.20
+                  </Text>{" "}
+                  <Text
+                    color={TextColor}
+                    bg="green.500"
+                    px={"2"}
+                    py="0.5"
+                    borderRadius="full"
+                  >
+                    +10.55%
+                  </Text>
+                </HStack>
+              </Box>
+              {/* ttt */}
+              <Box
+                w={{ base: "95%", md: "46%", lg: "24%" }}
+                px="12"
+                py="8"
+                borderRadius={"lg"}
+                bg={bgTrSub}
+                mb="2"
+                _hover={{ boxShadow: "xl" }}
+              >
+                <HStack spacing={"3"}>
+                  <Image
+                    // boxSize={"80%"}
+                    objectFit="contain"
+                    src="/image/Teth.png"
+                    alt="OurPartner1"
+                  />
+                  <Text color={TextColor} fontSize="20">
+                    {" "}
+                    Tether
+                  </Text>
+                  <Text color={"#9497A3"} fontSize="24">
+                    {" "}
+                    USDT/USD
+                  </Text>
+                </HStack>
+                <HStack mb="2">
+                  <Text color={TextColor} fontSize="4xl">
+                    USD 1.00
+                  </Text>
+                </HStack>
+                <HStack>
+                  <Text color={TextColor} fontSize="lg" fontWeight={"bold"}>
+                    36,641.20
+                  </Text>{" "}
+                  <Text
+                    color={TextColor}
+                    bg="red.500"
+                    px={"2"}
+                    py="0.5"
+                    borderRadius="full"
+                  >
+                    -0.01%
+                  </Text>
+                </HStack>
+              </Box>
+              {/* ttt */}
+              <Box
+                w={{ base: "95%", md: "46%", lg: "24%" }}
+                px="12"
+                py="8"
+                borderRadius={"lg"}
+                bg={bgTrSub}
+                mb="2"
+                _hover={{ boxShadow: "xl" }}
+              >
+                <HStack spacing={"3"}>
+                  <Image
+                    // boxSize={"80%"}
+                    objectFit="contain"
+                    src="/image/BNB.png"
+                    alt="OurPartner1"
+                  />
+                  <Text color={TextColor} fontSize="20">
+                    BNB
+                  </Text>
+                  <Text color={"#9497A3"} fontSize="24">
+                    BNB/USD
+                  </Text>
+                </HStack>
+                <HStack mb="2">
+                  <Text color={TextColor} fontSize="4xl">
+                    USD 443.56
+                  </Text>
+                </HStack>
+                <HStack>
+                  <Text color={TextColor} fontSize="lg" fontWeight={"bold"}>
+                    36,641.20
+                  </Text>{" "}
+                  <Text
+                    color={TextColor}
+                    bg="red.500"
+                    px={"2"}
+                    py="0.5"
+                    borderRadius="full"
+                  >
+                    -1.24%
+                  </Text>
+                </HStack>
+              </Box>
+              {/* tttt */}
+            </Flex>
+          </Box>
         </Box>
       </Box>
+
       {/* end of box 2 */}
       <Box>
         <HStack px={"6"} mt="20">
@@ -927,8 +932,8 @@ function Home1() {
             >
               <Image
                 as={motion.img}
-                whileHover={{ scaleX: 1.4 }}
-                transition={{ yoyo: "linear" }}
+                whileHover={{ rotateY: -320 }}
+                // transition={{ yoyo: "linear" }}
                 objectFit="cover"
                 src="/image/step1.png"
                 alt="step1"
@@ -959,7 +964,13 @@ function Home1() {
               w={{ base: "90%", md: "90%", lg: "23%" }}
               // h={{ base: "200px", md: "250px", lg: "300px" }}
             >
-              <Image objectFit="cover" src="/image/step2.png" alt="step1" />
+              <Image
+                objectFit="cover"
+                as={motion.img}
+                whileHover={{ rotateY: -320 }}
+                src="/image/step2.png"
+                alt="step1"
+              />
               <Text fontSize={"lg"} color={"#AAAEBD"} fontWeight="bold">
                 STEP 2
               </Text>
@@ -986,7 +997,13 @@ function Home1() {
               w={{ base: "90%", md: "90%", lg: "23%" }}
               // h={{ base: "200px", md: "250px", lg: "300px" }}
             >
-              <Image objectFit="cover" src="/image/step3.png" alt="step3" />
+              <Image
+                objectFit="cover"
+                as={motion.img}
+                whileHover={{ rotateY: -320 }}
+                src="/image/step3.png"
+                alt="step3"
+              />
               <Text fontSize={"lg"} color={"#AAAEBD"} fontWeight="bold">
                 STEP 3
               </Text>
@@ -1013,7 +1030,13 @@ function Home1() {
               w={{ base: "90%", md: "90%", lg: "23%" }}
               // h={{ base: "200px", md: "250px", lg: "300px" }}
             >
-              <Image objectFit="cover" src="/image/step4.png" alt="step3" />
+              <Image
+                objectFit="cover"
+                as={motion.img}
+                whileHover={{ rotateY: -320 }}
+                src="/image/step4.png"
+                alt="step3"
+              />
               <Text fontSize={"lg"} color={"#AAAEBD"} fontWeight="bold">
                 STEP 4
               </Text>
@@ -1040,7 +1063,7 @@ function Home1() {
         </Box>
       </Box>
       {/* end of box 4 */}
-      <Box bg={bg} py="10" px="4">
+      <Box bg={bg} py="10" px="4" ref={myRef2}>
         <Flex justify={"center"} flexWrap="wrap">
           <Box
             w={{ base: "100%", md: "100%", lg: "60%" }}
@@ -1103,9 +1126,17 @@ function Home1() {
             />
           </Box>
           <Box
+            as={motion.div}
             w={{ base: "100%", md: "100%", lg: "40%" }}
             p={{ base: "2", md: "2" }}
             pr={{ lg: "8" }}
+            initial={myElementIsVisible2 ? "" : { y: "0", opacity: 1 }}
+            animate={myElementIsVisible2 ? "" : { y: "100%", opacity: 0 }}
+            transition={{
+              type: "spring",
+              bounce: 2.5,
+              duration: 16,
+            }}
           >
             <VStack alignItems={"flex-start"}>
               <Heading fontSize={"6xl"} mt="-4" mb={"4"} color={headerColor}>
@@ -1160,14 +1191,24 @@ function Home1() {
         </Flex>
       </Box>
       {/* end of box 5 */}
-      <Box>
+      <Box ref={myRef3}>
         <Flex
           flexWrap={"wrap"}
           flexDir={{ base: "column", md: "column", lg: "row" }}
           px="3"
           py="2"
         >
-          <Box w={{ base: "100%", md: "100%", lg: "50%" }}>
+          <Box
+            w={{ base: "100%", md: "100%", lg: "50%" }}
+            as={motion.div}
+            initial={myElementIsVisible3 ? "" : { y: "0%", opacity: 1 }}
+            F
+            animate={myElementIsVisible3 ? "" : { y: "100%", opacity: 0 }}
+            transition={{
+              bounce: 2.5,
+              duration: 7,
+            }}
+          >
             <VStack mb="38px" rowGap={"30px"}>
               {" "}
               <Heading fontSize={"6xl"} color={headerColor} pr="6">
