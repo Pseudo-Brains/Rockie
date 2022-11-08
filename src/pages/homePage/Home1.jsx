@@ -71,7 +71,6 @@ function Home1() {
   // Inter section Observer
 
   const { ref: myRef, inView: myElementIsVisible } = useInView();
-
   const { ref: myRef2, inView: myElementIsVisible2 } = useInView();
   const { ref: myRef3, inView: myElementIsVisible3 } = useInView();
   useEffect(() => {

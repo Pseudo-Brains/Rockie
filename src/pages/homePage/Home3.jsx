@@ -47,7 +47,7 @@ const Home3 = () => {
           letterSpacing=" -1.2px"
           lineHeight={["50px", "50px", "75px"]}
           fontWeight="500"
-          p={["none", "none", " 0px 500px"]}
+          p={[" 0px 0px", " 0px 0px", " 0px 500px"]}
           mb="24px"
         >
           Learn, buy & sell crypto easily
@@ -674,7 +674,7 @@ const Home3 = () => {
             overflow="hidden"
             cursor="pointer"
           >
-            <Swiper slidesPerView={1}>
+            <Swiper slidesPerView={1} spaceBetween={200}>
               <SwiperSlide>
                 <Box w="100%" flexShrink={0}>
                   <Text as="h2" fontSize="30px" fontWeight={500} m="10px 0px">

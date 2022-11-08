@@ -20,6 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     --surface: #18191d;
     --line: #23262f;
     --text: #b1b5c3;
+    #777e90
     <html>
  <body>
   <iframe src="http://www.youtube.com/embed/W7qWa52k-nE"

@@ -18,7 +18,10 @@ import { FaBell, FaMoon, FaUser, FaSun } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiFillCaretDown } from "react-icons/ai";
 import { GrClose } from "react-icons/gr";
+
 import { useState, useMemo } from "react";
+
+
 
 const Nav = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -388,9 +391,11 @@ const Nav = () => {
           <Menu>
             <MenuButton fontWeight="700">Pages</MenuButton>
             <MenuList>
-              <MenuItem>New Window</MenuItem>
-              <MenuItem>Open Closed Tab</MenuItem>
-              <MenuItem>Open File</MenuItem>
+              <MenuItem><Link to='/profile'>User Profile</Link></MenuItem>
+              <MenuItem><Link to='/login'>Login</Link></MenuItem>
+              <MenuItem><Link to='/register'>Register</Link></MenuItem>
+              <MenuItem><Link to='/contact'>Contact</Link></MenuItem>
+              <MenuItem><Link to='/faq'>FAQs</Link></MenuItem>
             </MenuList>
           </Menu>
           <Menu>
