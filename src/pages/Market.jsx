@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+// import { GET_COINS } from "../graphQL/Queries/index";
+// import { useQuery, gql } from "@apollo/client";
+
 import {
   Box,
   Flex,
@@ -9,7 +12,6 @@ import {
   Table,
   Thead,
   Tbody,
-  AspectRatio,
   Tr,
   Th,
   Td,
@@ -23,7 +25,11 @@ import { AiOutlineStar, AiFillCheckCircle } from "react-icons/ai";
 import { GoArrowUp } from "react-icons/go";
 import { NavLink } from "react-router-dom";
 
-function Market() {
+function Market(props) {
+  console.log(props);
+  // const { loading, error, data } = useQuery(GET_COINS);
+
+  // console.log(data, loading, error);
   const [links, changeLinks] = useState([
     { id: 1, name: "Crypto" },
     { id: 2, name: "DeFi" },
@@ -2612,7 +2618,7 @@ function Market() {
         </TableContainer>
       </Box>
 
-      <Box as="div" p="70px 0px" textAlign="Center" >
+      <Box as="div" p="70px 0px" textAlign="Center">
         <Text as="h1" color="#fff" fontSize="60px" fontWeight={500}>
           Learn And Earn
         </Text>
@@ -2926,23 +2932,18 @@ function Market() {
           </Flex>
         </Flex>
         <Link
-        display="flex"
-        alignItems="center"
-        justifyContent="Center"
-        gap="0px 10px"
-        m="40px auto"
-        w="150px"
-        h="50px"
-        borderRadius="25px"
-        border="3px solid #222630"
+          display="flex"
+          alignItems="center"
+          justifyContent="Center"
+          gap="0px 10px"
+          m="40px auto"
+          w="150px"
+          h="50px"
+          borderRadius="25px"
+          border="3px solid #222630"
         >
-        <Image
-        w="20px"
-        src="/image/load.svg"
-        />
-        <Text
-        color="#fff"
-        >Load more </Text>
+          <Image w="20px" src="/image/load.svg" />
+          <Text color="#fff">Load more </Text>
         </Link>
       </Box>
     </Box>

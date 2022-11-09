@@ -73,9 +73,9 @@ function Home1() {
   const { ref: myRef, inView: myElementIsVisible } = useInView();
   const { ref: myRef2, inView: myElementIsVisible2 } = useInView();
   const { ref: myRef3, inView: myElementIsVisible3 } = useInView();
-  useEffect(() => {
-    console.log(myElementIsVisible);
-  }, [myElementIsVisible]);
+  // useEffect(() => {
+  //   console.log(myElementIsVisible);
+  // }, [myElementIsVisible]);
 
   return (
     <Box bg={bg} w="100%">
@@ -894,7 +894,7 @@ function Home1() {
               <Tr> ..</Tr>
             </Tfoot>
           </Table>
-        </TableContainer> */}
+        </TableContainer>  */}
         <Tableer />
       </Box>
       {/* end of box 3 */}

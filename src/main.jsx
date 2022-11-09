@@ -3,13 +3,25 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import { theme } from "./util/config";
+import { Provider } from "react-redux";
+// import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { store } from "./Redux/store";
+// export const client = new ApolloClient({
+//   uri: "http://localhost:4000/graphql",
+//   cache: new InMemoryCache(),
+// });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    {/* <ApolloProvider client={client}> */}
     <ChakraProvider theme={theme}>
-      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <App />
+      <Provider store={store}>
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+        <App />
+      </Provider>
     </ChakraProvider>
+    {/* </ApolloProvider> */}
   </React.StrictMode>
 );
 
