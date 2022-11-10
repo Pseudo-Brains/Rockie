@@ -45,7 +45,7 @@ const Tableer = () => {
           </Tr>
         </Thead>
         <Tbody color={headerColor}>
-          <Tr className="show-Btn-Hover">
+          {/* <Tr className="show-Btn-Hover">
             <Td>
               <Icon as={FaStar} />
             </Td>
@@ -83,9 +83,10 @@ const Tableer = () => {
                 Trade
               </Box>
             </Td>
-          </Tr>
+          </Tr> */}
           {coinsList.map((item, index) => (
-            <TableRow indexM={index} data={item} />
+            // index
+            <TableRow indexM={index + 1} data={item} />
           ))}
         </Tbody>
       </Table>

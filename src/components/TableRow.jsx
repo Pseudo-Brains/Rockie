@@ -33,7 +33,7 @@ export const TableRow = ({ data, indexM }) => {
       <Td>
         <Flex align="center">
           <Image objectFit="cover" h="20px" src={data.image} alt="Homebanner" />
-          <Text pl="10px">Bitcoin</Text>
+          <Text pl="10px">{data.name}</Text>
         </Flex>
       </Td>
       <Td>$ {data.current_price}</Td>
