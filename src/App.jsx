@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home1 from "./pages/homePage/Home1";
 import Home2 from "./pages/homePage/Home2";
+import Home3 from "./pages/homePage/Home3";
 import Blogdefault from "./pages/BlogPost/BlogDefault";
 import BlogGridV1 from "./pages/BlogPost/BlogGridV1";
 import BlogGridV2 from "./pages/BlogPost/BlogGridV2";
@@ -30,8 +31,7 @@ import { useDispatch } from "react-redux";
 import { apolloClient } from "./util/apolloConfig";
 import { ApolloProvider } from "@apollo/client";
 
-function App() {
-  return (
+function App() 
     <ApolloProvider client={apolloClient}>
       <BrowserRouter>
         <Nav />
