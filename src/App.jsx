@@ -18,7 +18,7 @@ import Faq from "./pages/faq/Faq";
 
 import BuyCryptoConfirm from "./pages/buyPages/Buy-Crypto-Confirm";
 import BuyCryptoDetails from "./pages/buyPages/Buy-Crypto-Details";
-import Home3 from "./pages/homePage/Home3";
+
 import Market from "./pages/Market";
 import SellSelect from "./pages/SellPages/SellSelect";
 import SellCryptoAmount from "./pages/SellPages/Sell-Crypto-Amount";
@@ -31,7 +31,8 @@ import { useDispatch } from "react-redux";
 import { apolloClient } from "./util/apolloConfig";
 import { ApolloProvider } from "@apollo/client";
 
-function App() 
+function App() {
+  return (
     <ApolloProvider client={apolloClient}>
       <BrowserRouter>
         <Nav />
@@ -50,7 +51,7 @@ function App()
           <Route path="/contact" element={<Contact />} />
           {/* faq */}
           <Route path="/faq" element={<Faq />} />
-          <Route path="/home2" element={<Home2 />} />
+          <Route path="/home3" element={<Home3 />} />
           <Route path="/blogdefault" element={<Blogdefault />} />
           <Route path="/blogdefaultV1" element={<BlogGridV1 />} />
           <Route path="/blogdefaultV2" element={<BlogGridV2 />} />
